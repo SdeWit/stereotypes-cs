@@ -209,6 +209,12 @@ def populate():
         images=[video_male]
     )
 
+    mc_4 = Question.create_question(q_type=QuestionType.mc_single_answer,
+                                    text="Mijn ervaring met programmeren is",
+                                    information=ParticipantInformationType.gender)
+    for i, gender in enumerate(Gender.__iter__(), 1):
+        QuestionChoice.create_choice(
+            choice_num=i, q_id=mc_4.id, text=gender.value)
 
 def create_images(link_array, c_id):
     """

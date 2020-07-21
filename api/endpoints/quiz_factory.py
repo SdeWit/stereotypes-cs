@@ -27,6 +27,7 @@ class QuizFactory:
             self.eat = EATFactory(self.data["eat"])
             self.video = VideoFactory(self.data['video'])
             self.demographics = DemographicsFactory(self.data['demographics'])
+            self.experience = ExperienceFactory(self.data['experience'])
 
     def create_collection_quiz(self):
         """
@@ -45,6 +46,7 @@ class QuizFactory:
         self.response.extend(self.eat.create_eat())
         self.response.extend(self.demographics.create_demographics())
         if 'before' in self.video.data and not self.video.data['before']:
+            self.response.extend(self.experience.create_experience())
             self.response.extend(self.video.create_video())
         self.create_ending(COLLECTION_QUIZ_END_TEXT)
         self.create_researcher_notes()
@@ -163,6 +165,24 @@ class DemographicsFactory:
                 id=q_id).first().make_response())
         return self.response
 
+class ExperienceFactory:
+    """
+    Class that creates the experience questions
+    """
+
+    def __init__(self, data):
+        self.data = data
+        self.response = []
+
+    def create_experience(self):
+        """
+        Creates a response object with all the demographics questions
+        :return: The response with a list of questions
+        """
+        for q_id in self.data:
+            self.response.extend(Question.query.filter_by(
+                id=q_id).first().make_response())
+        return self.response
 
 class EATFactory:
     """
