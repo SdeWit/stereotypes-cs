@@ -8,7 +8,7 @@ const Body = () => {
       <div>
         <Typography variant="h6" component="div">
           Titel van onderzoek: <br />
-          <span className="Titles"> Hoe denk jij over ...?  </span>
+          <span className="Titles"> Hoe denk jij over deze beroepen?</span>
         </Typography>
         <Typography variant="h6" component="div">
           Hoofdonderzoeker(s):
@@ -21,7 +21,9 @@ const Body = () => {
         <Typography variant="h6" component="div">
           Uitvoerend onderzoeker(s): :
           <br />
-          <span className="Titles">Shirley de Wit</span>
+          <span className="Titles">Felienne Hermans,
+            <br /> Fenia Aivaloglou
+            <br /> Shirley de Wit</span>
         </Typography>
         <Typography variant="h6" component="div">
           Onderzoeksgroep: <br />
@@ -38,18 +40,15 @@ const Body = () => {
       <Typography variant="body2" component="div" className="Paragraph">
         Fijn dat je meedoet aan Science Live, het onderzoeksprogramma van NEMO
         Science Museum. Het onderzoek waar je aan meewerkt wordt uitgevoerd door
-        onderzoekers van Universiteit Leiden.
+        onderzoekers van Universiteit Leiden. Voor deelname aan dit onderzoek moet
+        een ouder/voogd toestemming geven.
       </Typography>
       <Typography variant="body2" component="div" className="Paragraph">
-        In dit onderzoek leren we over hoe kinderen denken over een aantal
-        beroepen en we hebben daar jouw hulp voor nodig! Ons doel dit weekend (6
-        en 7 juni) is om te testen of ons onderzoek duidelijk is. Met jouw
-        mening en feedback kunnen we ons onderzoek beter maken! Tijdens de
-        zomervakantie zullen we het onderzoek uitvoeren. Wat je precies gaat
-        doen is afhankelijk van het moment van de dag dat je meedoet. Je gaat op
-        een laptop een aantal testjes doen, een video bekijken en/of we stellen
-        je een aantal vragen in een kort interview. Tijdens de interviews maken
-        we geluidsopnames.
+        In dit onderzoek leren we over hoe kinderen denken over een aantal beroepen 
+        en we hebben daar jouw hulp voor nodig! Je gaat een spelletje doen, een 
+        aantal vragen beantwoorden en een video bekijken. In dit onderzoek zijn er 
+        geen foute antwoorden, je doet het dus altijd goed! Help jij ons mee met 
+        ons onderzoek?  
       </Typography>
       <Typography variant="body2" component="div" className="Paragraph">
         Er wordt geen beloning gegeven voor deelname. Voor dit onderzoek geldt
@@ -90,21 +89,21 @@ const Body = () => {
         <b>
           {" "}
           Geachte ouder/voogd, we verzoeken je om dit toestemmingsformulier in
-          te vullen en te ondertekenen.
+          te vullen en te ondertekenen. Let op, in dit formulier kunt u toestemming 
+          geven voor meerdere kinderen. Klik hiervoor op de blauwe knop met het '+'-symbool. 
         </b>
       </Typography>
       <Typography variant="body2" component="div" className="Paragraph">
-        Hierbij verklaart de ouder / voogd van onderstaande minderjarige (n) aan
+        Hierbij verklaart de ouder/voogd van onderstaande minderjarigen aan
         NEMO (Stichting Nationaal Centrum voor Wetenschap en Technologie),
-        gevestigd aan Oosterdok 2 te Amsterdam dat de volgende kinderen heeft
-        deelgenomen aan het op de voorzijde genoemde en beschreven onderzoek.
-        Door dit formulier te ondertekenen, geef ik uitdrukkelijk toestemming
-        voor deelname aan het onderzoek binnen het Science Live-programma van
-        NEMO.
+        gevestigd aan Oosterdok 2 te Amsterdam dat onderstaande minderjarigen 
+        heeft/hebben deelgenomen aan het op het bovengenoemde en beschreven onderzoek.
+        Door ondertekening van dit formulier geef ik uitdrukkelijk toestemming 
+        tot deelname aan het onderzoek binnen NEMO’s Science Live programma. 
       </Typography>
       <Typography variant="body1" component='div' className="Paragraph">
           <b>
-          Op {new Date().getDay()} / {new Date().getMonth()+1} / {new Date().getFullYear()}
+          Op {new Date().getDate()} / {new Date().getMonth()+1} / {new Date().getFullYear()}
           </b>
       </Typography>
     </div>
