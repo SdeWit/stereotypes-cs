@@ -20,7 +20,7 @@ const App = ({ isLoggedIn = false }) => {
         </BrowserRouter>
       ) : (
         <BrowserRouter>
-          <Redirect exct to="/login" />
+          <Redirect exact to="/login" />
           <Login />
         </BrowserRouter>
       )}
