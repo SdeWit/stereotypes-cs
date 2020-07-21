@@ -107,24 +107,24 @@ def populate():
     ]
 
     fruit_images = [
-        ("https://www.delunchbus.nl/wp-content/uploads/2017/04/Appel-jg.png",
+        ("https://www.delunchbus.nl/wp-content/uploads/2017/04/Appel-jg.png?versie=1",
          "Fruit"),
-        ("https://www.delunchbus.nl/wp-content/uploads/2017/04/Appel-jg.png",
+        ("https://www.delunchbus.nl/wp-content/uploads/2017/04/Appel-jg.png?versie=2",
          "Fruit"),
-        ("https://www.delunchbus.nl/wp-content/uploads/2017/04/Appel-jg.png",
+        ("https://www.delunchbus.nl/wp-content/uploads/2017/04/Appel-jg.png?versie=3",
          "Fruit"),
-        ("https://www.delunchbus.nl/wp-content/uploads/2017/04/Appel-jg.png",
+        ("https://www.delunchbus.nl/wp-content/uploads/2017/04/Appel-jg.png?versie=4",
          "Fruit")
     ]
 
     vegetable_images = [
-        ("https://www.weightwatchers.com/nl/sites/nl/files/styles/wwvs_default_image/public/article_masthead/fruit_720x370_0.jpg",
+        ("https://www.weightwatchers.com/nl/sites/nl/files/styles/wwvs_default_image/public/article_masthead/fruit_720x370_0.jpg?versie=1",
          "Vegetable"),
-        ("https://www.weightwatchers.com/nl/sites/nl/files/styles/wwvs_default_image/public/article_masthead/fruit_720x370_0.jpg",
+        ("https://www.weightwatchers.com/nl/sites/nl/files/styles/wwvs_default_image/public/article_masthead/fruit_720x370_0.jpg?versie=2",
          "Vegetable"),
-        ("https://www.weightwatchers.com/nl/sites/nl/files/styles/wwvs_default_image/public/article_masthead/fruit_720x370_0.jpg",
+        ("https://www.weightwatchers.com/nl/sites/nl/files/styles/wwvs_default_image/public/article_masthead/fruit_720x370_0.jpg?versie=3",
          "Vegetable"),
-        ("https://www.weightwatchers.com/nl/sites/nl/files/styles/wwvs_default_image/public/article_masthead/fruit_720x370_0.jpg",
+        ("https://www.weightwatchers.com/nl/sites/nl/files/styles/wwvs_default_image/public/article_masthead/fruit_720x370_0.jpg?versie=4",
          "Vegetable")
     ]
 
