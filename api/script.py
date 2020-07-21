@@ -145,26 +145,27 @@ def populate():
     create_images(vegetable_images, c_vegetable.id)
 
     # likert
-    create_likert("Ik ben sociaal. "
-                  "Als je sociaal bent maak je makkelijk vrienden en werk je graag samen")
-    create_likert("Ik ben graag de beste")
+    ## Demographics 1-5
+    create_likert("Ik ben maak makkelijk vrienden en werk graag samen.")
     create_likert("Ik ben gek op computers")
+    create_likert("Ik vind het leukst om te")
+    create_likert("Als ik dat zou willen, zou ik later programmeur kunnen worden.")
     create_likert("Ik wil later programmeur worden")
-    create_likert("Programmeurs zijn sociaal. "
-                  "Als je sociaal bent maak je makkelijk vrienden en werk je graag samen")
-    create_likert("Programmeurs houden ervan om de beste te zijn")
-    create_likert(
-        "Programmeurs zijn gek op computers en hebben weinig andere hobby’s")
-    create_likert("Programmeur zijn, dat is een beroep voor mannen")
-    create_likert("Programmeur zijn, dat is een beroep voor vrouwen")
-    create_likert("Schrijvers zijn sociaal. "
-                  "Als je sociaal bent maak je makkelijk vrienden en werk je graag samen")
-    create_likert("Schrijvers houden ervan om de beste te zijn")
-    create_likert(
-        "Schrijvers zijn gek op computers en hebben weinig andere hobby’s")
-    create_likert("Schrijver zijn, dat is een beroep voor mannen")
-    create_likert("Schrijver zijn, dat is een beroep voor vrouwen")
 
+    ## 6-10
+    create_likert("Wie maakt het makkelijkst vrienden en werkt het liefst samen?")
+    create_likert("Wie speelt er het liefste videospelletjes?")
+    create_likert("Wie speelt er het liefste tennis?")
+    create_likert("Welk beroep vind jij iets voor meisjes?)
+    create_likert("Welk beroep vind jij iets voor jongens?")
+    
+    ## 10-14
+    create_likert("Programmeurs maken makkelijk vrienden en werken graag samen.")
+    create_likert("Programmeurs zijn gek op computers en hebben weinig andere hobby’s.")
+    create_likert("Programmeur zijn, dat is een beroep voor")
+    create_likert("Vraag 14")
+
+    #15
     Question.create_question(
         q_type=QuestionType.open_question, text="Wat doet een programmeur?")
 
@@ -173,12 +174,14 @@ def populate():
     video_male = Image.create_image(link="hEMOMVZbSBE", description='Role model intervention',
                                     attribute='Male')
 
-    # video_question
+    # video_question 16
     Question.create_question(
         q_type=QuestionType.video,
         images=[video_female]
     )
 
+    # demographics
+    ## 17 18 19
     mc_1 = Question.create_question(q_type=QuestionType.mc_single_answer, text="Hoe oud ben je?",
                                     information=ParticipantInformationType.age)
     for i in range(6, 19):
@@ -200,15 +203,18 @@ def populate():
         QuestionChoice.create_choice(
             choice_num=i, q_id=mc_3.id, text=gender.value)
 
+    # 20
     Question.create_question(q_type=QuestionType.notes, text="Researcher notes",
                              information=ParticipantInformationType.researcher_notes)
 
-    # video_question
+    # video_question 21
     Question.create_question(
         q_type=QuestionType.video,
         images=[video_male]
     )
 
+    # experience 
+    ## 22
     mc_4 = Question.create_question(q_type=QuestionType.mc_single_answer,
                                     text="Mijn ervaring met programmeren is",
                                     information=ParticipantInformationType.gender)
