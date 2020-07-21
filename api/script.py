@@ -156,7 +156,7 @@ def populate():
     create_likert("Wie maakt het makkelijkst vrienden en werkt het liefst samen?")
     create_likert("Wie speelt er het liefste videospelletjes?")
     create_likert("Wie speelt er het liefste tennis?")
-    create_likert("Welk beroep vind jij iets voor meisjes?)
+    create_likert("Welk beroep vind jij iets voor meisjes?")
     create_likert("Welk beroep vind jij iets voor jongens?")
     
     ## 10-14
