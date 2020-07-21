@@ -38,6 +38,7 @@ class QuizFactory:
         self.response = []
         self.create_information_beginning(COLLECTION_QUIZ_BEGINNING_TEXT)
         if 'before' in self.video.data and self.video.data['before']:
+            self.response.extend(self.experience.create_experience())
             self.response.extend(self.video.create_video())
         self.response.extend(self.gender_profession.create_iat())
         self.response.extend(self.social_profession.create_iat())
