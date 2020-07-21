@@ -5,7 +5,6 @@ from api.models import Category, Metacategory, Image, Question, \
 
 from api import db
 
-
 def populate():
     """Method that populates the databse with data"""
 
@@ -28,9 +27,13 @@ def populate():
     c_together = Category.create_category(
         name="Samen", metacategory=Metacategory.social)
     c_gaming = Category.create_category(
-        name="Gamen", metacategory=Metacategory.hobby)
+        name="Videospelletjes spelen", metacategory=Metacategory.hobby)
     c_tennis = Category.create_category(
-        name="Tennis", metacategory=Metacategory.hobby)
+        name="Tennissen", metacategory=Metacategory.hobby)
+    c_fruit = Category.create_category(
+        name="Fruit", metacategory=Metacategory.demo)
+    c_vegetable = Category.create_category(
+        name="Groente", metacategory=Metacategory.demo)
 
     male_images = [
         'https://res.cloudinary.com/hctr0xmqp/image/upload/v1591276420/Gender/gender_male_1_dh1pbq.png',
@@ -103,6 +106,28 @@ def populate():
          "Together")
     ]
 
+    fruit_images = [
+        ("https://www.delunchbus.nl/wp-content/uploads/2017/04/Appel-jg.png",
+         "Fruit"),
+        ("https://www.delunchbus.nl/wp-content/uploads/2017/04/Appel-jg.png",
+         "Fruit"),
+        ("https://www.delunchbus.nl/wp-content/uploads/2017/04/Appel-jg.png",
+         "Fruit"),
+        ("https://www.delunchbus.nl/wp-content/uploads/2017/04/Appel-jg.png",
+         "Fruit")
+    ]
+
+    vegetable_images = [
+        ("https://www.weightwatchers.com/nl/sites/nl/files/styles/wwvs_default_image/public/article_masthead/fruit_720x370_0.jpg",
+         "Vegetable"),
+        ("https://www.weightwatchers.com/nl/sites/nl/files/styles/wwvs_default_image/public/article_masthead/fruit_720x370_0.jpg",
+         "Vegetable"),
+        ("https://www.weightwatchers.com/nl/sites/nl/files/styles/wwvs_default_image/public/article_masthead/fruit_720x370_0.jpg",
+         "Vegetable"),
+        ("https://www.weightwatchers.com/nl/sites/nl/files/styles/wwvs_default_image/public/article_masthead/fruit_720x370_0.jpg",
+         "Vegetable")
+    ]
+
     for link in male_images:
         Image.create_image(link=link, description="Man",
                            attribute='man standing', c_id=c_male.id)
@@ -116,7 +141,8 @@ def populate():
     create_images(gaming_images, c_gaming.id)
     create_images(tenis_images, c_tennis.id)
     create_images(alone_images, c_alone.id)
-    create_images(together_images, c_together.id)
+    create_images(fruit_images, c_fruit.id)
+    create_images(vegetable_images, c_vegetable.id)
 
     # likert
     create_likert("Ik ben sociaal. "

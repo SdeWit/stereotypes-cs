@@ -33,6 +33,7 @@ class Metacategory(enum.Enum):
     gender = "Gender"
     hobby = "Hobby"
     social = "Social"
+    demo = "Demo"
 
 
 class QuestionType(enum.Enum):
