@@ -7,6 +7,7 @@ import Container from "@material-ui/core/Container";
 import { makeStyles } from "@material-ui/core";
 import GridListTile from "@material-ui/core/GridListTile";
 import GridList from "@material-ui/core/GridList";
+import audio from '../../utils/constants/sound.mp3'
 
 const useStyles = makeStyles((theme) => ({
   "@global": {
@@ -63,7 +64,7 @@ const Information = (props) => {
   const [hasNext, sethasNext] = useState(false);
   const [startsIn, setStartIn] = useState(false);
 
-  const beep = new UIFx({asset: '../../utils/constants/sound.mp3'});
+  const beep = new UIFx({asset: audio, volume: 0.5});
 
   return (
     <React.Fragment>
