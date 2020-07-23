@@ -82,7 +82,7 @@ const giveMeString = function(index, id) {
 
   // Programmeur - Schrijver
   // 6 - 10
-  else if(props.id >= 5 && props.id <= 10){
+  else if(id >= 5 && id <= 10){
     if(index === '1')
       return "Programmeur"
     else if(index === '2')
