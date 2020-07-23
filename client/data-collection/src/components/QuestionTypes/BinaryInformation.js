@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import UIfx from 'uifx';
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -6,7 +7,6 @@ import Container from "@material-ui/core/Container";
 import { makeStyles } from "@material-ui/core";
 import GridListTile from "@material-ui/core/GridListTile";
 import GridList from "@material-ui/core/GridList";
-import useSound from 'use-sound';
 
 const useStyles = makeStyles((theme) => ({
   "@global": {
@@ -63,9 +63,7 @@ const Information = (props) => {
   const [hasNext, sethasNext] = useState(false);
   const [startsIn, setStartIn] = useState(false);
 
-  const soundUrl = '../../utils/constants/sound.mp3';
-
-  const [play, { stop, isPlaying }] = useSound(soundUrl);
+  const beep = new UIFx({asset: '../../utils/constants/sound.mp3'});
 
   return (
     <React.Fragment>
@@ -91,15 +89,7 @@ const Information = (props) => {
             {props.text0}
           </Typography>
 
-          <PlayButton
-            active={isPlaying}
-            size={60}
-            iconColor="var(--color-background)"
-            idleBackgroundColor="var(--color-text)"
-            activeBackgroundColor="var(--color-primary)"
-            play={play}
-            stop={stop}
-          />
+          <button variant="contained"onClick={beep.play}>Geluid</button>
 
           <Container maxWidth component="main" className={classes.heroContent}>
             <div style={{ paddingTop: 30 }}>
