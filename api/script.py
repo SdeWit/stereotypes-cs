@@ -81,7 +81,7 @@ def populate():
          "Game Controller")
     ]
 
-    tenis_images = [
+    tennis_images = [
         ("https://res.cloudinary.com/hctr0xmqp/image/upload/v1591276495/Hobby/hobby_tennis_1_ei7yic.png", "Net"),
         ("https://res.cloudinary.com/hctr0xmqp/image/upload/v1591276493/Hobby/hobby_tennis_2_qx7tms.png", "Racket"),
         ("https://res.cloudinary.com/hctr0xmqp/image/upload/v1591276493/Hobby/hobby_tennis_3_pdsnou.png", "Shoe"),
@@ -139,7 +139,7 @@ def populate():
     create_images(programmer_images, c_programmer.id)
     create_images(writer_images, c_writer.id)
     create_images(gaming_images, c_gaming.id)
-    create_images(tenis_images, c_tennis.id)
+    create_images(tennis_images, c_tennis.id)
     create_images(alone_images, c_alone.id)
     create_images(fruit_images, c_fruit.id)
     create_images(vegetable_images, c_vegetable.id)

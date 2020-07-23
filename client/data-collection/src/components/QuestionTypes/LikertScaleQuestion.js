@@ -62,12 +62,58 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-const giveMeString = function(index) {
-  if(index === '1')
-    return index + "   Helemaal oneens "
-  else if(index === '5')
-    return index + '   Helemaal eens';
-  return index.toString();
+const giveMeString = function(index, id) {
+  // Jongens - Meisjes
+  //  12
+  if(id === 12){
+    if(index === '1')
+      return "Jongens"
+    else if(index === '2')
+      return "Een beetje meer voor jongens";
+    else if(index === '3')
+      return "Allebei";
+    else if(index === '4')
+      return "Een beetje meer voor meisjes";
+    else if(index === '5')
+      return "Meisjes";
+    return index.toString();
+  }
+    
+
+  // Programmeur - Schrijver
+  // 6 - 10
+  else if(props.id >= 5 && props.id <= 10){
+    if(index === '1')
+      return "Programmeur"
+    else if(index === '2')
+      return "Een beetje meer een programmeur";
+    else if(index === '3')
+      return "Allebei";
+    else if(index === '4')
+      return "Een beetje meer een schrijver";
+    else if(index === '5')
+      return "Schrijver";
+    return index.toString();
+  }
+
+  // Helemaal mee eens - helemaal mee oneens
+  // 1 - 5, 10 11 13 14 
+  // default
+
+  else {
+    if(index === '1')
+      return "Helemaal eens"
+    else if(index === '2')
+      return "Een beetje eens";
+    else if(index === '3')
+      return "Neutraal";
+    else if(index === '4')
+      return "Een beetje oneens";
+    else if(index === '5')
+      return "Helemaal oneens";
+    return index.toString();
+  }
+
 }
 
 const LikertScaleQuestion = (props) => {
@@ -81,7 +127,7 @@ const LikertScaleQuestion = (props) => {
 
   const likertOptions = {
     responses: likertScaleText.map((scaleText, index) => {
-      return { value: index + 1, text: giveMeString(scaleText) };
+      return { value: index + 1, text: giveMeString(scaleText, props.id) };
     }),
     picked: (val) => {
       setQuestionAnswer({ answers: parseInt(val), question_id: props.id });
@@ -107,7 +153,7 @@ const LikertScaleQuestion = (props) => {
           <Grid item xs={12} md={12} style={{ margin: 'auto' }}>
             <Card>
               <CardHeader
-                title='Ben jij het eens of oneens met deze zin?'
+                title='Wat vind jij?'
                 titleTypographyProps={{ align: 'center', variant: 'h6' }}
                 subheaderTypographyProps={{ align: 'center' }}
                 action={null}
