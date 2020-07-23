@@ -5,11 +5,28 @@ Module that contains the enums used in the database
 import enum
 
 
+class Experience(enum.Enum):
+    """Enumeration of the choices for experience types"""
+
+    School = "Ja, op school"
+    Activiteit = "Ja, op een activiteit buiten school bijvoorbeeld in de bibliotheek of bij een codeclub"
+    Thuis = "Ja, bij familie, vrienden of thuis"
+    Nee = "Nee"
+
+class Familiar(enum.Enum):
+    """Enumeration of the choices for familiar types"""
+
+    Ja_bekend = "Ja, iemand die ik vaak zie is programmeur"
+    Ja_onbekend = "Ja, maar ik zie deze persoon niet vaak"
+    Ja_tv = "Ja, van een film, serie of tv"
+    Nee = "Nee"
+
 class Gender(enum.Enum):
     """Enumeration of the choices for gender types"""
 
     Jongen = "Jongen"
     Meisje = "Meisje"
+    Geen = "Geen van beide"
     Niet = "Zeg ik liever niet"
 
 
@@ -63,6 +80,8 @@ class ParticipantInformationType(enum.Enum):
     gender = "Gender"
     ethnicity = "Ethnicity"
     researcher_notes = "Researcher notes"
+    experience = "Programming experiences"
+    familiar = "Familiar programmer"
 
 
 class Version(enum.Enum):

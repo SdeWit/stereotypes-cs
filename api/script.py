@@ -1,7 +1,7 @@
 # pylint: disable=line-too-long, too-many-locals, too-many-statements
 """Populates the database with data (categories, images, questions)"""
 from api.models import Category, Metacategory, Image, Question, \
-    QuestionType, QuestionChoice, Ethnicity, Gender, User, ParticipantInformationType
+    QuestionType, QuestionChoice, Ethnicity, Gender, User, ParticipantInformationType, Experience, Familiar
 
 from api import db
 
@@ -214,13 +214,20 @@ def populate():
     )
 
     # experience 
-    ## 22
+    ## 22 23
     mc_4 = Question.create_question(q_type=QuestionType.mc_single_answer,
-                                    text="Mijn ervaring met programmeren is",
-                                    information=ParticipantInformationType.gender)
-    for i, gender in enumerate(Gender.__iter__(), 1):
+                                    text="Heb je wel eens geprogrammeerd? Er zijn meerdere antwoorden mogelijk",
+                                    information=ParticipantInformationType.experience)
+    for i, experience in enumerate(Experience.__iter__(), 1):
         QuestionChoice.create_choice(
-            choice_num=i, q_id=mc_4.id, text=gender.value)
+            choice_num=i, q_id=mc_4.id, text=experience.value)
+
+    mc_5 = Question.create_question(q_type=QuestionType.mc_single_answer,
+                                    text="Ken jij een programmeur? Er zijn meerdere antwoorden mogelijk",
+                                    information=ParticipantInformationType.familiar)
+    for i, familiar in enumerate(Familiar.__iter__(), 1):
+        QuestionChoice.create_choice(
+            choice_num=i, q_id=mc_5.id, text=familiar.value)
 
 def create_images(link_array, c_id):
     """
