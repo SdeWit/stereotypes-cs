@@ -65,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
 const giveMeString = function(index) {
   if(index === '1')
     return index + "   Helemaal oneens "
-  else if(index === '7')
+  else if(index === '5')
     return index + '   Helemaal eens';
   return index.toString();
 }
