@@ -6,6 +6,7 @@ import Container from "@material-ui/core/Container";
 import { makeStyles } from "@material-ui/core";
 import GridListTile from "@material-ui/core/GridListTile";
 import GridList from "@material-ui/core/GridList";
+import useSound from 'use-sound';
 
 const useStyles = makeStyles((theme) => ({
   "@global": {
@@ -62,6 +63,10 @@ const Information = (props) => {
   const [hasNext, sethasNext] = useState(false);
   const [startsIn, setStartIn] = useState(false);
 
+  const soundUrl = '../../utils/constants/sound.mp3';
+
+  const [play, { stop, isPlaying }] = useSound(soundUrl);
+
   return (
     <React.Fragment>
       <CssBaseline />
@@ -85,6 +90,17 @@ const Information = (props) => {
           >
             {props.text0}
           </Typography>
+
+          <PlayButton
+            active={isPlaying}
+            size={60}
+            iconColor="var(--color-background)"
+            idleBackgroundColor="var(--color-text)"
+            activeBackgroundColor="var(--color-primary)"
+            play={play}
+            stop={stop}
+          />
+
           <Container maxWidth component="main" className={classes.heroContent}>
             <div style={{ paddingTop: 30 }}>
               <Typography
