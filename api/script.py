@@ -190,7 +190,7 @@ def populate():
     QuestionChoice.create_choice(choice_num=14, q_id=mc_1.id, text="Anders")
 
     mc_2 = Question.create_question(q_type=QuestionType.mc_multiple_answer,
-                                    text="Wat is jouw achtergrond? Er zijn meerdere antwoorden mogelijk.",
+                                    text="Waar zijn jouw ouders geboren? Er zijn meerdere antwoorden mogelijk.",
                                     information=ParticipantInformationType.ethnicity)
     for i, ethnicity in enumerate(Ethnicity.__iter__(), 1):
         QuestionChoice.create_choice(

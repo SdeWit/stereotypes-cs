@@ -33,14 +33,16 @@ class Gender(enum.Enum):
 class Ethnicity(enum.Enum):
     """Enumeration of the choices for ethnicity types"""
 
-    Nederlands = "Nederlands"
-    Turks = "Turks"
-    Marokkaans = "Marokkaans"
-    Surinaams = "Surinaams"
-    Indonesisch = "Indonesisch"
-    Duits = "Duits"
-    Pools = "Pools"
-    Anders = "Anders"
+    Nederlands = "Nederland"
+    Turks = "Turkijen"
+    Marokkaans = "Marokko"
+    Surinaams = "Suriname"
+    Indonesisch = "Indonesië"
+    Duits = "Duitsland"
+    Pools = "Polen"
+    Anders_eu = "Geen van bovenstaande, maar een ander land in Europa"
+    Anders = "Geen van bovenstaande, maar een ander land buiten Europa"
+    Onbkend = "Weet ik niet of zeg ik liever niet"
 
 
 class Metacategory(enum.Enum):
