@@ -37,10 +37,10 @@
   }
 }
 
-.MuiCardActionArea-focusHighlight {
+.MuiCardActionArea-root:hover {
   opacity: 0;
 }
 
-button {
+.MuiCardActionArea-root {
   cursor: auto;
 }
