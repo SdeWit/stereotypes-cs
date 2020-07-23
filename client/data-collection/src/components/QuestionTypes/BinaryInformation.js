@@ -90,7 +90,7 @@ const Information = (props) => {
             {props.text0}
           </Typography>
 
-          <button variant="contained"onClick={beep.play}>Geluid</button>
+          <button variant="contained" onClick={beep.play()}>Geluid</button>
 
           <Container maxWidth component="main" className={classes.heroContent}>
             <div style={{ paddingTop: 30 }}>
