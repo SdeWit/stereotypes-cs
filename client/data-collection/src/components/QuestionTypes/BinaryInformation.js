@@ -160,7 +160,7 @@ const Information = (props) => {
             }}
             disabled={hasNext}
           >
-            NEXT
+            Volgende
           </Button>
         </React.Fragment>
       )}
