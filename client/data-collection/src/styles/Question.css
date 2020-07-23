@@ -102,9 +102,9 @@ span.MuiFormControlLabel-label {
 }
 
 .MuiCardActionArea-root:hover .MuiCardActionArea-focusHighlight {
-  opacity: 0;
+  opacity: 0 !important;
 }
 
 .MuiCardActionArea-root {
-  cursor: auto;
+  cursor: auto !important;
 }
