@@ -100,3 +100,11 @@ span.MuiFormControlLabel-label {
 .OptionLabel span {
   font-size: 1.3em;
 }
+
+.MuiCardActionArea-root:hover .MuiCardActionArea-focusHighlight {
+  opacity: 0;
+}
+
+.MuiCardActionArea-root {
+  cursor: auto;
+}
