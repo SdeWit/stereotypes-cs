@@ -64,7 +64,11 @@ const Information = (props) => {
   const [hasNext, sethasNext] = useState(false);
   const [startsIn, setStartIn] = useState(false);
 
-  const beep = new UIFx({asset: audio, volume: 0.5});
+  const likeAudio = new Audio(audio);
+
+  const playSound = audioFile => {
+    audioFile.play();
+}
 
   return (
     <React.Fragment>
@@ -81,6 +85,14 @@ const Information = (props) => {
         </div>
       ) : (
         <React.Fragment>
+
+          <Button
+              onClick={() => playSound(likeAudio)}
+              variant="contained"
+              color="primary"
+          > Geluid
+          </Button>
+
           <Typography
             variant="h5"
             align="center"
@@ -89,8 +101,6 @@ const Information = (props) => {
           >
             {props.text0}
           </Typography>
-
-          <button variant="contained" onClick={beep.play()}>Geluid</button>
 
           <Container maxWidth component="main" className={classes.heroContent}>
             <div style={{ paddingTop: 30 }}>
