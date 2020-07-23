@@ -68,15 +68,13 @@ BLOCK_START_TEXT = [
      },
 ]
 
-BLOCK_END_TEXT = "Zet je linker wijsvinger op de ‘e’, en je rechter wijsvinger op de ‘i’, zo kun je " \
-                 "snel plaatjes verplaatsen! Ben je er klaar voor? Druk dan op volgende."
+BLOCK_END_TEXT = "Tip: Zet je linker wijsvinger op de ‘e’, en je rechter wijsvinger op de ‘i’, zo kun je " \
+                 "snel plaatjes verplaatsen! </br > Ben je er klaar voor? Druk dan op volgende."
 
 FINAL_BLOCK_TEXT = {
 
     "text": "Super goed gedaan! We willen je graag ook wat vragen stellen. "
-            "Er zijn geen goede of foute antwoorden op deze vragen! Als je het helemaal eens bent met een zin, "
-            "klik je op het bolletje helemaal rechts. Als je het er helemaal niet mee eens bent, klik je op het "
-            "bolletje helemaal links. Je mag er ook iets tussenin kiezen!"
+            "Er zijn geen goede of foute antwoorden op deze vragen!"
 }
 
 COLLECTION_QUIZ_BEGINNING_TEXT = "Leuk dat je mee doet aan dit onderzoek! Als je iets niet begrijpt tijdens het onderzoek, " \
