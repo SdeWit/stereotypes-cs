@@ -66,6 +66,16 @@ class QuizFactory:
         self.create_ending(DISSEMINATION_QUIZ_END_TEXT)
         return self.response
 
+    def create_demo_quiz(self):
+        """
+        Creates a quiz for the demo application
+        :return: The response to the demo application with the list of questions
+        """
+
+        self.response = []
+        self.response.extend(self.gender_profession.create_iat())
+        return self.response
+
     def create_ending(self, end_text):
         """
         Creates a type finish question to be shown at the end of the test

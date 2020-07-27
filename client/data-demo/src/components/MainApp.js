@@ -42,7 +42,7 @@ const MainApp = ({
             <BackIcon style={{ float: 'left', margin: 10}} fontSize='medium'/>
           </Link>
           <QueueManagement hasActiveChild={hasActiveChild} questionIndex={questionIndex} shouldRemoveChild={shouldRemoveChild}/>
-          <Start canStart={hasActiveChild} onClick={() => onQuestionChange(questionIndex).questions} />
+          <Start canStart={!hasActiveChild} onClick={() => onQuestionChange(questionIndex).questions} />
           {questionIndex === 0 ? null : <Redirect to="/questions" />}
         </Route>
         <Route path="/questions">
