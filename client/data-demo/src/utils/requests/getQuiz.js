@@ -10,11 +10,7 @@ export function getQuiz(accessToken, callback, errorcallback, version='A') {
   Send get request to retrieve quiz data from server
   */
   axios
-    .get("/quiz", {
-      params: {
-        version: version
-      }
-    })
+    .get("/demo", {})
     .then((res) => {
       if (callback != null && res.status === 200) {
         callback(res);
