@@ -77,36 +77,6 @@ const Load = (props) => {
   return (
     <div style={{ width: "50%", paddingTop: 200, margin: "auto" }}>
       <Grid container spacing={2}>
-        {/* VERSION DROPDOWN */}
-        <Grid item xs={6} style={{ textAlign: "right" }}>
-          {versions ? (
-            <FormControl variant="outlined" className={classes.formControl}>
-              <InputLabel id="demo-simple-select-outlined-label">
-                Version
-              </InputLabel>
-              <Select
-                labelId="demo-simple-select-outlined-label"
-                id="demo-simple-select-outlined"
-                value={checkedVersion}
-                onChange={(event) => setversion(event.target.value)}
-                label="Version"
-              >
-                {/* The first MenuItem will always be the RANDOM one */}
-                <MenuItem key="R" value="R">
-                  random
-                </MenuItem>
-                {/* All other selections */}
-                {Object.keys(versions).map((versionKey, index) => {
-                  return (
-                    <MenuItem key={versionKey} value={versionKey}>
-                      {versions[versionKey]}
-                    </MenuItem>
-                  );
-                })}
-              </Select>
-            </FormControl>
-          ) : null}
-        </Grid>
         {/* LOAD QUESTIONS BUTTON */}
         <Grid item xs={6} style={{ textAlign: "left", margin: "auto" }}>
           <Button
@@ -134,38 +104,6 @@ const Load = (props) => {
       >
         Data load failed
       </InputLabel>
-      {/* PARTICIPANTS BUTTON */}
-      <Grid item xs={12} style={{ marginTop: 20 }}>
-        <Link to="/participants" style={{ textDecoration: "none" }}>
-          <Button variant="contained" color="primary">
-            Participants
-          </Button>
-        </Link>
-      </Grid>
-      <Grid item={12} style={{ marginTop: 20 }}>
-        <Link to={"/stats"} style={{ textDecoration: "none" }}>
-          <Button variant="contained" color="primary">
-            Live stats
-          </Button>
-        </Link>
-      </Grid>
-      {/* DOWNLOAD DATA */}
-      {results ? (
-        <ExcelFile
-          element={
-            <Button variant="contained" color="primary" style={{ marginTop: 20 }}>
-              Data Ready!
-            </Button>
-          }
-        >
-          <ExcelSheet dataSet={results} name="Organization" />
-        </ExcelFile>
-      ) : (
-        <Button onClick={fetchResults} variant="contained" color="primary" style={{ marginTop: 20 }}>
-          Download Data
-        </Button>
-      )}
-      <br />
       {/* START BUTTON */}
       <Link
         to={props.isDataLoaded ? "/app" : "/load"}

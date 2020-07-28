@@ -75,33 +75,12 @@ const Finish = (props) => {
           {props.text}
         </Typography>
       </Container>
-      <Grid item xs={6} style={{margin: 'auto'}}>
-        <TextField
-          autoFocus
-          type='password'
-          onChange={(event) => setresearcherCode(event.target.value)}
-          variant="outlined"
-        />
-      </Grid>
-      <Grid item xs={6} style={{margin: 'auto'}}>
-        <FormControlLabel
-          control={
-            <Checkbox
-              checked={!finish}
-              onChange={onCheck}
-              name="checkedB"
-              color="primary"
-            />
-          }
-          label="Research notes"
-        />
-      </Grid>
       <Grid>
         <Button
           style={{ marginTop: 20 }}
           variant="contained"
           onClick={finish ? () => {setsendRequested(true); onClickFinish()} : onClickNext}
-          disabled={researcherCode !== "NEMO" || dataFailed || sendRequested}
+          //disabled={researcherCode !== "NEMO" || dataFailed || sendRequested}
         >
           {finish ? <span>EINDE</span> : <span>VOLGENDE</span>}
         </Button>

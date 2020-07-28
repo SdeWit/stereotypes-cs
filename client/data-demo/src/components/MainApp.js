@@ -5,9 +5,6 @@ import Question from "../containers/Question";
 import PropTypes from "prop-types";
 import Start from "./Start";
 import Load from "./Load";
-import QueueManagement from "./QueueManagement";
-import Stats from './Stats'
-import Participants from "../containers/Participants";
 import BackIcon from '@material-ui/icons/Backspace'
 import {Link} from 'react-router-dom'
 
@@ -28,12 +25,6 @@ const MainApp = ({
   return (
     <div>
       <Switch>
-        <Route path="/stats">
-          <Link to='/load'>
-            <BackIcon style={{ float: 'left', margin: 10}} fontSize='medium'/>
-          </Link>
-          <Stats accessToken={accessToken}/>
-        </Route>
         <Route path="/load">
           <Load  version={version} isDataLoaded={isDataLoaded} loadFailed={loadFailed} accessToken={accessToken} onLoadData={(version) => {setVersion(version); loadData(accessToken, version)}} />
         </Route>
@@ -41,7 +32,6 @@ const MainApp = ({
             <Link to='/load'>
             <BackIcon style={{ float: 'left', margin: 10}} fontSize='medium'/>
           </Link>
-          <QueueManagement hasActiveChild={hasActiveChild} questionIndex={questionIndex} shouldRemoveChild={shouldRemoveChild}/>
           <Start canStart={!hasActiveChild} onClick={() => onQuestionChange(questionIndex).questions} />
           {questionIndex === 0 ? null : <Redirect to="/questions" />}
         </Route>
@@ -53,12 +43,6 @@ const MainApp = ({
             questionIndex={questionIndex}
             onSkipQuiz={skipQuiz}
           />
-        </Route>
-        <Route path="/participants">
-          <Link to='/load'>
-            <BackIcon style={{ float: 'left', margin: 10}} fontSize='medium'/>
-          </Link>
-          <Participants accessToken={accessToken}/>
         </Route>
       </Switch>
     </div>
