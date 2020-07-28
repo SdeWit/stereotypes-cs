@@ -1,5 +1,4 @@
 import { getQuiz } from "../utils/requests/getQuiz";
-import { getChild } from "../utils/sockets/queue";
 import { preload } from "../utils/preloaders/images";
 /*
   Get all the data from the server.
@@ -86,15 +85,3 @@ export const finishQuiz = () => {
   };
 };
 
-export const registerChild = (dispatch) => {
-  getChild(dispatch);
-  return {
-    type: "LOADING_NEW_CHILD",
-  };
-};
-
-export const removeActiveChild = () => {
-  return {
-    type: "REMOVE_ACTIVE_CHILD",
-  };
-};

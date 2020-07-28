@@ -2,7 +2,6 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Button from "@material-ui/core/Button";
 import { InputLabel } from "@material-ui/core";
-import { getResults } from "../utils/requests/getResults";
 import { getVersions } from "../utils/requests/getQuiz";
 import { FormControl, MenuItem, Select } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core";
@@ -26,10 +25,8 @@ const Load = (props) => {
 
   const [state, setstate] = useState({ isLoading: false, version: props.version });
   const [checkedVersion, setversion] = useState(props.version);
-  const [results, setresults] = useState(false);
   const [versions, setversions] = useState(false);
-  const ExcelFile = modules.modules.ExcelFile;
-  const ExcelSheet = modules.modules.ExcelSheet;
+
 
   useEffect(() => {
     if (props.loadFailed) setstate({ isLoading: false });
@@ -46,13 +43,6 @@ const Load = (props) => {
       fetchVersions();
     }
   }, [versions]);
-
-  // Fetch the results
-  const fetchResults = async () => {
-    getResults(props.accessToken)
-      .then((res) => setresults([res.data]))
-      .catch();
-  };
 
   // Get the versions of the quiz.
   // If any error occurs, always select the first version.
