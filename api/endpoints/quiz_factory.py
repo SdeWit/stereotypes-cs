@@ -74,6 +74,7 @@ class QuizFactory:
 
         self.response = []
         self.response.extend(self.gender_profession.create_iat(guide_text=False))
+        self.response.extend(self.social_profession.create_iat(guide_text=False)) #quick fix for more images
         self.create_ending(DEMO_QUIZ_END_TEXT)
         return self.response
 

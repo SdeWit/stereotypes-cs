@@ -6,7 +6,14 @@
     }
 
   ],
-  "social_profession": [],
+
+  "social_profession": [
+     {
+      "left_categ": [9],
+      "right_categ": [10]
+    }
+  ],
+
   "hobby_profession": [],
 
   "eat": [],
