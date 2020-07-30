@@ -85,7 +85,7 @@ COLLECTION_QUIZ_END_TEXT = "Bedankt voor het meedoen aan dit onderzoek! We wille
                 "wat je precies gedaan hebt aan andere kinderen die misschien nog mee willen doen.\n" \
                 "Steek je hand op, dan komt er zo snel mogelijk iemand naar je toe."
 
-DEMO_QUIZ_END_TEXT = "The demo is over! PLease wait to be assigned to a computer to take the test."
+DEMO_QUIZ_END_TEXT = "De demo is afgelopen! Wacht tot een assistent je naar de testcomputer brengt."
 
 INTERVENTION_VIDEO_TEXT = "Wat goed gedaan! Je hebt alle vragen gehad. " \
                           "Je mag nog een korte video kijken waarin we je vertellen wat een programmeur eigenlijk is."
