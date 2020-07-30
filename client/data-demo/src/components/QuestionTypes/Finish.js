@@ -7,11 +7,7 @@ import { connect } from "react-redux";
 import Button from "@material-ui/core/Button";
 import {
   Typography,
-  Checkbox,
-  TextField,
-  FormControlLabel,
   Grid,
-  InputLabel
 } from "@material-ui/core";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Container from "@material-ui/core/Container";
@@ -23,7 +19,6 @@ const Finish = (props) => {
 
   const [finish, setfinish] = useState(true);
   const [sendRequested, setsendRequested] = useState(false)
-  const [researcherCode, setresearcherCode] = useState("");
   const [dataFailed, setdataFailed] = useState(false)
 
   useEffect(() => {

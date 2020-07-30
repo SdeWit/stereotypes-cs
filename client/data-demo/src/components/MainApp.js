@@ -5,14 +5,10 @@ import Question from "../containers/Question";
 import PropTypes from "prop-types";
 import Start from "./Start";
 import Load from "./Load";
-import BackIcon from '@material-ui/icons/Backspace'
-import {Link} from 'react-router-dom'
 
 const MainApp = ({
-  shouldRemoveChild,
   setVersion,
   loadFailed = false,
-  hasActiveChild = false,
   questionIndex = 0,
   onQuestionChange,
   loadData,

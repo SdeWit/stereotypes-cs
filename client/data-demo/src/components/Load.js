@@ -2,13 +2,8 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Button from "@material-ui/core/Button";
 import { InputLabel } from "@material-ui/core";
-import { getVersions } from "../utils/requests/getQuiz";
-import { FormControl, MenuItem, Select } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core";
-import { Grid } from "@material-ui/core";
 import { Link } from "react-router-dom";
-
-var modules = require("react-export-excel");
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
@@ -38,21 +33,6 @@ const Load = (props) => {
     }
   }, [props.isDataLoaded]);
 
-  useEffect(() => {
-    if (!versions) {
-      fetchVersions();
-    }
-  }, [versions]);
-
-  // Get the versions of the quiz.
-  // If any error occurs, always select the first version.
-  const fetchVersions = async () => {
-    getVersions()
-      .then((res) => {
-        setversions(res.data);
-      })
-      .catch(setversions({ A: "Version 1" }));
-  };
 
   // Function to determine the version of the quiz to be loaded.
   // If the value string is 'R' the quiz is randomly selected.
