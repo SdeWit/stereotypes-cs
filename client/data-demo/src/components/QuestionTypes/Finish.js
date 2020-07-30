@@ -18,34 +18,14 @@ const Finish = (props) => {
   const classes = useStyles();
 
   const [finish, setfinish] = useState(true);
-  const [sendRequested, setsendRequested] = useState(false)
-  const [dataFailed, setdataFailed] = useState(false)
-
-  useEffect(() => {
-    if(props.sendDataStatus === 1 ) {
-      props.clearQuestionsStore();
-      props.onFinish();
-    }
-    if(props.sendDataStatus === 2) {
-      setdataFailed(true)
-      setTimeout(() => {
-        props.clearQuestionsStore();
-        props.onFinish();
-      }, 6000)
-    }
-  }, [props])
 
   const onCheck = (event) => {
     setfinish(!event.target.checked);
   };
 
-  //sequence of actions to be dispatched whne quiz ends
-  const onClickFinish = () => {
-    props.sendQuestionsAnswers(props.childId);
-  };
-
-  const onClickNext = () => {
-    props.onNext();
+  const onClick = () => {
+     props.clearQuestionsStore();
+     props.onFinish();
   };
 
   return (
@@ -74,9 +54,9 @@ const Finish = (props) => {
         <Button
           style={{ marginTop: 20 }}
           variant="contained"
-          onClick={finish ? () => {setsendRequested(true); onClickFinish()} : onClickNext}
+          onClick={onClick}
         >
-          {finish ? <span>EINDE</span> : <span>VOLGENDE</span>}
+          EINDE
         </Button>
       </Grid>
     </React.Fragment>
