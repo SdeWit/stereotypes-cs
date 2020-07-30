@@ -73,7 +73,7 @@ class QuizFactory:
         """
 
         self.response = []
-        self.response.extend(self.gender_profession.create_iat())
+        self.response.extend(self.gender_profession.create_iat(guide_text=False))
         self.create_ending(DEMO_QUIZ_END_TEXT)
         return self.response
 
@@ -177,6 +177,7 @@ class DemographicsFactory:
                 id=q_id).first().make_response())
         return self.response
 
+
 class ExperienceFactory:
     """
     Class that creates the experience questions
@@ -195,6 +196,7 @@ class ExperienceFactory:
             self.response.extend(Question.query.filter_by(
                 id=q_id).first().make_response())
         return self.response
+
 
 class EATFactory:
     """
@@ -226,14 +228,15 @@ class IATFactory:
         self.data = data
         self.response = []
 
-    def create_iat(self):
+    def create_iat(self, guide_text=True):
         """
         Creates an IAT response object
         :return: A list with all the IAT questions
         """
 
         for block_nr, phase in enumerate(self.data, 5 - len(self.data)):
-            self.create_guide_text(phase, block_nr)
+            if guide_text:
+                self.create_guide_text(phase, block_nr)
             self.load_phase(phase, block_nr)
         return self.response
 
