@@ -107,25 +107,25 @@ def populate():
     ]
 
     fruit_images = [
-        ("https://res.cloudinary.com/hctr0xmqp/image/upload/v1595871903/Demo/Apple_fbyk6p.png",
+        ("https://res.cloudinary.com/hctr0xmqp/image/upload/v1595959980/Demo/Apple_c9fqwu.png",
          "Apple"),
-        ("https://res.cloudinary.com/hctr0xmqp/image/upload/v1595871896/Demo/Banana_xqj79b.png",
+        ("https://res.cloudinary.com/hctr0xmqp/image/upload/v1595959980/Demo/Bannana_elcl8z.png",
          "Banana"),
-        ("https://res.cloudinary.com/hctr0xmqp/image/upload/v1595871896/Demo/Orange_mh1nol.png",
+        ("https://res.cloudinary.com/hctr0xmqp/image/upload/v1595959980/Demo/Orange_o7l4il.png",
          "Orange"),
-        ("https://res.cloudinary.com/hctr0xmqp/image/upload/v1595871896/Demo/Strawberry_cfezk5.jpg",
+        ("https://res.cloudinary.com/hctr0xmqp/image/upload/v1595959980/Demo/Strawberry_ml06ja.png",
          "Strawberry")
     ]
 
     vegetable_images = [
-        ("https://res.cloudinary.com/hctr0xmqp/image/upload/v1595873074/Demo/Lettuce_ivs3nh.png",
-         "Lettuce"),
-        ("https://res.cloudinary.com/hctr0xmqp/image/upload/v1595873074/Demo/Carrot_xe0gef.png",
+        ("https://res.cloudinary.com/hctr0xmqp/image/upload/v1595959980/Demo/Cabbage_dsdze3.png",
+         "Cabbage"),
+        ("https://res.cloudinary.com/hctr0xmqp/image/upload/v1595959981/Demo/Carrot_iv5zhx.png",
          "Carrot"),
-        ("https://res.cloudinary.com/hctr0xmqp/image/upload/v1595873074/Demo/Pepper_jgjrkx.png",
+        ("https://res.cloudinary.com/hctr0xmqp/image/upload/v1595959980/Demo/Pepper_z4qqm8.png",
          "Pepper"),
-        ("https://res.cloudinary.com/hctr0xmqp/image/upload/v1595873074/Demo/Cucumber_bddcka.png",
-         "Cucumber")
+        ("https://res.cloudinary.com/hctr0xmqp/image/upload/v1595959981/Demo/Broccoli_kl78u7.png",
+         "Broccoli")
     ]
 
     for link in male_images:

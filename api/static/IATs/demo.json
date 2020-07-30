@@ -4,16 +4,15 @@
       "left_categ": [9],
       "right_categ": [10]
     }
+
   ],
   "social_profession": [],
   "hobby_profession": [],
 
   "eat": [],
 
-  "video": {
-    "id": 21,
-    "before": false
-  },
+  "video": {},
+
   "demographics": [],
 
   "experience": []

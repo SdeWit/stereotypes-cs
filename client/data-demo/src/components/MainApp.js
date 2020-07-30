@@ -29,10 +29,7 @@ const MainApp = ({
           <Load  version={version} isDataLoaded={isDataLoaded} loadFailed={loadFailed} accessToken={accessToken} onLoadData={(version) => {setVersion(version); loadData(accessToken, version)}} />
         </Route>
         <Route path="/app">
-            <Link to='/load'>
-            <BackIcon style={{ float: 'left', margin: 10}} fontSize='medium'/>
-          </Link>
-          <Start canStart={!hasActiveChild} onClick={() => onQuestionChange(questionIndex).questions} />
+          <Start canStart={isDataLoaded} onClick={() => onQuestionChange(questionIndex).questions} />
           {questionIndex === 0 ? null : <Redirect to="/questions" />}
         </Route>
         <Route path="/questions">

@@ -80,15 +80,9 @@ const Finish = (props) => {
           style={{ marginTop: 20 }}
           variant="contained"
           onClick={finish ? () => {setsendRequested(true); onClickFinish()} : onClickNext}
-          //disabled={researcherCode !== "NEMO" || dataFailed || sendRequested}
         >
           {finish ? <span>EINDE</span> : <span>VOLGENDE</span>}
         </Button>
-      </Grid>
-      <Grid>
-        <InputLabel error style={{visibility: dataFailed ? 'visible' : 'hidden', marginTop: 20}}>
-          Data failed to be sent. NO data was lost! Data has been printed in logs. You will now be redirected to main page.
-        </InputLabel>
       </Grid>
     </React.Fragment>
   );

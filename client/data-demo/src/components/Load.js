@@ -66,9 +66,6 @@ const Load = (props) => {
 
   return (
     <div style={{ width: "50%", paddingTop: 200, margin: "auto" }}>
-      <Grid container spacing={2}>
-        {/* LOAD QUESTIONS BUTTON */}
-        <Grid item xs={6} style={{ textAlign: "left", margin: "auto" }}>
           <Button
             style={{ margin: "auto" }}
             variant="contained"
@@ -80,10 +77,8 @@ const Load = (props) => {
             }}
           >
             {" "}
-            LOAD QUESTIONS{" "}
+            LOAD DEMO{" "}
           </Button>
-        </Grid>
-      </Grid>
       {/* ERROR MESSAGE */}
       <InputLabel
         error

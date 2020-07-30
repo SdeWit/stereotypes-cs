@@ -1,7 +1,6 @@
 import BinaryQuestion from "../components/QuestionTypes/BinaryQuestion";
 import LikertScaleQuestion from "../components/QuestionTypes/LikertScaleQuestion.js";
 import React from "react";
-import Video from "../components/QuestionTypes/Video";
 import Information from "../components/QuestionTypes/Information";
 import Finish from "../components/QuestionTypes/Finish";
 import MultipleChoice from "../components/QuestionTypes/MultipleChoice";
@@ -18,7 +17,6 @@ Create mapping between type and Component to be rendered
 const mapTypeToComponent = {
   binary: BinaryQuestion,
   likert: LikertScaleQuestion,
-  video: Video,
   information: Information,
   finish: Finish,
   mc_single_answer: MultipleChoice,

@@ -25,7 +25,9 @@ const useStyles = makeStyles((theme) => ({
   link: {
     margin: theme.spacing(1, 1.5),
   },
-  heroContent: {},
+  heroContent: {
+     marginTop: theme.spacing(20),
+  },
   cardHeader: {
     backgroundColor:
       theme.palette.type === "light"
@@ -63,7 +65,7 @@ const Start = (props) => {
           color="textPrimary"
           gutterBottom
         >
-          Welkom bij Nemo
+          Welkom bij Nemo (Demo Quiz)
         </Typography>
         <Typography
           variant="h5"
