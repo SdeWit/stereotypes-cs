@@ -141,6 +141,7 @@ def populate():
     create_images(gaming_images, c_gaming.id)
     create_images(tennis_images, c_tennis.id)
     create_images(alone_images, c_alone.id)
+    create_images(together_images, c_together.id)
     create_images(fruit_images, c_fruit.id)
     create_images(vegetable_images, c_vegetable.id)
 
