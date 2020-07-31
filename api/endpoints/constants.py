@@ -68,6 +68,14 @@ BLOCK_START_TEXT = [
      },
 ]
 
+BLOCK_START_AUDIO = [
+    {"audio" : ''},
+    {"audio" : ''},
+    {"audio" : ''},
+    {"audio" : ''},
+    {"audio" : ''},
+]
+
 BLOCK_END_TEXT = "Tip: Zet je linker wijsvinger op de ‘e’, en je rechter wijsvinger op de ‘i’, zo kun je " \
                  "snel plaatjes verplaatsen! Ben je er klaar voor? Druk dan op volgende."
 

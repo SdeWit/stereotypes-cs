@@ -231,6 +231,7 @@ class IATFactory:
 
         for block_nr, phase in enumerate(self.data, 5 - len(self.data)):
             self.create_guide_text(phase, block_nr)
+            self.create_guide(phase, block_nr)
             self.load_phase(phase, block_nr)
         return self.response
 
@@ -333,3 +334,16 @@ class IATFactory:
         guide_text['images0'] = images0
         guide_text['images1'] = images1
         self.response.append(guide_text)
+
+    def create_guide_audio(self, phase, block_nr):
+        """
+        Creates the audio before a phase in a IAT
+        :return: The audio to be showed before the phase
+        """
+
+        guide_audio = BLOCK_START_AUDIO[block_nr].copy()
+
+        if block_nr == 0:
+            self.response.append(guide_text)
+        else:
+            self.response.append(guide_text)

@@ -63,8 +63,6 @@ const Information = (props) => {
   const [hasNext, sethasNext] = useState(false);
   const [startsIn, setStartIn] = useState(false);
 
-  const likeAudio = new Audio(props.audio);
-
   const playSound = audioFile => {
     audioFile.play();
 }
@@ -159,7 +157,7 @@ const Information = (props) => {
           <Container>
             <Grid item xs={6}>
               <Button
-                  onClick={() => playSound(likeAudio)}
+                  onClick={() => playSound(new Audio(props.audio))}
                   variant="contained"
                   color="primary"
               > Voorlezen
