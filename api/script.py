@@ -39,12 +39,13 @@ def populate():
         'https://res.cloudinary.com/hwutobbxz/image/upload/v1596200563/gender/boy-1_hm8jgs.png',
         'https://res.cloudinary.com/hwutobbxz/image/upload/v1596200563/gender/boy-2_xzh71v.png',
         'https://res.cloudinary.com/hwutobbxz/image/upload/v1596200563/gender/boy-3_dkzdxu.png',
-        'https://res.cloudinary.com/hwutobbxz/image/upload/v1596200563/gender/boy-4_oubhbd.png']
+        'https://res.cloudinary.com/hwutobbxz/image/upload/v1596200563/gender/boy-4_oubhbd.png'
+    ]
 
     female_images = [
         'https://res.cloudinary.com/hwutobbxz/image/upload/v1596200563/gender/girl-1_um01eh.png',
         'https://res.cloudinary.com/hwutobbxz/image/upload/v1596200563/gender/girl-2_kmilzm.png',
-        'https://res.cloudinary.com/hwutobbxz/image/upload/v1596200564/gender/girl-3_vnqj3q.png,
+        'https://res.cloudinary.com/hwutobbxz/image/upload/v1596200564/gender/girl-3_vnqj3q.png',
         'https://res.cloudinary.com/hwutobbxz/image/upload/v1596200564/gender/girl-4_zfdrct.png'
     ]
 

@@ -90,11 +90,11 @@ COLLECTION_QUIZ_END_TEXT = "Bedankt voor het meedoen aan dit onderzoek! We wille
 INTERVENTION_VIDEO_TEXT = "Wat goed gedaan! Je hebt alle vragen gehad. " \
                           "Je mag nog een korte video kijken waarin we je vertellen wat een programmeur eigenlijk is."
 
-INTERVENTION_VIDEO_AUDIO = ''
+INTERVENTION_VIDEO_AUDIO = 'https://res.cloudinary.com/hwutobbxz/video/upload/v1596203599/audio/control-video_ofvne3.m4a'
 
 CONTROL_VIDEO_TEXT = "Allereerst ga je naar een video kijken waarin we je uitleg geven over het beroep ‘programmeur’."
 
-CONTROL_VIDEO_AUDIO = ''
+CONTROL_VIDEO_AUDIO = 'https://res.cloudinary.com/hwutobbxz/video/upload/v1596203599/audio/intervention-video_otawa1.m4a'
 
 DISSEMINATION_RESULT_MALE = "Volgens deze test associeert u programmeren met mannen."
 
