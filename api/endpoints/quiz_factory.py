@@ -342,8 +342,7 @@ class IATFactory:
         """
 
         guide_audio = BLOCK_START_AUDIO[block_nr].copy()
+        self.response.append({"audio": guide_audio[c_left[0][0].lower()})
 
-        if block_nr == 0:
-            self.response.append(guide_audio['audio'])
-        else:
-            self.response.append(guide_audio['audio'])
+    #  c_left[0][0]
+    # jongen, meisje, programmeur, schrijver, alleen, samen, videospelletjes spelen, tennisen, fruit, groente

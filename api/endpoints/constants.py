@@ -68,12 +68,42 @@ BLOCK_START_TEXT = [
      },
 ]
 
+jongen, meisje, programmeur, schrijver, alleen, samen, videospelletjes spelen, tennisen, fruit, groente
+# audio file begins with left category
 BLOCK_START_AUDIO = [
-    {"audio" : ''},
-    {"audio" : ''},
-    {"audio" : ''},
-    {"audio" : ''},
-    {"audio" : ''},
+    {"programmeur" : ''},
+
+    {"jongen" : '',
+    "meisje" : '',
+    "alleen" : '',
+    "samen" : '',
+    "videospelletjes spelen" : '',
+    "tennisen" : '',
+    },
+
+    {"jongen" : '',
+    "meisje" : '',
+    "alleen" : '',
+    "samen" : '',
+    "videospelletjes spelen" : '',
+    "tennisen" : '',
+    },
+
+    {"jongen" : '',
+    "meisje" : '',
+    "alleen" : '',
+    "samen" : '',
+    "videospelletjes spelen" : '',
+    "tennisen" : '',
+    },
+
+    {"jongen" : '',
+    "meisje" : '',
+    "alleen" : '',
+    "samen" : '',
+    "videospelletjes spelen" : '',
+    "tennisen" : '',
+    },
 ]
 
 BLOCK_END_TEXT = "Tip: Zet je linker wijsvinger op de ‘e’, en je rechter wijsvinger op de ‘i’, zo kun je " \
