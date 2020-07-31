@@ -69,7 +69,7 @@ BLOCK_START_TEXT = [
 ]
 
 BLOCK_END_TEXT = "Tip: Zet je linker wijsvinger op de ‘e’, en je rechter wijsvinger op de ‘i’, zo kun je " \
-                 "snel plaatjes verplaatsen! </br > Ben je er klaar voor? Druk dan op volgende."
+                 "snel plaatjes verplaatsen! </br> Ben je er klaar voor? Druk dan op volgende."
 
 FINAL_BLOCK_TEXT = {
 
@@ -90,7 +90,11 @@ COLLECTION_QUIZ_END_TEXT = "Bedankt voor het meedoen aan dit onderzoek! We wille
 INTERVENTION_VIDEO_TEXT = "Wat goed gedaan! Je hebt alle vragen gehad. " \
                           "Je mag nog een korte video kijken waarin we je vertellen wat een programmeur eigenlijk is."
 
+INTERVENTION_VIDEO_AUDIO = ''
+
 CONTROL_VIDEO_TEXT = "Allereerst ga je naar een video kijken waarin we je uitleg geven over het beroep ‘programmeur’."
+
+CONTROL_VIDEO_AUDIO = ''
 
 DISSEMINATION_RESULT_MALE = "Volgens deze test associeert u programmeren met mannen."
 
