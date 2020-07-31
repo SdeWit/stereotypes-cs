@@ -27,10 +27,23 @@ const MultipleChoice = (props) => {
       question_id: props.id,
     });
   };
+
+  const playSound = audioFile => {
+    audioFile.play();
+  }
+  
   return (
     <React.Fragment>
       <CssBaseline />
       <Container maxWidth="sm" component="main" className={classes.heroContent}>
+
+      <Button
+              onClick={() => playSound(new Audio(props.audio))}
+              variant="contained"
+              color="primary"
+          > Geluid
+      </Button>
+
         <Typography
           component="p"
           variant="h4"

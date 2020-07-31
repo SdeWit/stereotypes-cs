@@ -170,7 +170,7 @@ def populate():
 
     #15
     Question.create_question(
-        q_type=QuestionType.open_question, text="Wat doet een programmeur?")
+        q_type=QuestionType.open_question, text="Wat doet een programmeur?", audio='https://res.cloudinary.com/hwutobbxz/video/upload/v1596200543/audio/15_kgj5ql.m4a')
 
     video_female = Image.create_image(link="173d_-zTd1o", description='Role model intervention',
                                       attribute='Female')
@@ -186,7 +186,8 @@ def populate():
     # demographics
     ## 17 18 19
     mc_1 = Question.create_question(q_type=QuestionType.mc_single_answer, text="Hoe oud ben je?",
-                                    information=ParticipantInformationType.age)
+                                    information=ParticipantInformationType.age, 
+                                    audio='https://res.cloudinary.com/hwutobbxz/video/upload/v1596200542/audio/17_fcwq8f.m4a')
     for i in range(6, 19):
         QuestionChoice.create_choice(
             choice_num=i - 5, q_id=mc_1.id, text=str(i))
@@ -194,14 +195,16 @@ def populate():
 
     mc_2 = Question.create_question(q_type=QuestionType.mc_multiple_answer,
                                     text="Waar zijn jouw ouders/verzorgers geboren? Er zijn meerdere antwoorden mogelijk.",
-                                    information=ParticipantInformationType.ethnicity)
+                                    information=ParticipantInformationType.ethnicity,
+                                    audio='https://res.cloudinary.com/hwutobbxz/video/upload/v1596200543/audio/18_etdcmb.m4a')
     for i, ethnicity in enumerate(Ethnicity.__iter__(), 1):
         QuestionChoice.create_choice(
             choice_num=i, q_id=mc_2.id, text=ethnicity.value)
 
     mc_3 = Question.create_question(q_type=QuestionType.mc_single_answer,
                                     text="Ik voel me een ...",
-                                    information=ParticipantInformationType.gender)
+                                    information=ParticipantInformationType.gender,
+                                    audio='https://res.cloudinary.com/hwutobbxz/video/upload/v1596200542/audio/19_iiqikw.m4a')
     for i, gender in enumerate(Gender.__iter__(), 1):
         QuestionChoice.create_choice(
             choice_num=i, q_id=mc_3.id, text=gender.value)
@@ -220,14 +223,16 @@ def populate():
     ## 22 23
     mc_4 = Question.create_question(q_type=QuestionType.mc_single_answer,
                                     text="Heb je wel eens geprogrammeerd? Er zijn meerdere antwoorden mogelijk",
-                                    information=ParticipantInformationType.experience)
+                                    information=ParticipantInformationType.experience,
+                                    audio='https://res.cloudinary.com/hwutobbxz/video/upload/v1596200543/audio/22_jlrycd.m4a')
     for i, experience in enumerate(Experience.__iter__(), 1):
         QuestionChoice.create_choice(
             choice_num=i, q_id=mc_4.id, text=experience.value)
 
     mc_5 = Question.create_question(q_type=QuestionType.mc_single_answer,
                                     text="Ken jij een programmeur? Er zijn meerdere antwoorden mogelijk",
-                                    information=ParticipantInformationType.familiar)
+                                    information=ParticipantInformationType.familiar,
+                                    audio='https://res.cloudinary.com/hwutobbxz/video/upload/v1596200543/audio/23_iicnjg.m4a')
     for i, familiar in enumerate(Familiar.__iter__(), 1):
         QuestionChoice.create_choice(
             choice_num=i, q_id=mc_5.id, text=familiar.value)
