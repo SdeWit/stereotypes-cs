@@ -344,6 +344,6 @@ class IATFactory:
         guide_audio = BLOCK_START_AUDIO[block_nr].copy()
 
         if block_nr == 0:
-            self.response.append(guide_text)
+            self.response.append(guide_audio['audio'])
         else:
-            self.response.append(guide_text)
+            self.response.append(guide_audio['audio'])
