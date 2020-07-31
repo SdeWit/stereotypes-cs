@@ -84,14 +84,6 @@ const Information = (props) => {
         </div>
       ) : (
         <React.Fragment>
-
-          <Button
-              onClick={() => playSound(likeAudio)}
-              variant="contained"
-              color="primary"
-          > Geluid
-          </Button>
-
           <Typography
             variant="h5"
             align="center"
@@ -163,21 +155,37 @@ const Information = (props) => {
               </Typography>
             </div>
           </Container>
-          <Button
-            variant="contained"
-            style={{ marginTop: 20 }}
-            onClick={() => {
-              sethasNext(true);
-              setTimeout(props.onNext, 4000);
-              setStartIn(3);
-              setTimeout(() => setStartIn(2), 1000);
-              setTimeout(() => setStartIn(1), 2000);
-              setTimeout(() => setStartIn("Start!"), 3000);
-            }}
-            disabled={hasNext}
-          >
-            Volgende
-          </Button>
+
+          <Container>
+            <Grid item xs={6}>
+              <Button
+                  onClick={() => playSound(likeAudio)}
+                  variant="contained"
+                  color="primary"
+              > Voorlezen
+              </Button>
+            </Grid>
+
+            <Grid item xs={6}>
+              <Button
+                variant="contained"
+                style={{ marginTop: 20 }}
+                onClick={() => {
+                  sethasNext(true);
+                  setTimeout(props.onNext, 4000);
+                  setStartIn(3);
+                  setTimeout(() => setStartIn(2), 1000);
+                  setTimeout(() => setStartIn(1), 2000);
+                  setTimeout(() => setStartIn("Start!"), 3000);
+                }}
+                disabled={hasNext}
+              >
+                Volgende
+              </Button> 
+            </Grid>
+            
+          </Container>
+          
         </React.Fragment>
       )}
     </React.Fragment>

@@ -124,15 +124,29 @@ const MultipleChoiceSpecial = (props) => {
                 </div>
               </CardContent>
             </Card>
-            <Button
-              style={{ marginTop: "20px" }}
-              className={classes.nextButton}
-              variant="contained"
-              disabled={ticked === 0}
-              onClick={onClick}
-            >
-              VOLGENDE
-            </Button>
+
+            <Grid item xs={6}>
+              <Button
+                onClick={() => playSound(new Audio(props.audio))}
+                variant="contained"
+                color="primary"
+                > 
+                Voorlezen
+              </Button>
+            </Grid>
+
+            <Grid item xs={6}>
+              <Button
+                style={{ marginTop: "20px" }}
+                className={classes.nextButton}
+                variant="contained"
+                disabled={ticked === 0}
+                onClick={onClick}
+              >
+                VOLGENDE
+              </Button>
+            </Grid>
+           
           </Grid>
         </Grid>
       </Container>

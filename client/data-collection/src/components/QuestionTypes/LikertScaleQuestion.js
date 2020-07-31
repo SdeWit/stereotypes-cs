@@ -142,14 +142,6 @@ const LikertScaleQuestion = (props) => {
     <React.Fragment>
       <CssBaseline />
       <Container maxWidth='sm' component='main' className={classes.heroContent}>
-
-      <Button
-              onClick={() => playSound(new Audio(props.audio))}
-              variant="contained"
-              color="primary"
-          > Geluid
-      </Button>
-
         <Typography
           component='p'
           variant='h4'
@@ -179,15 +171,28 @@ const LikertScaleQuestion = (props) => {
                 />
               </CardContent>
             </Card>
-            <Button
-              style={{ marginTop: '20px' }}
-              className={classes.nextButton}
-              variant='contained'
-              disabled={state.answers.length === 0}
-              onClick={onClick}
-            >
-              VOLGENDE
-            </Button>
+           
+            <Grid item xs={6}>
+              <Button
+                  onClick={() => playSound(likeAudio)}
+                  variant="contained"
+                  color="primary"
+              > Voorlezen
+              </Button>
+            </Grid>
+
+            <Grid item xs={6}>
+              <Button
+                style={{ marginTop: '20px' }}
+                className={classes.nextButton}
+                variant='contained'
+                disabled={state.answers.length === 0}
+                onClick={onClick}
+              >
+                VOLGENDE
+              </Button>
+            </Grid>
+            
           </Grid>
         </Grid>
       </Container>

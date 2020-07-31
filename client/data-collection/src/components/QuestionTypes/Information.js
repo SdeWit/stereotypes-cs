@@ -9,6 +9,10 @@ const Information = (props) => {
   /*eslint-disable */
   const classes = useStyles();
 
+  const playSound = audioFile => {
+    audioFile.play();
+  }
+
   return (
     <React.Fragment>
       <CssBaseline />
@@ -22,13 +26,30 @@ const Information = (props) => {
           {props.text}
         </Typography>
       </Container>
-      <Button
-        variant="contained"
-        style={{ marginTop: 20 }}
-        onClick={props.onNext}
-      >
-        VOLGENDE
-      </Button>
+      
+      <Container>
+        <Grid item xs={6}>
+          <Button
+                  onClick={() => playSound(new Audio(props.audio))}
+                  variant="contained"
+                  color="primary"
+              > 
+              Voorlezen
+          </Button>
+        </Grid>
+        <Grid item xs={6}>
+          <Button
+            variant="contained"
+            style={{ marginTop: 20 }}
+            onClick={props.onNext}
+          >
+            VOLGENDE
+        </Button>
+        </Grid>
+      </Container>
+
+
+
     </React.Fragment>
   );
 };

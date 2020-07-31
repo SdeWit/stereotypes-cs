@@ -37,13 +37,6 @@ const MultipleChoice = (props) => {
       <CssBaseline />
       <Container maxWidth="sm" component="main" className={classes.heroContent}>
 
-      <Button
-              onClick={() => playSound(new Audio(props.audio))}
-              variant="contained"
-              color="primary"
-          > Geluid
-      </Button>
-
         <Typography
           component="p"
           variant="h4"
@@ -99,15 +92,29 @@ const MultipleChoice = (props) => {
                 </RadioGroup>
               </CardContent>
             </Card>
-            <Button
-              style={{ marginTop: "20px" }}
-              className={classes.nextButton}
-              variant="contained"
-              disabled={state.answers.length === 0}
-              onClick={onClick}
-            >
-              VOLGENDE
-            </Button>
+
+            <Grid item xs={6}>
+              <Button
+                onClick={() => playSound(new Audio(props.audio))}
+                variant="contained"
+                color="primary"
+                > 
+                Voorlezen
+              </Button>
+            </Grid>
+
+            <Grid item xs={6}>
+              <Button
+                style={{ marginTop: "20px" }}
+                className={classes.nextButton}
+                variant="contained"
+                disabled={state.answers.length === 0}
+                onClick={onClick}
+              >
+                VOLGENDE
+              </Button> 
+            </Grid>
+            
           </Grid>
         </Grid>
       </Container>
