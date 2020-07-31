@@ -94,7 +94,7 @@ const Information = (props) => {
           </Typography>
 
           <Container maxWidth component="main" className={classes.heroContent}>
-            <div style={{ paddingTop: 30 }}>
+            <div style={{ paddingTop: 25 }}>
               <Typography
                 variant="h5"
                 align="center"
@@ -119,7 +119,7 @@ const Information = (props) => {
                 </GridListTile>
               ))}
             </GridList>
-            <div style={{ paddingTop: 25 }}>
+            <div style={{ paddingTop: 15 }}>
               <Typography
                 variant="h5"
                 align="center"
@@ -144,7 +144,7 @@ const Information = (props) => {
                 </GridListTile>
               ))}
             </GridList>
-            <div style={{ paddingTop: 25 }}>
+            <div style={{ paddingTop: 15 }}>
               <Typography
                 variant="h5"
                 align="center"
