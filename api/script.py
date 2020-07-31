@@ -1,6 +1,6 @@
 # pylint: disable=line-too-long, too-many-locals, too-many-statements
 """Populates the database with data (categories, images, questions)"""
-from api.models import Category, Metacategory, Image, Audio, Question, \
+from api.models import Category, Metacategory, Image, Question, \
     QuestionType, QuestionChoice, Ethnicity, Gender, User, ParticipantInformationType, Experience, Familiar
 
 from api import db
@@ -151,7 +151,7 @@ def populate():
     ## Demographics 1-5
     create_likert("Ik maak makkelijk vrienden en werk graag samen.", 'https://res.cloudinary.com/hctr0xmqp/video/upload/v1596188858/sound_fyfb3p.mp3')
     create_likert("Ik ben gek op computers", 'https://res.cloudinary.com/hctr0xmqp/video/upload/v1596188858/sound_fyfb3p.mp3')
-    create_likert("Ik vind het leukst om te", 'https://res.cloudinary.com/hctr0xmqp/video/upload/v1596188858/sound_fyfb3p.mp3')
+    create_likert("Ik vind het het leukst om te", 'https://res.cloudinary.com/hctr0xmqp/video/upload/v1596188858/sound_fyfb3p.mp3')
     create_likert("Als ik dat zou willen, zou ik later programmeur kunnen worden.",'https://res.cloudinary.com/hctr0xmqp/video/upload/v1596188858/sound_fyfb3p.mp3')
     create_likert("Ik wil later programmeur worden", 'https://res.cloudinary.com/hctr0xmqp/video/upload/v1596188858/sound_fyfb3p.mp3')
 
@@ -162,7 +162,7 @@ def populate():
     create_likert("Welk beroep vind jij iets voor meisjes?", 'https://res.cloudinary.com/hctr0xmqp/video/upload/v1596188858/sound_fyfb3p.mp3')
     create_likert("Welk beroep vind jij iets voor jongens?", 'https://res.cloudinary.com/hctr0xmqp/video/upload/v1596188858/sound_fyfb3p.mp3')
     
-    ## 10-14
+    ## 11-14
     create_likert("Programmeurs maken makkelijk vrienden en werken graag samen.", 'https://res.cloudinary.com/hctr0xmqp/video/upload/v1596188858/sound_fyfb3p.mp3')
     create_likert("Programmeurs zijn gek op computers en hebben weinig andere hobby’s.", 'https://res.cloudinary.com/hctr0xmqp/video/upload/v1596188858/sound_fyfb3p.mp3')
     create_likert("Programmeur zijn, dat is een beroep voor", 'https://res.cloudinary.com/hctr0xmqp/video/upload/v1596188858/sound_fyfb3p.mp3')

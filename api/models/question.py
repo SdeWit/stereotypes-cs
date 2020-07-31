@@ -64,7 +64,7 @@ class Question(db.Model):
                               backref=db.backref('question', lazy=True),
                               lazy=True)
     images = db.relationship(Image, secondary="questions_to_images", lazy=True)
-    audio = db.Column(db.Audio, nullable=True)
+    audio = db.Column(db.Text, nullable=True)
 
     @staticmethod
     def create_question(q_type, is_active=True, text="", information=None,
