@@ -172,9 +172,9 @@ def populate():
     Question.create_question(
         q_type=QuestionType.open_question, text="Wat doet een programmeur?", audio='https://res.cloudinary.com/hwutobbxz/video/upload/v1596200543/audio/15_kgj5ql.m4a')
 
-    video_female = Image.create_image(link="173d_-zTd1o", description='Role model intervention',
+    video_female = Image.create_image(link="B3600xjaz3Y", description='Role model intervention',
                                       attribute='Female')
-    video_male = Image.create_image(link="hEMOMVZbSBE", description='Role model intervention',
+    video_male = Image.create_image(link="SwISXzPoNUQ", description='Role model intervention',
                                     attribute='Male')
 
     # video_question 16

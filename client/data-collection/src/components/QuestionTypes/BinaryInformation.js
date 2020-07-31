@@ -63,7 +63,7 @@ const Information = (props) => {
   const [hasNext, sethasNext] = useState(false);
   const [startsIn, setStartIn] = useState(false);
 
-  const likeAudio = new Audio('https://res.cloudinary.com/hwutobbxz/video/upload/v1596200543/audio/intro_hgujds.m4a');
+  const likeAudio = new Audio(props.audio);
 
   const playSound = audioFile => {
     audioFile.play();

@@ -101,6 +101,7 @@ class QuizFactory:
         self.response.append({
             "q_type": QuestionType.information.value,
             "text": beginning_text
+            "audio": 'https://res.cloudinary.com/hwutobbxz/video/upload/v1596200543/audio/intro_hgujds.m4a'
         })
 
     def create_end_iat_text(self):
