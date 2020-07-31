@@ -149,7 +149,7 @@ def populate():
     # Audio.create_audio(link_audio[0], description='', attribute=link_audio[1], c_id=c_id)
     # likert
     ## Demographics 1-5
-    create_likert("Ik ben maak makkelijk vrienden en werk graag samen.", 'https://res.cloudinary.com/hctr0xmqp/video/upload/v1596188858/sound_fyfb3p.mp3')
+    create_likert("Ik maak makkelijk vrienden en werk graag samen.", 'https://res.cloudinary.com/hctr0xmqp/video/upload/v1596188858/sound_fyfb3p.mp3')
     create_likert("Ik ben gek op computers", 'https://res.cloudinary.com/hctr0xmqp/video/upload/v1596188858/sound_fyfb3p.mp3')
     create_likert("Ik vind het leukst om te", 'https://res.cloudinary.com/hctr0xmqp/video/upload/v1596188858/sound_fyfb3p.mp3')
     create_likert("Als ik dat zou willen, zou ik later programmeur kunnen worden.",'https://res.cloudinary.com/hctr0xmqp/video/upload/v1596188858/sound_fyfb3p.mp3')
