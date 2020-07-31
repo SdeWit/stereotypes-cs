@@ -1,6 +1,6 @@
 # pylint: disable=line-too-long, too-many-locals, too-many-statements
 """Populates the database with data (categories, images, questions)"""
-from api.models import Category, Metacategory, Image, Question, \
+from api.models import Category, Metacategory, Image, Audio, Question, \
     QuestionType, QuestionChoice, Ethnicity, Gender, User, ParticipantInformationType, Experience, Familiar
 
 from api import db
@@ -144,26 +144,28 @@ def populate():
     create_images(fruit_images, c_fruit.id)
     create_images(vegetable_images, c_vegetable.id)
 
+    # audio files
+    # Audio.create_audio(link_audio[0], description='', attribute=link_audio[1], c_id=c_id)
     # likert
     ## Demographics 1-5
-    create_likert("Ik ben maak makkelijk vrienden en werk graag samen.")
-    create_likert("Ik ben gek op computers")
-    create_likert("Ik vind het leukst om te")
-    create_likert("Als ik dat zou willen, zou ik later programmeur kunnen worden.")
-    create_likert("Ik wil later programmeur worden")
+    create_likert("Ik ben maak makkelijk vrienden en werk graag samen.", 'https://res.cloudinary.com/hctr0xmqp/video/upload/v1596188858/sound_fyfb3p.mp3')
+    create_likert("Ik ben gek op computers", 'https://res.cloudinary.com/hctr0xmqp/video/upload/v1596188858/sound_fyfb3p.mp3')
+    create_likert("Ik vind het leukst om te", 'https://res.cloudinary.com/hctr0xmqp/video/upload/v1596188858/sound_fyfb3p.mp3')
+    create_likert("Als ik dat zou willen, zou ik later programmeur kunnen worden.",'https://res.cloudinary.com/hctr0xmqp/video/upload/v1596188858/sound_fyfb3p.mp3')
+    create_likert("Ik wil later programmeur worden", 'https://res.cloudinary.com/hctr0xmqp/video/upload/v1596188858/sound_fyfb3p.mp3')
 
     ## 6-10
-    create_likert("Wie maakt het makkelijkst vrienden en werkt het liefst samen?")
-    create_likert("Wie speelt er het liefste videospelletjes?")
-    create_likert("Wie speelt er het liefste tennis?")
-    create_likert("Welk beroep vind jij iets voor meisjes?")
-    create_likert("Welk beroep vind jij iets voor jongens?")
+    create_likert("Wie maakt het makkelijkst vrienden en werkt het liefst samen?", 'https://res.cloudinary.com/hctr0xmqp/video/upload/v1596188858/sound_fyfb3p.mp3')
+    create_likert("Wie speelt er het liefste videospelletjes?", 'https://res.cloudinary.com/hctr0xmqp/video/upload/v1596188858/sound_fyfb3p.mp3')
+    create_likert("Wie speelt er het liefste tennis?", 'https://res.cloudinary.com/hctr0xmqp/video/upload/v1596188858/sound_fyfb3p.mp3')
+    create_likert("Welk beroep vind jij iets voor meisjes?", 'https://res.cloudinary.com/hctr0xmqp/video/upload/v1596188858/sound_fyfb3p.mp3')
+    create_likert("Welk beroep vind jij iets voor jongens?", 'https://res.cloudinary.com/hctr0xmqp/video/upload/v1596188858/sound_fyfb3p.mp3')
     
     ## 10-14
-    create_likert("Programmeurs maken makkelijk vrienden en werken graag samen.")
-    create_likert("Programmeurs zijn gek op computers en hebben weinig andere hobby’s.")
-    create_likert("Programmeur zijn, dat is een beroep voor")
-    create_likert("Vraag 14")
+    create_likert("Programmeurs maken makkelijk vrienden en werken graag samen.", 'https://res.cloudinary.com/hctr0xmqp/video/upload/v1596188858/sound_fyfb3p.mp3')
+    create_likert("Programmeurs zijn gek op computers en hebben weinig andere hobby’s.", 'https://res.cloudinary.com/hctr0xmqp/video/upload/v1596188858/sound_fyfb3p.mp3')
+    create_likert("Programmeur zijn, dat is een beroep voor", 'https://res.cloudinary.com/hctr0xmqp/video/upload/v1596188858/sound_fyfb3p.mp3')
+    create_likert("Vraag 14", 'https://res.cloudinary.com/hctr0xmqp/video/upload/v1596188858/sound_fyfb3p.mp3')
 
     #15
     Question.create_question(
@@ -244,10 +246,9 @@ def create_images(link_array, c_id):
         Image.create_image(link=link[0], description='',
                            attribute=link[1], c_id=c_id)
 
-
-def create_likert(text):
+def create_likert(text, link_audio):
     """
-    Inserts a likert question with text
+    Inserts a likert question with text and audio
 
     Parameters
     ----------
@@ -255,4 +256,5 @@ def create_likert(text):
         text for the question.
     """
     Question.create_question(q_type=QuestionType.likert,
-                             text=text)
+                             text=text, audio=link_audio)
+    
