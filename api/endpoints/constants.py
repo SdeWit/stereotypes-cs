@@ -69,7 +69,7 @@ BLOCK_START_TEXT = [
 ]
 
 BLOCK_END_TEXT = "Tip: Zet je linker wijsvinger op de ‘e’, en je rechter wijsvinger op de ‘i’, zo kun je " \
-                 "snel plaatjes verplaatsen! </br> Ben je er klaar voor? Druk dan op volgende."
+                 "snel plaatjes verplaatsen! Ben je er klaar voor? Druk dan op volgende."
 
 FINAL_BLOCK_TEXT = {
 
@@ -77,11 +77,11 @@ FINAL_BLOCK_TEXT = {
             "Er zijn geen goede of foute antwoorden op deze vragen!"
 }
 
-COLLECTION_QUIZ_BEGINNING_TEXT = "Leuk dat je mee doet aan dit onderzoek! Als je iets niet begrijpt tijdens het onderzoek, " \
-                      "of als je wilt " \
-                      "stoppen, steek dan je hand op. We komen dan zo snel mogelijk naar je toe om je te helpen."
+COLLECTION_QUIZ_BEGINNING_TEXT = "Leuk dat je mee doet aan dit onderzoek! Vind je het fijn als de tekst wordt voorgelezen? Klik dan onderaan op de knop 'Voorlezen. " \
+                      "Als je iets niet begrijpt tijdens het onderzoek, of als je wilt " \
+                      "stoppen, steek dan je hand op. We komen dan zo snel mogelijk naar je toe om je te helpen. "
 
-COLLECTION_QUIZ_BEGINNING_AUDIO = 'https://res.cloudinary.com/hwutobbxz/video/upload/v1596200543/audio/intro_hgujds.m4a'
+COLLECTION_QUIZ_BEGINNING_AUDIO = 'https://res.cloudinary.com/hwutobbxz/video/upload/v1596206106/audio/collection-intro_sjdsq8.m4a'
 
 COLLECTION_QUIZ_END_TEXT = "Bedankt voor het meedoen aan dit onderzoek! We willen je vragen om niet te verklappen" \
                 "wat je precies gedaan hebt aan andere kinderen die misschien nog mee willen doen.\n" \
