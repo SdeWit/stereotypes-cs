@@ -231,7 +231,7 @@ class IATFactory:
 
         for block_nr, phase in enumerate(self.data, 5 - len(self.data)):
             self.create_guide_text(phase, block_nr)
-            self.create_guide(phase, block_nr)
+            self.create_guide_audio(phase, block_nr)
             self.load_phase(phase, block_nr)
         return self.response
 
