@@ -81,6 +81,8 @@ COLLECTION_QUIZ_BEGINNING_TEXT = "Leuk dat je mee doet aan dit onderzoek! Als je
                       "of als je wilt " \
                       "stoppen, steek dan je hand op. We komen dan zo snel mogelijk naar je toe om je te helpen."
 
+COLLECTION_QUIZ_BEGINNING_AUDIO = 'https://res.cloudinary.com/hwutobbxz/video/upload/v1596200543/audio/intro_hgujds.m4a'
+
 COLLECTION_QUIZ_END_TEXT = "Bedankt voor het meedoen aan dit onderzoek! We willen je vragen om niet te verklappen" \
                 "wat je precies gedaan hebt aan andere kinderen die misschien nog mee willen doen.\n" \
                 "Steek je hand op, dan komt er zo snel mogelijk iemand naar je toe."
