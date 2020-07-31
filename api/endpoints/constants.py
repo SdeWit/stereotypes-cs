@@ -68,7 +68,6 @@ BLOCK_START_TEXT = [
      },
 ]
 
-jongen, meisje, programmeur, schrijver, alleen, samen, videospelletjes spelen, tennisen, fruit, groente
 # audio file begins with left category
 BLOCK_START_AUDIO = [
     {"programmeur" : ''},
