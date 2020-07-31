@@ -36,95 +36,95 @@ def populate():
         name="Groente", metacategory=Metacategory.demo)
 
     male_images = [
-        'https://res.cloudinary.com/hctr0xmqp/image/upload/v1591276420/Gender/gender_male_1_dh1pbq.png',
-        'https://res.cloudinary.com/hctr0xmqp/image/upload/v1591276420/Gender/gender_male_2_bsbqc9.png',
-        'https://res.cloudinary.com/hctr0xmqp/image/upload/v1591276421/Gender/gender_male_3_eknmuv.png',
-        'https://res.cloudinary.com/hctr0xmqp/image/upload/v1591276421/Gender/gender_male_4_d1clch.png']
+        'https://res.cloudinary.com/hwutobbxz/image/upload/v1596200563/gender/boy-1_hm8jgs.png',
+        'https://res.cloudinary.com/hwutobbxz/image/upload/v1596200563/gender/boy-2_xzh71v.png',
+        'https://res.cloudinary.com/hwutobbxz/image/upload/v1596200563/gender/boy-3_dkzdxu.png',
+        'https://res.cloudinary.com/hwutobbxz/image/upload/v1596200563/gender/boy-4_oubhbd.png']
 
     female_images = [
-        'https://res.cloudinary.com/hctr0xmqp/image/upload/v1591276422/Gender/gender_female_1_nph1ga.png',
-        'https://res.cloudinary.com/hctr0xmqp/image/upload/v1591276420/Gender/gender_female_2_fjfxrv.png',
-        'https://res.cloudinary.com/hctr0xmqp/image/upload/v1591276420/Gender/gender_female_3_erg7nd.png',
-        'https://res.cloudinary.com/hctr0xmqp/image/upload/v1591276420/Gender/gender_female_4_b0vc8l.png'
+        'https://res.cloudinary.com/hwutobbxz/image/upload/v1596200563/gender/girl-1_um01eh.png',
+        'https://res.cloudinary.com/hwutobbxz/image/upload/v1596200563/gender/girl-2_kmilzm.png',
+        'https://res.cloudinary.com/hwutobbxz/image/upload/v1596200564/gender/girl-3_vnqj3q.png,
+        'https://res.cloudinary.com/hwutobbxz/image/upload/v1596200564/gender/girl-4_zfdrct.png'
     ]
 
     programmer_images = [
-        ("https://res.cloudinary.com/hctr0xmqp/image/upload/v1591276505/Profession/profession_programmer_1_c6pvby.png",
+        ("https://res.cloudinary.com/hwutobbxz/image/upload/v1596200584/profession/programmer-1_dy9k1r.png",
+         "Website"),
+        ("https://res.cloudinary.com/hwutobbxz/image/upload/v1596200584/profession/programmer-2_vi49gm.png",
          "App"),
-        ("https://res.cloudinary.com/hctr0xmqp/image/upload/v1591276504/Profession/profession_programmer_2_rbcfov.png",
-         "Laptop"),
-        ("https://res.cloudinary.com/hctr0xmqp/image/upload/v1591276504/Profession/profession_programmer_3_cjwqsw.png",
-         "Keyboard"),
-        ("https://res.cloudinary.com/hctr0xmqp/image/upload/v1591276504/Profession/profession_programmer_4_xbviey.png",
-         "Website")
+        ("https://res.cloudinary.com/hwutobbxz/image/upload/v1596200584/profession/programmer-4_mj7bmj.png",
+         "Call"),
+        ("https://res.cloudinary.com/hwutobbxz/image/upload/v1596200584/profession/programmmer-3_utmpgj.png",
+         "Streaming")
     ]
 
     writer_images = [
-        ("https://res.cloudinary.com/hctr0xmqp/image/upload/v1591276504/Profession/profession_writer_1_o8xzue.png",
+        ("https://res.cloudinary.com/hwutobbxz/image/upload/v1596200584/profession/writer-1_mnxtfu.png",
          "Newspaper"),
-        ("https://res.cloudinary.com/hctr0xmqp/image/upload/v1591276504/Profession/profession_writer_2_mmpdnx.png",
+        ("https://res.cloudinary.com/hwutobbxz/image/upload/v1596200584/profession/writer-2_lo1khm.png",
          "Papers"),
-        ("https://res.cloudinary.com/hctr0xmqp/image/upload/v1591276505/Profession/profession_writer_3_qyl8aq.png",
-         "Pen"),
-        ("https://res.cloudinary.com/hctr0xmqp/image/upload/v1591276505/Profession/profession_writer_4_tbvw0b.png",
+        ("https://res.cloudinary.com/hwutobbxz/image/upload/v1596200585/profession/writer-3_uiqwul.png",
+         "Magazine"),
+        ("https://res.cloudinary.com/hwutobbxz/image/upload/v1596200585/profession/writer-4_nz5bwi.png",
          "Book")
     ]
 
     gaming_images = [
-        ("https://res.cloudinary.com/hctr0xmqp/image/upload/v1591276493/Hobby/hobby_gaming_1_tlfl07.png",
+        ("https://res.cloudinary.com/hwutobbxz/image/upload/v1596200573/hobby/game-1_ebkexs.png",
          "Game Controller"),
-        ("https://res.cloudinary.com/hctr0xmqp/image/upload/v1591276493/Hobby/hobby_gaming_2_ruribs.png",
+        ("https://res.cloudinary.com/hwutobbxz/image/upload/v1596200573/hobby/game-2_jby6nu.png",
          "Game Controller"),
-        ("https://res.cloudinary.com/hctr0xmqp/image/upload/v1591276493/Hobby/hobby_gaming_3_hvkfme.png",
+        ("https://res.cloudinary.com/hwutobbxz/image/upload/v1596200573/hobby/game-3_ou7k0m.png",
          "Game Controller"),
-        ("https://res.cloudinary.com/hctr0xmqp/image/upload/v1591276493/Hobby/hobby_gaming_4_cb1doe.png",
+        ("https://res.cloudinary.com/hwutobbxz/image/upload/v1596200573/hobby/game-4_ntapp8.png",
          "Game Controller")
     ]
 
     tennis_images = [
-        ("https://res.cloudinary.com/hctr0xmqp/image/upload/v1591276495/Hobby/hobby_tennis_1_ei7yic.png", "Net"),
-        ("https://res.cloudinary.com/hctr0xmqp/image/upload/v1591276493/Hobby/hobby_tennis_2_qx7tms.png", "Racket"),
-        ("https://res.cloudinary.com/hctr0xmqp/image/upload/v1591276493/Hobby/hobby_tennis_3_pdsnou.png", "Shoe"),
-        ("https://res.cloudinary.com/hctr0xmqp/image/upload/v1591276493/Hobby/hobby_tennis_4_v5yam2.png", "Ball")
+        ("https://res.cloudinary.com/hwutobbxz/image/upload/v1596200573/hobby/tennis-1_ls9oat.png", "Net"),
+        ("https://res.cloudinary.com/hwutobbxz/image/upload/v1596200573/hobby/tennis-2_chdk4g.png", "Racket"),
+        ("https://res.cloudinary.com/hwutobbxz/image/upload/v1596200574/hobby/tennis-3_sg4gvn.png", "Shoe"),
+        ("https://res.cloudinary.com/hwutobbxz/image/upload/v1596200574/hobby/tennis-4_edsko1.png", "Ball")
     ]
 
     alone_images = [
-        ("https://res.cloudinary.com/hctr0xmqp/image/upload/v1591276518/Social/social_alone_1_wy8rpb.png", "Alone"),
-        ("https://res.cloudinary.com/hctr0xmqp/image/upload/v1591276516/Social/social_alone_2_vy3tmr.png", "Alone"),
-        ("https://res.cloudinary.com/hctr0xmqp/image/upload/v1591276518/Social/social_alone_3_ygnsbz.png", "Alone"),
-        ("https://res.cloudinary.com/hctr0xmqp/image/upload/v1591276517/Social/social_alone_4_ppasf1.png", "Alone")
+        ("https://res.cloudinary.com/hwutobbxz/image/upload/v1596200595/social/alone-1_ers4ra.png", "Alone"),
+        ("https://res.cloudinary.com/hwutobbxz/image/upload/v1596200595/social/alone-2_ottg4u.png", "Alone"),
+        ("https://res.cloudinary.com/hwutobbxz/image/upload/v1596200596/social/alone-3_oqbvos.png", "Alone"),
+        ("https://res.cloudinary.com/hwutobbxz/image/upload/v1596200596/social/alone-4_hdx8ji.png", "Alone")
     ]
 
     together_images = [
-        ("https://res.cloudinary.com/hctr0xmqp/image/upload/v1591276518/Social/social_together_1_eumalw.png",
+        ("https://res.cloudinary.com/hwutobbxz/image/upload/v1596200596/social/together-1_q7oafw.png",
          "Together"),
-        ("https://res.cloudinary.com/hctr0xmqp/image/upload/v1591276517/Social/social_together_2_ketyo1.png",
+        ("https://res.cloudinary.com/hwutobbxz/image/upload/v1596200595/social/together-2_c8qnil.png",
          "Together"),
-        ("https://res.cloudinary.com/hctr0xmqp/image/upload/v1591276517/Social/social_together_3_s4wzba.png",
+        ("https://res.cloudinary.com/hwutobbxz/image/upload/v1596200596/social/together-3_vjqgxj.png",
          "Together"),
-        ("https://res.cloudinary.com/hctr0xmqp/image/upload/v1591276517/Social/social_together_4_ea2yka.png",
+        ("https://res.cloudinary.com/hwutobbxz/image/upload/v1596200596/social/together-4_zdnaff.png",
          "Together")
     ]
 
     fruit_images = [
-        ("https://www.delunchbus.nl/wp-content/uploads/2017/04/Appel-jg.png?versie=1",
+        ("https://res.cloudinary.com/hwutobbxz/image/upload/v1596200555/demo/fruit-1_ntbqi8.png",
          "Fruit"),
-        ("https://www.delunchbus.nl/wp-content/uploads/2017/04/Appel-jg.png?versie=2",
+        ("https://res.cloudinary.com/hwutobbxz/image/upload/v1596200554/demo/fruit-2_vqe5g6.png",
          "Fruit"),
-        ("https://www.delunchbus.nl/wp-content/uploads/2017/04/Appel-jg.png?versie=3",
+        ("https://res.cloudinary.com/hwutobbxz/image/upload/v1596200554/demo/fruit-3_wbszse.png",
          "Fruit"),
-        ("https://www.delunchbus.nl/wp-content/uploads/2017/04/Appel-jg.png?versie=4",
+        ("https://res.cloudinary.com/hwutobbxz/image/upload/v1596200555/demo/fruit-4_sn0esk.png",
          "Fruit")
     ]
 
     vegetable_images = [
-        ("https://www.weightwatchers.com/nl/sites/nl/files/styles/wwvs_default_image/public/article_masthead/fruit_720x370_0.jpg?versie=1",
+        ("https://res.cloudinary.com/hwutobbxz/image/upload/v1596200555/demo/vegetable-1_qqcsac.png",
          "Vegetable"),
-        ("https://www.weightwatchers.com/nl/sites/nl/files/styles/wwvs_default_image/public/article_masthead/fruit_720x370_0.jpg?versie=2",
+        ("https://res.cloudinary.com/hwutobbxz/image/upload/v1596200555/demo/vegetable-2_aubakv.png",
          "Vegetable"),
-        ("https://www.weightwatchers.com/nl/sites/nl/files/styles/wwvs_default_image/public/article_masthead/fruit_720x370_0.jpg?versie=3",
+        ("https://res.cloudinary.com/hwutobbxz/image/upload/v1596200555/demo/vegetable-3_icivmh.png",
          "Vegetable"),
-        ("https://www.weightwatchers.com/nl/sites/nl/files/styles/wwvs_default_image/public/article_masthead/fruit_720x370_0.jpg?versie=4",
+        ("https://res.cloudinary.com/hwutobbxz/image/upload/v1596200555/demo/vegetable-4_vck7kb.png",
          "Vegetable")
     ]
 
@@ -149,24 +149,24 @@ def populate():
     # Audio.create_audio(link_audio[0], description='', attribute=link_audio[1], c_id=c_id)
     # likert
     ## Demographics 1-5
-    create_likert("Ik maak makkelijk vrienden en werk graag samen.", 'https://res.cloudinary.com/hctr0xmqp/video/upload/v1596188858/sound_fyfb3p.mp3')
-    create_likert("Ik ben gek op computers", 'https://res.cloudinary.com/hctr0xmqp/video/upload/v1596188858/sound_fyfb3p.mp3')
-    create_likert("Ik vind het het leukst om te", 'https://res.cloudinary.com/hctr0xmqp/video/upload/v1596188858/sound_fyfb3p.mp3')
-    create_likert("Als ik dat zou willen, zou ik later programmeur kunnen worden.",'https://res.cloudinary.com/hctr0xmqp/video/upload/v1596188858/sound_fyfb3p.mp3')
-    create_likert("Ik wil later programmeur worden", 'https://res.cloudinary.com/hctr0xmqp/video/upload/v1596188858/sound_fyfb3p.mp3')
+    create_likert("Ik maak makkelijk vrienden en werk graag samen.", 'https://res.cloudinary.com/hwutobbxz/video/upload/v1596200541/audio/1_ywbmuk.m4a')
+    create_likert("Ik ben gek op computers", 'https://res.cloudinary.com/hwutobbxz/video/upload/v1596200541/audio/2_qty6fj.m4a')
+    create_likert("Ik vind het het leukst om te", 'https://res.cloudinary.com/hwutobbxz/video/upload/v1596200542/audio/3_e3qsyz.m4a')
+    create_likert("Als ik dat zou willen, zou ik later programmeur kunnen worden.",'https://res.cloudinary.com/hwutobbxz/video/upload/v1596200542/audio/4_yxejoq.m4a')
+    create_likert("Ik wil later programmeur worden", 'https://res.cloudinary.com/hwutobbxz/video/upload/v1596200542/audio/5_r7ghrl.m4a')
 
     ## 6-10
-    create_likert("Wie maakt het makkelijkst vrienden en werkt het liefst samen?", 'https://res.cloudinary.com/hctr0xmqp/video/upload/v1596188858/sound_fyfb3p.mp3')
-    create_likert("Wie speelt er het liefste videospelletjes?", 'https://res.cloudinary.com/hctr0xmqp/video/upload/v1596188858/sound_fyfb3p.mp3')
-    create_likert("Wie speelt er het liefste tennis?", 'https://res.cloudinary.com/hctr0xmqp/video/upload/v1596188858/sound_fyfb3p.mp3')
-    create_likert("Welk beroep vind jij iets voor meisjes?", 'https://res.cloudinary.com/hctr0xmqp/video/upload/v1596188858/sound_fyfb3p.mp3')
-    create_likert("Welk beroep vind jij iets voor jongens?", 'https://res.cloudinary.com/hctr0xmqp/video/upload/v1596188858/sound_fyfb3p.mp3')
+    create_likert("Wie maakt het makkelijkst vrienden en werkt het liefst samen?", 'https://res.cloudinary.com/hwutobbxz/video/upload/v1596200541/audio/6_tbouud.m4a')
+    create_likert("Wie speelt er het liefste videospelletjes?", 'https://res.cloudinary.com/hwutobbxz/video/upload/v1596200541/audio/7_wiwrjx.m4a')
+    create_likert("Wie speelt er het liefste tennis?", 'https://res.cloudinary.com/hwutobbxz/video/upload/v1596200541/audio/8_l9xs3q.m4a')
+    create_likert("Welk beroep vind jij iets voor meisjes?", 'https://res.cloudinary.com/hwutobbxz/video/upload/v1596200541/audio/9_zqwjng.m4a')
+    create_likert("Welk beroep vind jij iets voor jongens?", 'https://res.cloudinary.com/hwutobbxz/video/upload/v1596200542/audio/10_qjljyp.m4a')
     
     ## 11-14
-    create_likert("Programmeurs maken makkelijk vrienden en werken graag samen.", 'https://res.cloudinary.com/hctr0xmqp/video/upload/v1596188858/sound_fyfb3p.mp3')
-    create_likert("Programmeurs zijn gek op computers en hebben weinig andere hobby’s.", 'https://res.cloudinary.com/hctr0xmqp/video/upload/v1596188858/sound_fyfb3p.mp3')
-    create_likert("Programmeur zijn, dat is een beroep voor", 'https://res.cloudinary.com/hctr0xmqp/video/upload/v1596188858/sound_fyfb3p.mp3')
-    create_likert("Vraag 14", 'https://res.cloudinary.com/hctr0xmqp/video/upload/v1596188858/sound_fyfb3p.mp3')
+    create_likert("Programmeurs maken makkelijk vrienden en werken graag samen.", 'https://res.cloudinary.com/hwutobbxz/video/upload/v1596200542/audio/11_g0dvmj.m4a')
+    create_likert("Programmeurs zijn gek op computers en hebben weinig andere hobby’s.", 'https://res.cloudinary.com/hwutobbxz/video/upload/v1596200542/audio/12_nvbyjz.m4a')
+    create_likert("Programmeur zijn, dat is een beroep voor", 'https://res.cloudinary.com/hwutobbxz/video/upload/v1596200542/audio/13_x4cjuw.m4a')
+    create_likert("Vraag 14", '')
 
     #15
     Question.create_question(

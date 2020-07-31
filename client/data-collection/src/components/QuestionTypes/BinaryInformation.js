@@ -7,7 +7,6 @@ import Container from "@material-ui/core/Container";
 import { makeStyles } from "@material-ui/core";
 import GridListTile from "@material-ui/core/GridListTile";
 import GridList from "@material-ui/core/GridList";
-import audio from '../../utils/constants/sound.mp3'
 
 const useStyles = makeStyles((theme) => ({
   "@global": {
@@ -64,7 +63,7 @@ const Information = (props) => {
   const [hasNext, sethasNext] = useState(false);
   const [startsIn, setStartIn] = useState(false);
 
-  const likeAudio = new Audio(audio);
+  const likeAudio = new Audio('https://res.cloudinary.com/hwutobbxz/video/upload/v1596200543/audio/intro_hgujds.m4a');
 
   const playSound = audioFile => {
     audioFile.play();
