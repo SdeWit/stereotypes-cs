@@ -10,8 +10,8 @@ from api.models import QuestionType, Question, Image, Question_to_category, Cate
 from api.models.helpers import add_to_db
 
 from api.endpoints.constants import BLOCK_START_TEXT, BLOCK_END_TEXT, FINAL_BLOCK_TEXT, \
-    COLLECTION_QUIZ_END_TEXT, COLLECTION_QUIZ_BEGINNING_TEXT, COLLECTION_QUIZ_BEGINNING_AUDIO, INTERVENTION_VIDEO_TEXT, \
-    CONTROL_VIDEO_TEXT, DISSEMINATION_QUIZ_END_TEXT, DEMO_QUIZ_END_TEXT
+    COLLECTION_QUIZ_END_TEXT, COLLECTION_QUIZ_END_AUDIO, COLLECTION_QUIZ_BEGINNING_TEXT, COLLECTION_QUIZ_BEGINNING_AUDIO, INTERVENTION_VIDEO_TEXT, \
+    CONTROL_VIDEO_TEXT, DISSEMINATION_QUIZ_END_TEXT, DEMO_QUIZ_END_TEXT, INTERVENTION_VIDEO_AUDIO, CONTROL_VIDEO_AUDIO
 
 class QuizFactory:
     """
@@ -50,7 +50,7 @@ class QuizFactory:
         if 'before' in self.video.data and not self.video.data['before']:
             self.response.extend(self.experience.create_experience())
             self.response.extend(self.video.create_video())
-        self.create_ending(COLLECTION_QUIZ_END_TEXT)
+        self.create_ending(COLLECTION_QUIZ_END_TEXT, COLLECTION_QUIZ_END_AUDIO)
         self.create_researcher_notes()
         return self.response
 
@@ -79,7 +79,7 @@ class QuizFactory:
         self.create_ending(DEMO_QUIZ_END_TEXT)
         return self.response
 
-    def create_ending(self, end_text):
+    def create_ending(self, end_text, end_audio=''):
         """
         Creates a type finish question to be shown at the end of the test
         Parameters
@@ -90,7 +90,8 @@ class QuizFactory:
         self.response.append({
             "q_type": QuestionType.finish.value,
             "title": "Einde",
-            "text": end_text
+            "text": end_text,
+            "audio": end_audio
         })
 
     def create_researcher_notes(self):
@@ -141,6 +142,7 @@ class VideoFactory:
 
         video = Question.query.filter_by(id=self.data['id']).first()
         video.text = self.create_video_text()
+        video.audio = self.create_video_audio()
         print(video.images)
         return video.make_response()
 
@@ -152,6 +154,15 @@ class VideoFactory:
         if not self.data['before']:
             return INTERVENTION_VIDEO_TEXT
         return CONTROL_VIDEO_TEXT
+
+    def create_video_audio(self):
+        """
+        Checks if video is at the start or at the end of the quiz.
+        :return: Returns the corresponding text for its posisiton
+        """
+        if not self.data['before']:
+            return INTERVENTION_VIDEO_AUDIO
+        return CONTROL_VIDEO_AUDIO
 
 
 class DemographicsFactory:
@@ -172,6 +183,7 @@ class DemographicsFactory:
         self.response.append({
             "q_type": QuestionType.information.value,
             "text": "Je bent er bijna, nog een paar vragen!"
+            "audio": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596317858/audio/before-demographics_bpt9xe.m4a"
         })
         for q_id in self.data:
             self.response.extend(Question.query.filter_by(
@@ -342,10 +354,10 @@ class IATFactory:
 
         if len(c_left) >= 2 and c_left[0][0].lower()=='programmeur':
              audio_name = c_left[1][0].lower()
-             logging.warning('if') 
+             logging.warning('if1') 
         else: 
             audio_name = c_left[0][0].lower()
-            logging.warning('else') 
+            logging.warning('else1') 
     
         if len(c_right) >= 2 and c_right[0][0].lower()=='schrijver':
              audio_name = audio_name + '_' +  c_right[1][0].lower()
@@ -354,7 +366,7 @@ class IATFactory:
             audio_name = audio_name + '_' + c_right[0][0].lower() 
             logging.warning('else') 
     
-        audio_name = c_left[0][0].lower() + '_' + c_right[0][0].lower() 
+        # audio_name = c_left[0][0].lower() + '_' + c_right[0][0].lower() 
 
         logging.warning('factory audio') 
         logging.warning(audio_name) 

@@ -75,13 +75,6 @@ const MultipleChoiceSpecial = (props) => {
     <React.Fragment>
       <CssBaseline />
       <Container maxWidth="sm" component="main" className={classes.heroContent}>
-
-      <Button
-              onClick={() => playSound(new Audio(props.audio))}
-              variant="contained"
-              color="primary"
-          > Geluid
-      </Button>
       
         <Typography
           component="p"
@@ -98,7 +91,7 @@ const MultipleChoiceSpecial = (props) => {
           <Grid item xs={12} md={6} style={{ margin: "auto" }}>
             <Card>
               <CardHeader
-                title="Select all that apply"
+                title="Kies één of meerdere opties"
                 titleTypographyProps={{ align: "center" }}
                 subheaderTypographyProps={{ align: "center" }}
                 action={null}
@@ -152,7 +145,7 @@ const MultipleChoiceSpecial = (props) => {
                 color="primary"
                 className={classes.nextButton}
                 variant="contained"
-                disabled={ticked === 0}
+                disabled={ticked === 0 && !playing}
                 onClick={onClick}
               >
                 VOLGENDE

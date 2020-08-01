@@ -62,7 +62,7 @@ const MultipleChoice = (props) => {
           <Grid item xs={12} md={6} style={{ margin: "auto" }}>
             <Card>
               <CardHeader
-                title="Select only one answer"
+                title="Kies één optie"
                 titleTypographyProps={{ align: "center" }}
                 subheaderTypographyProps={{ align: "center" }}
                 action={null}
@@ -120,7 +120,7 @@ const MultipleChoice = (props) => {
                 color="primary"
                 className={classes.nextButton}
                 variant="contained"
-                disabled={state.answers.length === 0}
+                disabled={state.answers.length === 0 && !playing}
                 onClick={onClick}
               >
                 VOLGENDE

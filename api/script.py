@@ -187,10 +187,10 @@ def populate():
     mc_1 = Question.create_question(q_type=QuestionType.mc_single_answer, text="Hoe oud ben je?",
                                     information=ParticipantInformationType.age, 
                                     audio='https://res.cloudinary.com/hwutobbxz/video/upload/v1596200542/audio/17_fcwq8f.m4a')
-    for i in range(6, 19):
+    for i in range(7, 19):
         QuestionChoice.create_choice(
-            choice_num=i - 5, q_id=mc_1.id, text=str(i))
-    QuestionChoice.create_choice(choice_num=14, q_id=mc_1.id, text="Anders")
+            choice_num=i - 6, q_id=mc_1.id, text=str(i))
+    QuestionChoice.create_choice(choice_num=13, q_id=mc_1.id, text="Anders")
 
     mc_2 = Question.create_question(q_type=QuestionType.mc_multiple_answer,
                                     text="Waar zijn jouw ouders/verzorgers geboren? Er zijn meerdere antwoorden mogelijk.",
@@ -220,7 +220,7 @@ def populate():
 
     # experience 
     ## 22 23
-    mc_4 = Question.create_question(q_type=QuestionType.mc_single_answer,
+    mc_4 = Question.create_question(q_type=QuestionType.mc_multiple_answer,
                                     text="Heb je wel eens geprogrammeerd? Er zijn meerdere antwoorden mogelijk",
                                     information=ParticipantInformationType.experience,
                                     audio='https://res.cloudinary.com/hwutobbxz/video/upload/v1596200543/audio/22_jlrycd.m4a')
@@ -228,7 +228,7 @@ def populate():
         QuestionChoice.create_choice(
             choice_num=i, q_id=mc_4.id, text=experience.value)
 
-    mc_5 = Question.create_question(q_type=QuestionType.mc_single_answer,
+    mc_5 = Question.create_question(q_type=QuestionType.mc_multiple_answer,
                                     text="Ken jij een programmeur? Er zijn meerdere antwoorden mogelijk",
                                     information=ParticipantInformationType.familiar,
                                     audio='https://res.cloudinary.com/hwutobbxz/video/upload/v1596200543/audio/23_iicnjg.m4a')

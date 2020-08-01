@@ -56,6 +56,7 @@ const Information = (props) => {
             style={{ marginTop: 20 }}
             color="primary"
             onClick={props.onNext}
+            disabled={!playing}
           >
             VOLGENDE
           </Button>

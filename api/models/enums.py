@@ -34,7 +34,7 @@ class Ethnicity(enum.Enum):
     """Enumeration of the choices for ethnicity types"""
 
     Nederlands = "Nederland"
-    Turks = "Turkijen"
+    Turks = "Turkije"
     Marokkaans = "Marokko"
     Surinaams = "Suriname"
     Indonesisch = "Indonesië"

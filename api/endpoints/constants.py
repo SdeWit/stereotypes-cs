@@ -24,10 +24,10 @@ BLOCK_START_TEXT = [
               "snel mogelijk en probeer zo min mogelijk fouten te maken. Mocht je toch een foutje maken, geen "
               "probleem! Je mag het dan nog een keer proberen.",
 
-     "text1": "Hieronder zie je plaatjes van een {}. Deze ga je zo naar links verplaatsen. Dit doe je door op "
+     "text1": "Hieronder zie je plaatjes van {}. Deze ga je zo naar links verplaatsen. Dit doe je door op "
               "de ‘e’ te tikken op het toetsenbord.",
 
-     "text2": "Ook ga je plaatjes zien van een {}. Deze ga je zo naar rechts verplaatsen. Dit doe je door op "
+     "text2": "Ook ga je plaatjes zien van {}. Deze ga je zo naar rechts verplaatsen. Dit doe je door op "
               "de ‘i’ te tikken op het toetsenbord.",
 
      "programmeur_schrijver" : "https://res.cloudinary.com/hwutobbxz/video/upload/v1596284785/audio/IAT-1-profession-programmer-writer_tcnceo.m4a"
@@ -35,10 +35,10 @@ BLOCK_START_TEXT = [
 
     {"text0": "Goed gedaan! We gaan het nog een keer doen, maar nu met nieuwe plaatjes.",
 
-     "text1": "Hieronder zie je plaatjes van een {}. Deze ga je zo naar links verplaatsen. Dit doe je door op "
+     "text1": "Hieronder zie je plaatjes van {}. Deze ga je zo naar links verplaatsen. Dit doe je door op "
               "de 'e' te tikken op het toetsenbord.",
 
-     "text2": "Ook ga je plaatjes zien van een {}. Deze ga je zo naar rechts verplaatsen. Dit doe je door op "
+     "text2": "Ook ga je plaatjes zien van {}. Deze ga je zo naar rechts verplaatsen. Dit doe je door op "
               "de ‘i’ te tikken op het toetsenbord.",
 
     "programmeur_schrijver" : "",
@@ -46,7 +46,7 @@ BLOCK_START_TEXT = [
     "jongen_meisje": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596284785/audio/IAT-2-gender-jongen-meisje_gr2drx.m4a",
     "meisje_jongen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596284785/audio/IAT-2-gender-meisje-jongen_nj70nx.m4a",
 
-    "videospelletjes spelen_tennissen":"https://res.cloudinary.com/hwutobbxz/video/upload/v1596286605/audio/IAT-2-hobby-spel-tennis_prhzzg.m4a",
+    "videospelletjes spelen_tennissen":"https://res.cloudinary.com/hwutobbxz/video/upload/v1596314711/audio/IAT-2-hobby-spel-tennis_1_fu9gxw.m4a",
     "tennissen_videospelletjes spelen":"https://res.cloudinary.com/hwutobbxz/video/upload/v1596286834/audio/IAT-2-tennis-spel_qvpxuy.m4a",
 
     "alleen_samen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596286603/audio/IAT-2-social-alleen-samen_ukbvnd.m4a",
@@ -55,10 +55,10 @@ BLOCK_START_TEXT = [
 
     {"text0": "Nu gaan we plaatjes combineren.",
 
-     "text1": "Wanneer je een plaatje ziet van een {} of {} verplaats je deze naar links door op de ‘e’ "
+     "text1": "Wanneer je een plaatje ziet van {} of {} verplaats je deze naar links door op de ‘e’ "
               "te tikken op het toetsenbord. Dat zijn dus deze plaatjes.",
 
-     "text2": "Wanneer je een plaatje ziet van een {} of {} verplaats je deze naar rechts door op de "
+     "text2": "Wanneer je een plaatje ziet van {} of {} verplaats je deze naar rechts door op de "
               "‘i’ te tikken op het toetsenbord. Dat zijn dus deze plaatjes.",
     
     "programmeur_schrijver" : "",   
@@ -75,16 +75,16 @@ BLOCK_START_TEXT = [
 
     {"text0": "Goed gedaan! We gaan het nog een keer doen, maar draaien nu links en rechts om.",
 
-     "text1": "Hieronder zie je plaatjes van een {}. Deze ga je zo naar links verplaatsen. Dit doe je door op de "
-              "‘E’ te tikken op het toetsenbord.",
+     "text1": "Hieronder zie je plaatjes van {}. Deze ga je zo naar links verplaatsen. Dit doe je door op de "
+              "‘e’ te tikken op het toetsenbord.",
 
-     "text2": "Ook ga je plaatjes zien van een {}. Deze ga je zo naar rechts verplaatsen. Dit doe je door op de "
-              "‘I’ te tikken op het toetsenbord.",
+     "text2": "Ook ga je plaatjes zien van {}. Deze ga je zo naar rechts verplaatsen. Dit doe je door op de "
+              "‘i’ te tikken op het toetsenbord.",
 
     "programmeur_schrijver" : "",   
 
     "jongen_meisje": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596286605/audio/IAT-4-gender-jongen-meisje_b5xejt.m4a",
-    "meisje_jongen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596286605/audio/IAT-4-gender-meisje-jongen_1_m45pzu.m4a",
+    "meisje_jongen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596314012/audio/IAT-4-gender-meisje-jongen_n7t9nh.m4a",
 
     "videospelletjes spelen_tennissen":"https://res.cloudinary.com/hwutobbxz/video/upload/v1596286606/audio/IAT-4-hobby-spel-tennis_v7gs5a.m4a",
     "tennissen_videospelletjes spelen":"https://res.cloudinary.com/hwutobbxz/video/upload/v1596286607/audio/IAT-4-hobby-tennis-spel_oemkfc.m4a",
@@ -96,11 +96,11 @@ BLOCK_START_TEXT = [
 
     {"text0": "Nog een set met plaatjes te gaan! Je doet het heel goed.",
 
-     "text1": "Wanneer je een plaatje ziet van een {} of {} verplaats je deze naar links door op de ‘E’ "
+     "text1": "Wanneer je een plaatje ziet van {} of {} verplaats je deze naar links door op de ‘e’ "
               "te tikken op het toetsenbord. Dat zijn dus deze plaatjes.",
 
-     "text2": "Wanneer je een plaatje ziet van een {} of {} verplaats je deze naar rechts door op de "
-              "‘I’ te tikken op het toetsenbord. Dat zijn dus deze plaatjes.",
+     "text2": "Wanneer je een plaatje ziet van {} of {} verplaats je deze naar rechts door op de "
+              "‘i’ te tikken op het toetsenbord. Dat zijn dus deze plaatjes.",
 
      "programmeur_schrijver" : "",   
 
@@ -121,7 +121,8 @@ BLOCK_END_TEXT = "Tip: Zet je linker wijsvinger op de ‘e’, en je rechter wij
 FINAL_BLOCK_TEXT = {
 
     "text": "Super goed gedaan! We willen je graag ook wat vragen stellen. "
-            "Er zijn geen goede of foute antwoorden op deze vragen!"
+            "Er zijn geen goede of foute antwoorden op deze vragen!",
+    "audio": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596317178/audio/final-block-tekst_snyjaa.m4a"
 }
 
 COLLECTION_QUIZ_BEGINNING_TEXT = "Leuk dat je mee doet aan dit onderzoek! Vind je het fijn als de tekst wordt voorgelezen? Klik dan onderaan op de knop 'voorlezen'. " \
@@ -130,9 +131,11 @@ COLLECTION_QUIZ_BEGINNING_TEXT = "Leuk dat je mee doet aan dit onderzoek! Vind j
 
 COLLECTION_QUIZ_BEGINNING_AUDIO = "https://res.cloudinary.com/hwutobbxz/video/upload/v1596206106/audio/collection-intro_sjdsq8.m4a"
 
-COLLECTION_QUIZ_END_TEXT = "Bedankt voor het meedoen aan dit onderzoek! We willen je vragen om niet te verklappen" \
+COLLECTION_QUIZ_END_TEXT = "Bedankt voor het meedoen aan dit onderzoek! We willen je vragen om niet te verklappen " \
                 "wat je precies gedaan hebt aan andere kinderen die misschien nog mee willen doen.\n" \
                 "Steek je hand op, dan komt er zo snel mogelijk iemand naar je toe."
+
+COLLECTION_QUIZ_END_TEXT = "https://res.cloudinary.com/hwutobbxz/video/upload/v1596318222/audio/end_svg6jz.m4a"
 
 DEMO_QUIZ_END_TEXT = "De demo is afgelopen! Wacht tot een assistent je naar de testcomputer brengt."
 
