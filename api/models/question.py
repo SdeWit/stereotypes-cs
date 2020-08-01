@@ -34,10 +34,12 @@ class Question(db.Model):
         The list of choices that this question has.
     images : list of Image
         The list of images that this question uses.
+    audio: string
+        The audio file corresponding to the question
 
     Methods
     -------
-    create_question(q_type, is_active=True, text="", categories=[], choices=[], images=[])
+    create_question(q_type, is_active=True, text="", categories=[], choices=[], images=[], audio="")
         Creates a new question object and adds it into the database.
     as_dict()
         Returns a dictionary representation of the object (with a selection of attributes).
@@ -62,10 +64,11 @@ class Question(db.Model):
                               backref=db.backref('question', lazy=True),
                               lazy=True)
     images = db.relationship(Image, secondary="questions_to_images", lazy=True)
+    audio = db.Column(db.Text, nullable=True)
 
     @staticmethod
     def create_question(q_type, is_active=True, text="", information=None,
-                        categories=[], choices=[], images=[]):
+                        categories=[], choices=[], images=[], audio=""):
         """
         Creates a question object and inserts it into the database
 
@@ -83,6 +86,8 @@ class Question(db.Model):
             The choices that this question has.
         images = list of Image , optional
             The images that this question uses.
+        audio = link to audio , optional
+            The audio that this question uses.
 
         Returns
         -------
@@ -92,7 +97,7 @@ class Question(db.Model):
         """
 
         q = Question(q_type=q_type, is_active=is_active, text=text, information=information,
-                     categories=categories, choices=choices, images=images)
+                     categories=categories, choices=choices, images=images, audio=audio)
         add_to_db(q)
         return q
 

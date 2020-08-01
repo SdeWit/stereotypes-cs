@@ -4,11 +4,12 @@ Module that contains the classes that create the different components for a quiz
 """
 import json
 from sqlalchemy import or_
+import logging
 
 from api.models import QuestionType, Question, Image, Question_to_category, Category
 from api.models.helpers import add_to_db
-from api.endpoints.constants import BLOCK_START_TEXT, BLOCK_END_TEXT, FINAL_BLOCK_TEXT, \
-    COLLECTION_QUIZ_END_TEXT, COLLECTION_QUIZ_BEGINNING_TEXT, INTERVENTION_VIDEO_TEXT, \
+from api.endpoints.constants import BLOCK_START_TEXT, BLOCK_START_AUDIO, BLOCK_END_TEXT, FINAL_BLOCK_TEXT, \
+    COLLECTION_QUIZ_END_TEXT, COLLECTION_QUIZ_BEGINNING_TEXT, COLLECTION_QUIZ_BEGINNING_AUDIO, INTERVENTION_VIDEO_TEXT, \
     CONTROL_VIDEO_TEXT, DISSEMINATION_QUIZ_END_TEXT
 
 
@@ -36,7 +37,7 @@ class QuizFactory:
         """
 
         self.response = []
-        self.create_information_beginning(COLLECTION_QUIZ_BEGINNING_TEXT)
+        self.create_information_beginning(COLLECTION_QUIZ_BEGINNING_TEXT, COLLECTION_QUIZ_BEGINNING_AUDIO)
         if 'before' in self.video.data and self.video.data['before']:
             self.response.extend(self.experience.create_experience())
             self.response.extend(self.video.create_video())
@@ -69,7 +70,6 @@ class QuizFactory:
     def create_ending(self, end_text):
         """
         Creates a type finish question to be shown at the end of the test
-
         Parameters
         ----------
         end_text : string
@@ -89,10 +89,9 @@ class QuizFactory:
                              .first()
                              .make_response())
 
-    def create_information_beginning(self, beginning_text):
+    def create_information_beginning(self, beginning_text, beginning_audio):
         """
         Creates a type information question to be shown at the start of the test
-
         Parameters
         ----------
         beginning_text : string
@@ -100,7 +99,8 @@ class QuizFactory:
         """
         self.response.append({
             "q_type": QuestionType.information.value,
-            "text": beginning_text
+            "text": beginning_text,
+            "audio": beginning_audio
         })
 
     def create_end_iat_text(self):
@@ -324,4 +324,22 @@ class IATFactory:
                            Image.query.filter(Image.category_id.in_(phase['right_categ']))))
         guide_text['images0'] = images0
         guide_text['images1'] = images1
+
+        if len(c_left) >= 2:
+             audio_name = c_left[1][0].lower()
+        else: 
+            audio_name = c_left[0][0].lower()
+    
+        if len(c_right) >= 2:
+             audio_name = audio_name + '_' +  c_right[1][0].lower()
+        else:
+            audio_name = audio_name + '_' + c_right[0][0].lower() 
+    
+        logging.warning('factory audio') 
+        logging.warning(block_nr) 
+        logging.warning(audio_name) 
+        logging.warning(BLOCK_START_AUDIO[block_nr]) 
+        logging.warning(BLOCK_START_AUDIO[block_nr][audio_name])
+        guide_text['audio'] = BLOCK_START_AUDIO[block_nr][audio_name]
+
         self.response.append(guide_text)

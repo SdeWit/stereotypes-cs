@@ -53,6 +53,20 @@ const Finish = (props) => {
     props.onNext();
   };
 
+  var playing = false;
+
+  function audio_ended() {
+    playing = false;
+  };
+
+  const playSound = audioFile => {
+    if (playing==false){
+      audioFile.play(); 
+      playing = true;
+      setTimeout(audio_ended, 5000)
+    }
+  }
+
   return (
     <React.Fragment>
       <CssBaseline />
@@ -74,7 +88,17 @@ const Finish = (props) => {
         >
           {props.text}
         </Typography>
+
+        <Button
+              onClick={() => playSound(new Audio(props.audio))}
+              variant="contained"
+              color="primary"
+              > 
+              Voorlezen
+        </Button>
+
       </Container>
+
       <Grid item xs={6} style={{margin: 'auto'}}>
         <TextField
           autoFocus

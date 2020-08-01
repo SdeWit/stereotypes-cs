@@ -134,6 +134,20 @@ const LikertScaleQuestion = (props) => {
     },
   };
 
+  var playing = false;
+
+  function audio_ended() {
+    playing = false;
+  };
+
+  const playSound = audioFile => {
+    if (playing==false){
+      audioFile.play(); 
+      playing = true;
+      setTimeout(audio_ended, 5000)
+    }
+  }
+
   return (
     <React.Fragment>
       <CssBaseline />
@@ -167,15 +181,30 @@ const LikertScaleQuestion = (props) => {
                 />
               </CardContent>
             </Card>
-            <Button
-              style={{ marginTop: '20px' }}
-              className={classes.nextButton}
-              variant='contained'
-              disabled={state.answers.length === 0}
-              onClick={onClick}
-            >
-              VOLGENDE
-            </Button>
+           
+            <Grid item xs={6}>
+              <Button
+                  onClick={() => playSound(new Audio(props.audio))}
+                  variant="contained"
+                  color="primary"
+                  style={{ marginTop: '20px' }}
+              > Voorlezen
+              </Button>
+            </Grid>
+
+            <Grid item xs={6}>
+              <Button
+                style={{ marginTop: '20px' }}
+                color="primary"
+                className={classes.nextButton}
+                variant='contained'
+                disabled={state.answers.length === 0}
+                onClick={onClick}
+              >
+                VOLGENDE
+              </Button>
+            </Grid>
+            
           </Grid>
         </Grid>
       </Container>
