@@ -177,6 +177,7 @@ const LikertScaleQuestion = (props) => {
                   onClick={() => playSound(new Audio(props.audio))}
                   variant="contained"
                   color="primary"
+                  style={{ marginTop: '20px' }}
               > Voorlezen
               </Button>
             </Grid>
@@ -184,6 +185,7 @@ const LikertScaleQuestion = (props) => {
             <Grid item xs={6}>
               <Button
                 style={{ marginTop: '20px' }}
+                color="primary"
                 className={classes.nextButton}
                 variant='contained'
                 disabled={state.answers.length === 0}

@@ -4,13 +4,30 @@ import Typography from "@material-ui/core/Typography";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Container from "@material-ui/core/Container";
 import useStyles from '../../styles/Information'
+import Grid from "@material-ui/core/Grid";
 
 const Information = (props) => {
   /*eslint-disable */
   const classes = useStyles();
 
+  var playing = false;
+
+  function audio_ended() {
+    console.log('audio ended');
+    playing = false;
+    console.log(playing);
+  };
+
   const playSound = audioFile => {
-    audioFile.play();
+    console.log('playsound method');
+    console.log(playing);
+    if (playing==false){
+      console.log('playing');
+      audioFile.play(); 
+      playing = true;
+      console.log(audioFile.duration);
+      setTimeout(audio_ended(), audioFile.duration*1000)
+    }
   }
 
   return (
@@ -26,29 +43,30 @@ const Information = (props) => {
           {props.text}
         </Typography>
       </Container>
-      
-      <Container>
-        <Grid item xs={6}>
+
+      <Grid container>
+        <Grid item xs={6} sm={6}>
           <Button
-                  onClick={() => playSound(new Audio(props.audio))}
-                  variant="contained"
-                  color="primary"
-              > 
-              Voorlezen
+            onClick={() => playSound(new Audio(props.audio))}
+            variant="contained"
+            style={{ marginTop: 20}}
+            color="primary"
+          > 
+            Voorlezen
           </Button>
         </Grid>
-        <Grid item xs={6}>
+          
+        <Grid item xs={6} sm={6}>
           <Button
             variant="contained"
             style={{ marginTop: 20 }}
+            color="primary"
             onClick={props.onNext}
           >
             VOLGENDE
-        </Button>
+          </Button>
         </Grid>
-      </Container>
-
-
+      </Grid>
 
     </React.Fragment>
   );

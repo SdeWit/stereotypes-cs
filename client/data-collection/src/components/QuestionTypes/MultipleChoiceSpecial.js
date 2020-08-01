@@ -130,6 +130,7 @@ const MultipleChoiceSpecial = (props) => {
                 onClick={() => playSound(new Audio(props.audio))}
                 variant="contained"
                 color="primary"
+                style={{ marginTop: "20px" }}
                 > 
                 Voorlezen
               </Button>
@@ -138,6 +139,7 @@ const MultipleChoiceSpecial = (props) => {
             <Grid item xs={6}>
               <Button
                 style={{ marginTop: "20px" }}
+                color="primary"
                 className={classes.nextButton}
                 variant="contained"
                 disabled={ticked === 0}

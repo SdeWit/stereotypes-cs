@@ -6,6 +6,7 @@ import Container from "@material-ui/core/Container";
 import { makeStyles } from "@material-ui/core";
 import GridListTile from "@material-ui/core/GridListTile";
 import GridList from "@material-ui/core/GridList";
+import Grid from "@material-ui/core/Grid";
 
 const useStyles = makeStyles((theme) => ({
   "@global": {
@@ -153,20 +154,22 @@ const Information = (props) => {
             </div>
           </Container>
 
-          <Container>
-            <Grid item xs={6}>
+          <Grid container>
+            <Grid item xs={6} sm={6}>
               <Button
                   onClick={() => playSound(new Audio(props.audio))}
                   variant="contained"
+                  style={{ marginTop: 20 }}
                   color="primary"
               > Voorlezen
               </Button>
             </Grid>
 
-            <Grid item xs={6}>
+            <Grid item xs={6} sm={6}>
               <Button
                 variant="contained"
                 style={{ marginTop: 20 }}
+                color="primary"
                 onClick={() => {
                   sethasNext(true);
                   setTimeout(props.onNext, 4000);
@@ -181,7 +184,7 @@ const Information = (props) => {
               </Button> 
             </Grid>
             
-          </Container>
+          </Grid>
           
         </React.Fragment>
       )}
