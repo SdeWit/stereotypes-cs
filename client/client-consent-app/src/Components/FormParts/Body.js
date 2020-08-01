@@ -8,7 +8,7 @@ const Body = () => {
       <div>
         <Typography variant="h6" component="div">
           Titel van onderzoek: <br />
-          <span className="Titles"> Hoe denk jij over deze beroepen?</span>
+          <span className="Titles"> Hoe denk jij hierover?</span>
         </Typography>
         <Typography variant="h6" component="div">
           Hoofdonderzoeker(s):

@@ -68,7 +68,61 @@ BLOCK_START_TEXT = [
      },
 ]
 
-BLOCK_END_TEXT = "Tip: Zet je linker wijsvinger op de ‘E’, en je rechter wijsvinger op de ‘I’, zo kun je " \
+# audio file begins with left category
+BLOCK_START_AUDIO = [
+    {"programmeur_schrijver" : "https://res.cloudinary.com/hwutobbxz/video/upload/v1596284785/audio/IAT-1-profession-programmer-writer_tcnceo.m4a"
+    },
+
+    {
+    "programmeur_schrijver" : "",    
+    "jongen_meisje": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596284785/audio/IAT-2-gender-jongen-meisje_gr2drx.m4a",
+    "meisje_jongen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596284785/audio/IAT-2-gender-meisje-jongen_nj70nx.m4a",
+
+    "videospelletjes spelen_tennissen":"https://res.cloudinary.com/hwutobbxz/video/upload/v1596286605/audio/IAT-2-hobby-spel-tennis_prhzzg.m4a",
+    "tennissen_videospelletjes spelen":"https://res.cloudinary.com/hwutobbxz/video/upload/v1596286834/audio/IAT-2-tennis-spel_qvpxuy.m4a",
+
+    "alleen_samen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596286603/audio/IAT-2-social-alleen-samen_ukbvnd.m4a",
+    "samen_alleen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596286604/audio/IAT-2-social-samen-alleen_1_ydkqxf.m4a"
+    },
+
+    {
+    "programmeur_schrijver" : "",   
+    "jongen_meisje": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596286604/audio/IAT-3-gender-jongen-meisje_1_qmh5z6.m4a",
+    "meisje_jongen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596286605/audio/IAT-3-gender-meisje-jongen_s86hzl.m4a",
+
+    "videospelletjes spelen_tennissen":"https://res.cloudinary.com/hwutobbxz/video/upload/v1596286605/audio/IAT-3-hobby-spel-tennis_mga5dh.m4a",
+    "tennissen_videospelletjes spelen":"https://res.cloudinary.com/hwutobbxz/video/upload/v1596286604/audio/IAT-3-hobby-tennis-spel_xfzsbz.m4a",
+
+    "alleen_samen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596286604/audio/IAT-3-social-alleen-samen_wlp5ja.m4a",
+    "samen_alleen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596286604/audio/IAT-3-social-samen-alleen_imcskt.m4a"
+    },
+
+    {
+    "programmeur_schrijver" : "",   
+    "jongen_meisje": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596286605/audio/IAT-4-gender-jongen-meisje_b5xejt.m4a",
+    "meisje_jongen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596286605/audio/IAT-4-gender-meisje-jongen_1_m45pzu.m4a",
+
+    "videospelletjes spelen_tennissen":"https://res.cloudinary.com/hwutobbxz/video/upload/v1596286606/audio/IAT-4-hobby-spel-tennis_v7gs5a.m4a",
+    "tennissen_videospelletjes spelen":"https://res.cloudinary.com/hwutobbxz/video/upload/v1596286607/audio/IAT-4-hobby-tennis-spel_oemkfc.m4a",
+
+    "alleen_samen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596286606/audio/IAT-4-social-alleen-samen_ifahca.m4a",
+    "samen_alleen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596286607/audio/IAT-4-social-samen-alleen_uplozf.m4a"
+    },
+
+    {
+    "programmeur_schrijver" : "",   
+    "jongen_meisje": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596286607/audio/IAT-5-gender-jongen-meisje_dzcggb.m4a",
+    "meisje_jongen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596287115/audio/IAT-5-gender-meisje-jongen_qbzxyd.m4a",
+
+    "videospelletjes spelen_tennissen":"https://res.cloudinary.com/hwutobbxz/video/upload/v1596286607/audio/IAT-5-hobby-spel-tennis_hmgaan.m4a",
+    "tennissen_videospelletjes spelen":"https://res.cloudinary.com/hwutobbxz/video/upload/v1596286607/audio/IAT-5-hobby-tennis-spel_eheia4.m4a",
+
+    "alleen_samen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596286606/audio/IAT-5-social-alleen-samen_qjmonj.m4a",
+    "samen_alleen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596286606/audio/IAT-5-social-samen-alleen_y6gekz.m4a"
+    },
+]
+
+BLOCK_END_TEXT = "Tip: Zet je linker wijsvinger op de ‘e’, en je rechter wijsvinger op de ‘i’, zo kun je " \
                  "snel plaatjes verplaatsen! Ben je er klaar voor? Druk dan op volgende."
 
 FINAL_BLOCK_TEXT = {
@@ -77,9 +131,11 @@ FINAL_BLOCK_TEXT = {
             "Er zijn geen goede of foute antwoorden op deze vragen!"
 }
 
-COLLECTION_QUIZ_BEGINNING_TEXT = "Leuk dat je mee doet aan dit onderzoek! Als je iets niet begrijpt tijdens het onderzoek, " \
-                      "of als je wilt " \
-                      "stoppen, steek dan je hand op. We komen dan zo snel mogelijk naar je toe om je te helpen."
+COLLECTION_QUIZ_BEGINNING_TEXT = "Leuk dat je mee doet aan dit onderzoek! Vind je het fijn als de tekst wordt voorgelezen? Klik dan onderaan op de knop 'Voorlezen'. " \
+                      "Als je iets niet begrijpt tijdens het onderzoek, of als je wilt " \
+                      "stoppen, steek dan je hand op. We komen dan zo snel mogelijk naar je toe om je te helpen. "
+
+COLLECTION_QUIZ_BEGINNING_AUDIO = "https://res.cloudinary.com/hwutobbxz/video/upload/v1596206106/audio/collection-intro_sjdsq8.m4a"
 
 COLLECTION_QUIZ_END_TEXT = "Bedankt voor het meedoen aan dit onderzoek! We willen je vragen om niet te verklappen" \
                 "wat je precies gedaan hebt aan andere kinderen die misschien nog mee willen doen.\n" \
@@ -90,7 +146,11 @@ DEMO_QUIZ_END_TEXT = "De demo is afgelopen! Wacht tot een assistent je naar de t
 INTERVENTION_VIDEO_TEXT = "Wat goed gedaan! Je hebt alle vragen gehad. " \
                           "Je mag nog een korte video kijken waarin we je vertellen wat een programmeur eigenlijk is."
 
+INTERVENTION_VIDEO_AUDIO = "https://res.cloudinary.com/hwutobbxz/video/upload/v1596203599/audio/control-video_ofvne3.m4a"
+
 CONTROL_VIDEO_TEXT = "Allereerst ga je naar een video kijken waarin we je uitleg geven over het beroep ‘programmeur’."
+
+CONTROL_VIDEO_AUDIO = "https://res.cloudinary.com/hwutobbxz/video/upload/v1596203599/audio/intervention-video_otawa1.m4a"
 
 DISSEMINATION_RESULT_MALE = "Volgens deze test associeert u programmeren met mannen."
 

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import UIFx from 'uifx';
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -7,7 +6,7 @@ import Container from "@material-ui/core/Container";
 import { makeStyles } from "@material-ui/core";
 import GridListTile from "@material-ui/core/GridListTile";
 import GridList from "@material-ui/core/GridList";
-import audio from '../../utils/constants/sound.mp3'
+import Grid from "@material-ui/core/Grid";
 
 const useStyles = makeStyles((theme) => ({
   "@global": {
@@ -64,11 +63,19 @@ const Information = (props) => {
   const [hasNext, sethasNext] = useState(false);
   const [startsIn, setStartIn] = useState(false);
 
-  const likeAudio = new Audio(audio);
+  var playing = false;
+
+  function audio_ended() {
+    playing = false;
+  };
 
   const playSound = audioFile => {
-    audioFile.play();
-}
+    if (playing==false){
+      audioFile.play(); 
+      playing = true;
+      setTimeout(audio_ended, 30000)
+    }
+  }
 
   return (
     <React.Fragment>
@@ -85,14 +92,6 @@ const Information = (props) => {
         </div>
       ) : (
         <React.Fragment>
-
-          <Button
-              onClick={() => playSound(likeAudio)}
-              variant="contained"
-              color="primary"
-          > Geluid
-          </Button>
-
           <Typography
             variant="h5"
             align="center"
@@ -103,7 +102,7 @@ const Information = (props) => {
           </Typography>
 
           <Container maxWidth component="main" className={classes.heroContent}>
-            <div style={{ paddingTop: 30 }}>
+            <div style={{ paddingTop: 25 }}>
               <Typography
                 variant="h5"
                 align="center"
@@ -128,7 +127,7 @@ const Information = (props) => {
                 </GridListTile>
               ))}
             </GridList>
-            <div style={{ paddingTop: 25 }}>
+            <div style={{ paddingTop: 15 }}>
               <Typography
                 variant="h5"
                 align="center"
@@ -153,7 +152,7 @@ const Information = (props) => {
                 </GridListTile>
               ))}
             </GridList>
-            <div style={{ paddingTop: 25 }}>
+            <div style={{ paddingTop: 15 }}>
               <Typography
                 variant="h5"
                 align="center"
@@ -164,21 +163,39 @@ const Information = (props) => {
               </Typography>
             </div>
           </Container>
-          <Button
-            variant="contained"
-            style={{ marginTop: 20 }}
-            onClick={() => {
-              sethasNext(true);
-              setTimeout(props.onNext, 4000);
-              setStartIn(3);
-              setTimeout(() => setStartIn(2), 1000);
-              setTimeout(() => setStartIn(1), 2000);
-              setTimeout(() => setStartIn("Start!"), 3000);
-            }}
-            disabled={hasNext}
-          >
-            Volgende
-          </Button>
+
+          <Grid container>
+            <Grid item xs={6} sm={6}>
+              <Button
+                  onClick={() => playSound(new Audio(props.audio))}
+                  variant="contained"
+                  style={{ marginTop: 20 }}
+                  color="primary"
+              > Voorlezen
+              </Button>
+            </Grid>
+
+            <Grid item xs={6} sm={6}>
+              <Button
+                variant="contained"
+                style={{ marginTop: 20 }}
+                color="primary"
+                onClick={() => {
+                  sethasNext(true);
+                  setTimeout(props.onNext, 4000);
+                  setStartIn(3);
+                  setTimeout(() => setStartIn(2), 1000);
+                  setTimeout(() => setStartIn(1), 2000);
+                  setTimeout(() => setStartIn("Start!"), 3000);
+                }}
+                disabled={hasNext}
+              >
+                Volgende
+              </Button> 
+            </Grid>
+            
+          </Grid>
+          
         </React.Fragment>
       )}
     </React.Fragment>
