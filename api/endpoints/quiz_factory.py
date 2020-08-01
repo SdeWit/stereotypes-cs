@@ -8,8 +8,8 @@ from sqlalchemy import or_
 from api.models import QuestionType, Question, Image, Question_to_category, Category
 from api.models.helpers import add_to_db
 from api.endpoints.constants import BLOCK_START_TEXT, BLOCK_END_TEXT, FINAL_BLOCK_TEXT, \
-    COLLECTION_QUIZ_END_TEXT, COLLECTION_QUIZ_BEGINNING_TEXT, COLLECTION_QUIZ_BEGINNING_AUDIO, \
-    INTERVENTION_VIDEO_TEXT, INTERVENTION_VIDEO_AUDIO, CONTROL_VIDEO_TEXT, CONTROL_VIDEO_AUDIO, DISSEMINATION_QUIZ_END_TEXT
+    COLLECTION_QUIZ_END_TEXT, COLLECTION_QUIZ_BEGINNING_TEXT, INTERVENTION_VIDEO_TEXT, \
+    CONTROL_VIDEO_TEXT, DISSEMINATION_QUIZ_END_TEXT
 
 
 class QuizFactory:
@@ -36,7 +36,10 @@ class QuizFactory:
         """
 
         self.response = []
-        self.create_information_beginning(COLLECTION_QUIZ_BEGINNING_TEXT, COLLECTION_QUIZ_BEGINNING_AUDIO)
+        self.create_information_beginning(COLLECTION_QUIZ_BEGINNING_TEXT)
+        if 'before' in self.video.data and self.video.data['before']:
+            self.response.extend(self.experience.create_experience())
+            self.response.extend(self.video.create_video())
         self.response.extend(self.gender_profession.create_iat())
         self.response.extend(self.social_profession.create_iat())
         self.response.extend(self.hobby_profession.create_iat())
@@ -66,7 +69,6 @@ class QuizFactory:
     def create_ending(self, end_text):
         """
         Creates a type finish question to be shown at the end of the test
-
         Parameters
         ----------
         end_text : string
@@ -86,10 +88,9 @@ class QuizFactory:
                              .first()
                              .make_response())
 
-    def create_information_beginning(self, beginning_text, beginning_audio=''):
+    def create_information_beginning(self, beginning_text):
         """
         Creates a type information question to be shown at the start of the test
-
         Parameters
         ----------
         beginning_text : string
@@ -97,8 +98,7 @@ class QuizFactory:
         """
         self.response.append({
             "q_type": QuestionType.information.value,
-            "text": beginning_text,
-            "audio": beginning_audio
+            "text": beginning_text
         })
 
     def create_end_iat_text(self):
@@ -127,7 +127,6 @@ class VideoFactory:
 
         video = Question.query.filter_by(id=self.data['id']).first()
         video.text = self.create_video_text()
-        video.audio = self.create_video_audio()
         print(video.images)
         return video.make_response()
 
@@ -139,15 +138,6 @@ class VideoFactory:
         if not self.data['before']:
             return INTERVENTION_VIDEO_TEXT
         return CONTROL_VIDEO_TEXT
-
-    def create_video_audio(self):
-        """
-        Checks if video is at the start or at the end of the quiz.
-        :return: Returns the corresponding audio for its posisiton
-        """
-        if not self.data['before']:
-            return INTERVENTION_VIDEO_AUDIO
-        return CONTROL_VIDEO_AUDIO
 
 
 class DemographicsFactory:
@@ -231,7 +221,6 @@ class IATFactory:
 
         for block_nr, phase in enumerate(self.data, 5 - len(self.data)):
             self.create_guide_text(phase, block_nr)
-            self.create_guide_audio(phase, block_nr)
             self.load_phase(phase, block_nr)
         return self.response
 
@@ -334,15 +323,3 @@ class IATFactory:
         guide_text['images0'] = images0
         guide_text['images1'] = images1
         self.response.append(guide_text)
-
-    def create_guide_audio(self, phase, block_nr):
-        """
-        Creates the audio before a phase in a IAT
-        :return: The audio to be showed before the phase
-        """
-
-        guide_audio = BLOCK_START_AUDIO[block_nr].copy()
-        self.response.append({"audio": guide_audio[c_left[0][0].lower()]})
-
-    #  c_left[0][0]
-    # jongen, meisje, programmeur, schrijver, alleen, samen, videospelletjes spelen, tennisen, fruit, groente

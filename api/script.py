@@ -146,8 +146,6 @@ def populate():
     create_images(fruit_images, c_fruit.id)
     create_images(vegetable_images, c_vegetable.id)
 
-    # audio files
-    # Audio.create_audio(link_audio[0], description='', attribute=link_audio[1], c_id=c_id)
     # likert
     ## Demographics 1-5
     create_likert("Ik maak makkelijk vrienden en werk graag samen.", 'https://res.cloudinary.com/hwutobbxz/video/upload/v1596200541/audio/1_ywbmuk.m4a')
