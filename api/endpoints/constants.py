@@ -36,10 +36,10 @@ BLOCK_START_TEXT = [
     {"text0": "Goed gedaan! We gaan het nog een keer doen, maar nu met nieuwe plaatjes.",
 
      "text1": "Hieronder zie je plaatjes van een {}. Deze ga je zo naar links verplaatsen. Dit doe je door op "
-              "de ‘E’ te tikken op het toetsenbord.",
+              "de 'e' te tikken op het toetsenbord.",
 
      "text2": "Ook ga je plaatjes zien van een {}. Deze ga je zo naar rechts verplaatsen. Dit doe je door op "
-              "de ‘I’ te tikken op het toetsenbord.",
+              "de ‘i’ te tikken op het toetsenbord.",
 
     "programmeur_schrijver" : "",
 
@@ -55,11 +55,11 @@ BLOCK_START_TEXT = [
 
     {"text0": "Nu gaan we plaatjes combineren.",
 
-     "text1": "Wanneer je een plaatje ziet van een {} of {} verplaats je deze naar links door op de ‘E’ "
+     "text1": "Wanneer je een plaatje ziet van een {} of {} verplaats je deze naar links door op de ‘e’ "
               "te tikken op het toetsenbord. Dat zijn dus deze plaatjes.",
 
      "text2": "Wanneer je een plaatje ziet van een {} of {} verplaats je deze naar rechts door op de "
-              "‘I’ te tikken op het toetsenbord. Dat zijn dus deze plaatjes.",
+              "‘i’ te tikken op het toetsenbord. Dat zijn dus deze plaatjes.",
     
     "programmeur_schrijver" : "",   
     
