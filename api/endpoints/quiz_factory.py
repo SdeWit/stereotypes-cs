@@ -340,18 +340,23 @@ class IATFactory:
         guide_text['images0'] = images0
         guide_text['images1'] = images1
 
-        if len(c_left) >= 2:
+        if len(c_left) >= 2 & c_left[0][0].lower()=='programmeur':
              audio_name = c_left[1][0].lower()
+             logging.warning('if') 
         else: 
             audio_name = c_left[0][0].lower()
+            logging.warning('else') 
     
-        if len(c_right) >= 2:
+        if len(c_right) >= 2 & c_right[0][0].lower()=='schrijver':
              audio_name = audio_name + '_' +  c_right[1][0].lower()
+             logging.warning('if')
         else:
             audio_name = audio_name + '_' + c_right[0][0].lower() 
+            logging.warning('else') 
     
+        audio_name = c_left[0][0].lower() + '_' + c_right[0][0].lower() 
+        
         logging.warning('factory audio') 
-        logging.warning(block_nr) 
         logging.warning(audio_name) 
         logging.warning(guide_text[audio_name]) 
         
