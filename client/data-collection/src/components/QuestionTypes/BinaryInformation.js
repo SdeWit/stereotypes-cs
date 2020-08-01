@@ -63,9 +63,19 @@ const Information = (props) => {
   const [hasNext, sethasNext] = useState(false);
   const [startsIn, setStartIn] = useState(false);
 
+  var playing = false;
+
+  function audio_ended() {
+    playing = false;
+  };
+
   const playSound = audioFile => {
-    audioFile.play();
-}
+    if (playing==false){
+      audioFile.play(); 
+      playing = true;
+      setTimeout(audio_ended, 30000)
+    }
+  }
 
   return (
     <React.Fragment>

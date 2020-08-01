@@ -57,8 +57,18 @@ const MultipleChoiceSpecial = (props) => {
     setOptions({ ...newState });
   };
   
+  var playing = false;
+
+  function audio_ended() {
+    playing = false;
+  };
+
   const playSound = audioFile => {
-    audioFile.play();
+    if (playing==false){
+      audioFile.play(); 
+      playing = true;
+      setTimeout(audio_ended, 5000)
+    }
   }
 
   return (

@@ -324,5 +324,6 @@ class IATFactory:
         guide_text['images0'] = images0
         guide_text['images1'] = images1
 
-        guide_text['audio'] = 'audio'
+        #guide_text['audio'] = 'audio'
+        guide_text['audio'] = Category.name.in_(phase['right_categ'])
         self.response.append(guide_text)

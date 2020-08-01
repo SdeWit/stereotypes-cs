@@ -13,20 +13,14 @@ const Information = (props) => {
   var playing = false;
 
   function audio_ended() {
-    console.log('audio ended');
     playing = false;
-    console.log(playing);
   };
 
   const playSound = audioFile => {
-    console.log('playsound method');
-    console.log(playing);
     if (playing==false){
-      console.log('playing');
       audioFile.play(); 
       playing = true;
-      console.log(audioFile.duration);
-      setTimeout(audio_ended(), audioFile.duration*1000)
+      setTimeout(audio_ended, 15000)
     }
   }
 
