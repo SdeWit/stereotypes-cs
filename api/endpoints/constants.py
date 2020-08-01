@@ -135,7 +135,7 @@ COLLECTION_QUIZ_END_TEXT = "Bedankt voor het meedoen aan dit onderzoek! We wille
                 "wat je precies gedaan hebt aan andere kinderen die misschien nog mee willen doen.\n" \
                 "Steek je hand op, dan komt er zo snel mogelijk iemand naar je toe."
 
-COLLECTION_QUIZ_END_TEXT = "https://res.cloudinary.com/hwutobbxz/video/upload/v1596318222/audio/end_svg6jz.m4a"
+COLLECTION_QUIZ_END_AUDIO = "https://res.cloudinary.com/hwutobbxz/video/upload/v1596318222/audio/end_svg6jz.m4a"
 
 DEMO_QUIZ_END_TEXT = "De demo is afgelopen! Wacht tot een assistent je naar de testcomputer brengt."
 
