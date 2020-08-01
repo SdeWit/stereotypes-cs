@@ -182,7 +182,7 @@ class DemographicsFactory:
 
         self.response.append({
             "q_type": QuestionType.information.value,
-            "text": "Je bent er bijna, nog een paar vragen!"
+            "text": "Je bent er bijna, nog een paar vragen!",
             "audio": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596317858/audio/before-demographics_bpt9xe.m4a"
         })
         for q_id in self.data:
