@@ -188,7 +188,7 @@ const Information = (props) => {
                   setTimeout(() => setStartIn(1), 2000);
                   setTimeout(() => setStartIn("Start!"), 3000);
                 }}
-                disabled={hasNext && !playing}
+                disabled={hasNext}
               >
                 Volgende
               </Button> 

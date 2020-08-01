@@ -145,7 +145,7 @@ const MultipleChoiceSpecial = (props) => {
                 color="primary"
                 className={classes.nextButton}
                 variant="contained"
-                disabled={ticked === 0 && !playing}
+                disabled={ticked === 0}
                 onClick={onClick}
               >
                 VOLGENDE

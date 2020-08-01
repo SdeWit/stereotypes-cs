@@ -65,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
 const giveMeString = function(index, id) {
   // Jongens - Meisjes
   //  12
-  if(id == 12){
+  if(id == 13){
     if(index == '1')
       return "Jongens"
     else if(index == '2')
@@ -82,7 +82,7 @@ const giveMeString = function(index, id) {
 
   // Programmeur - Schrijver
   // 6 - 10
-  else if(id >= 5 && id <= 10){
+  else if(id >= 6 && id <= 10){
     if(index == '1')
       return "Programmeur"
     else if(index == '2')
@@ -199,7 +199,7 @@ const LikertScaleQuestion = (props) => {
                   color="primary"
                   className={classes.nextButton}
                   variant='contained'
-                  disabled={state.answers.length === 0 && !playing}
+                  disabled={state.answers.length === 0}
                   onClick={onClick}
                 >
                   VOLGENDE

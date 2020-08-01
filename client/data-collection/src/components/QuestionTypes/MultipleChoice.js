@@ -120,7 +120,7 @@ const MultipleChoice = (props) => {
                 color="primary"
                 className={classes.nextButton}
                 variant="contained"
-                disabled={state.answers.length === 0 && !playing}
+                disabled={state.answers.length === 0}
                 onClick={onClick}
               >
                 VOLGENDE

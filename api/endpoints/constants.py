@@ -24,10 +24,10 @@ BLOCK_START_TEXT = [
               "snel mogelijk en probeer zo min mogelijk fouten te maken. Mocht je toch een foutje maken, geen "
               "probleem! Je mag het dan nog een keer proberen.",
 
-     "text1": "Hieronder zie je plaatjes van {}. Deze ga je zo naar links verplaatsen. Dit doe je door op "
+     "text1": "Hieronder zie je '{}'-plaatjes. Deze ga je zo naar links verplaatsen. Dit doe je door op "
               "de ‘e’ te tikken op het toetsenbord.",
 
-     "text2": "Ook ga je plaatjes zien van {}. Deze ga je zo naar rechts verplaatsen. Dit doe je door op "
+     "text2": "Ook ga je '{}'-plaatjes zien. Deze ga je zo naar rechts verplaatsen. Dit doe je door op "
               "de ‘i’ te tikken op het toetsenbord.",
 
      "programmeur_schrijver" : "https://res.cloudinary.com/hwutobbxz/video/upload/v1596284785/audio/IAT-1-profession-programmer-writer_tcnceo.m4a"
@@ -35,10 +35,10 @@ BLOCK_START_TEXT = [
 
     {"text0": "Goed gedaan! We gaan het nog een keer doen, maar nu met nieuwe plaatjes.",
 
-     "text1": "Hieronder zie je plaatjes van {}. Deze ga je zo naar links verplaatsen. Dit doe je door op "
+     "text1": "Hieronder zie je '{}'-plaatjes. Deze ga je zo naar links verplaatsen. Dit doe je door op "
               "de 'e' te tikken op het toetsenbord.",
 
-     "text2": "Ook ga je plaatjes zien van {}. Deze ga je zo naar rechts verplaatsen. Dit doe je door op "
+     "text2": "Ook ga je '{}'-plaatjes zien. Deze ga je zo naar rechts verplaatsen. Dit doe je door op "
               "de ‘i’ te tikken op het toetsenbord.",
 
     "programmeur_schrijver" : "",
@@ -55,10 +55,10 @@ BLOCK_START_TEXT = [
 
     {"text0": "Nu gaan we plaatjes combineren.",
 
-     "text1": "Wanneer je een plaatje ziet van {} of {} verplaats je deze naar links door op de ‘e’ "
+     "text1": "Wanneer je '{}'-plaatjes ziet of '{}'-plaatjes ziet verplaats je deze naar links door op de ‘e’ "
               "te tikken op het toetsenbord. Dat zijn dus deze plaatjes.",
 
-     "text2": "Wanneer je een plaatje ziet van {} of {} verplaats je deze naar rechts door op de "
+     "text2": "Wanneer je '{}'-plaatjes of '{}'-plaatjes ziet verplaats je deze naar rechts door op de "
               "‘i’ te tikken op het toetsenbord. Dat zijn dus deze plaatjes.",
     
     "programmeur_schrijver" : "",   
@@ -75,10 +75,10 @@ BLOCK_START_TEXT = [
 
     {"text0": "Goed gedaan! We gaan het nog een keer doen, maar draaien nu links en rechts om.",
 
-     "text1": "Hieronder zie je plaatjes van {}. Deze ga je zo naar links verplaatsen. Dit doe je door op de "
+     "text1": "Hieronder zie je '{}'-plaatjes. Deze ga je zo naar links verplaatsen. Dit doe je door op de "
               "‘e’ te tikken op het toetsenbord.",
 
-     "text2": "Ook ga je plaatjes zien van {}. Deze ga je zo naar rechts verplaatsen. Dit doe je door op de "
+     "text2": "Ook ga je '{}'-plaatjes zien. Deze ga je zo naar rechts verplaatsen. Dit doe je door op de "
               "‘i’ te tikken op het toetsenbord.",
 
     "programmeur_schrijver" : "",   
@@ -96,10 +96,10 @@ BLOCK_START_TEXT = [
 
     {"text0": "Nog een set met plaatjes te gaan! Je doet het heel goed.",
 
-     "text1": "Wanneer je een plaatje ziet van {} of {} verplaats je deze naar links door op de ‘e’ "
+     "text1": "Wanneer je '{}'-plaatjes of '{}'-plaatjes ziet verplaats je deze naar links door op de ‘e’ "
               "te tikken op het toetsenbord. Dat zijn dus deze plaatjes.",
 
-     "text2": "Wanneer je een plaatje ziet van {} of {} verplaats je deze naar rechts door op de "
+     "text2": "Wanneer je '{}'-plaatjes of '{}'-plaatjes ziet verplaats je deze naar rechts door op de "
               "‘i’ te tikken op het toetsenbord. Dat zijn dus deze plaatjes.",
 
      "programmeur_schrijver" : "",   
