@@ -25,46 +25,46 @@ BLOCK_START_TEXT = [
               "probleem! Je mag het dan nog een keer proberen.",
 
      "text1": "Hieronder zie je plaatjes van een {}. Deze ga je zo naar links verplaatsen. Dit doe je door op "
-              "de ‘e’ te tikken op het toetsenbord.",
+              "de ‘E’ te tikken op het toetsenbord.",
 
      "text2": "Ook ga je plaatjes zien van een {}. Deze ga je zo naar rechts verplaatsen. Dit doe je door op "
-              "de ‘i’ te tikken op het toetsenbord."
+              "de ‘I’ te tikken op het toetsenbord."
      },
 
     {"text0": "Goed gedaan! We gaan het nog een keer doen, maar nu met nieuwe plaatjes.",
 
      "text1": "Hieronder zie je plaatjes van een {}. Deze ga je zo naar links verplaatsen. Dit doe je door op "
-              "de ‘e’ te tikken op het toetsenbord.",
+              "de ‘E’ te tikken op het toetsenbord.",
 
      "text2": "Ook ga je plaatjes zien van een {}. Deze ga je zo naar rechts verplaatsen. Dit doe je door op "
-              "de ‘i’ te tikken op het toetsenbord."
+              "de ‘I’ te tikken op het toetsenbord."
      },
 
     {"text0": "Nu gaan we plaatjes combineren.",
 
-     "text1": "Wanneer je een plaatje ziet van een {} of {} verplaats je deze naar links door op de ‘e’ "
+     "text1": "Wanneer je een plaatje ziet van een {} of {} verplaats je deze naar links door op de ‘E’ "
               "te tikken op het toetsenbord. Dat zijn dus deze plaatjes.",
 
      "text2": "Wanneer je een plaatje ziet van een {} of {} verplaats je deze naar rechts door op de "
-              "‘i’ te tikken op het toetsenbord. Dat zijn dus deze plaatjes."
+              "‘I’ te tikken op het toetsenbord. Dat zijn dus deze plaatjes."
      },
 
     {"text0": "Goed gedaan! We gaan het nog een keer doen, maar draaien nu links en rechts om.",
 
      "text1": "Hieronder zie je plaatjes van een {}. Deze ga je zo naar links verplaatsen. Dit doe je door op de "
-              "‘e’ te tikken op het toetsenbord.",
+              "‘E’ te tikken op het toetsenbord.",
 
      "text2": "Ook ga je plaatjes zien van een {}. Deze ga je zo naar rechts verplaatsen. Dit doe je door op de "
-              "‘i’ te tikken op het toetsenbord."
+              "‘I’ te tikken op het toetsenbord."
      },
 
     {"text0": "Nog een set met plaatjes te gaan! Je doet het heel goed.",
 
-     "text1": "Wanneer je een plaatje ziet van een {} of {} verplaats je deze naar links door op de ‘e’ "
+     "text1": "Wanneer je een plaatje ziet van een {} of {} verplaats je deze naar links door op de ‘E’ "
               "te tikken op het toetsenbord. Dat zijn dus deze plaatjes.",
 
      "text2": "Wanneer je een plaatje ziet van een {} of {} verplaats je deze naar rechts door op de "
-              "‘i’ te tikken op het toetsenbord. Dat zijn dus deze plaatjes."
+              "‘I’ te tikken op het toetsenbord. Dat zijn dus deze plaatjes."
      },
 ]
 
@@ -140,6 +140,8 @@ COLLECTION_QUIZ_BEGINNING_AUDIO = "https://res.cloudinary.com/hwutobbxz/video/up
 COLLECTION_QUIZ_END_TEXT = "Bedankt voor het meedoen aan dit onderzoek! We willen je vragen om niet te verklappen" \
                 "wat je precies gedaan hebt aan andere kinderen die misschien nog mee willen doen.\n" \
                 "Steek je hand op, dan komt er zo snel mogelijk iemand naar je toe."
+
+DEMO_QUIZ_END_TEXT = "De demo is afgelopen! Wacht tot een assistent je naar de testcomputer brengt."
 
 INTERVENTION_VIDEO_TEXT = "Wat goed gedaan! Je hebt alle vragen gehad. " \
                           "Je mag nog een korte video kijken waarin we je vertellen wat een programmeur eigenlijk is."

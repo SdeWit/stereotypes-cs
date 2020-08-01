@@ -8,10 +8,10 @@ import logging
 
 from api.models import QuestionType, Question, Image, Question_to_category, Category
 from api.models.helpers import add_to_db
+
 from api.endpoints.constants import BLOCK_START_TEXT, BLOCK_START_AUDIO, BLOCK_END_TEXT, FINAL_BLOCK_TEXT, \
     COLLECTION_QUIZ_END_TEXT, COLLECTION_QUIZ_BEGINNING_TEXT, COLLECTION_QUIZ_BEGINNING_AUDIO, INTERVENTION_VIDEO_TEXT, \
-    CONTROL_VIDEO_TEXT, DISSEMINATION_QUIZ_END_TEXT
-
+    CONTROL_VIDEO_TEXT, DISSEMINATION_QUIZ_END_TEXT, DEMO_QUIZ_END_TEXT
 
 class QuizFactory:
     """
@@ -65,6 +65,18 @@ class QuizFactory:
         self.response.extend(self.social_profession.create_iat())
         self.response.extend(self.hobby_profession.create_iat())
         self.create_ending(DISSEMINATION_QUIZ_END_TEXT)
+        return self.response
+
+    def create_demo_quiz(self):
+        """
+        Creates a quiz for the demo application
+        :return: The response to the demo application with the list of questions
+        """
+
+        self.response = []
+        self.response.extend(self.gender_profession.create_iat(guide_text=False))
+        self.response.extend(self.social_profession.create_iat(guide_text=False)) #quick fix for more images
+        self.create_ending(DEMO_QUIZ_END_TEXT)
         return self.response
 
     def create_ending(self, end_text):
@@ -166,6 +178,7 @@ class DemographicsFactory:
                 id=q_id).first().make_response())
         return self.response
 
+
 class ExperienceFactory:
     """
     Class that creates the experience questions
@@ -184,6 +197,7 @@ class ExperienceFactory:
             self.response.extend(Question.query.filter_by(
                 id=q_id).first().make_response())
         return self.response
+
 
 class EATFactory:
     """
@@ -215,14 +229,15 @@ class IATFactory:
         self.data = data
         self.response = []
 
-    def create_iat(self):
+    def create_iat(self, guide_text=True):
         """
         Creates an IAT response object
         :return: A list with all the IAT questions
         """
 
         for block_nr, phase in enumerate(self.data, 5 - len(self.data)):
-            self.create_guide_text(phase, block_nr)
+            if guide_text:
+                self.create_guide_text(phase, block_nr)
             self.load_phase(phase, block_nr)
         return self.response
 

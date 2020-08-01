@@ -105,3 +105,4 @@ class Version(enum.Enum):
     N = "intervention-social-male-counter"
     O = "intervention-hobby-female-counter"
     P = "intervention-hobby-male-counter"
+    Z = "demo"

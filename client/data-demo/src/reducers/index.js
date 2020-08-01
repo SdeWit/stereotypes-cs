@@ -1,10 +1,14 @@
-import { combineReducers } from "redux";
-import appReducer from "../reducers/app";
-import quizReducer from '../reducers/quiz';
+import { combineReducers } from 'redux';
+import loginReducer from '../reducers/login';
+import mainAppReducer from '../reducers/mainApp';
+import questionsReducer from '../reducers/questions';
+
+
 /*
  Combine all store reducers in one, to be provided to the whole app
 */
 export default combineReducers({
-  appReducer,
-  quizReducer
+  loginReducer,
+  mainAppReducer,
+  questionsReducer,
 });

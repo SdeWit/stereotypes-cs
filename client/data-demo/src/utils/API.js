@@ -11,4 +11,18 @@ const instance = axios.create({
   responseType: "json",
 });
 
+// request interceptor
+
+export const withToken = (token) => {
+  instance.interceptors.request.use(
+    (config) => {
+      config.headers["Authorization"] = "Bearer " + token;
+      return config;
+    },
+    (error) => {
+      Promise.reject(error);
+    }
+  );
+  return instance;
+};
 export default instance;

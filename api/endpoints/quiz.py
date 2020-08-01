@@ -114,6 +114,25 @@ class QuizQuestions(Resource):
             return ANSWERS[404], 404
 
 
+class DemoQuiz(Resource):
+    """Resource that returns a quiz for the demo app"""
+
+    @jwt_required
+    def get(self):
+        """
+        On a get request on the /demo endpoint we return a demo quiz with questions
+        :return: demo quiz and status 200
+        """
+
+        try:
+            filename = os.path.join(current_app.static_folder,
+                                    "IATs/{}.json".format("demo"))
+            return QuizFactory(filename).create_demo_quiz(), 200
+        except:
+            traceback.print_exc()
+            return ANSWERS[404], 404
+
+
 class RandomQuiz(Resource):
     """Resource that deals with retrieving random scenario from database"""
 
