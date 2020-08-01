@@ -9,7 +9,7 @@ import logging
 from api.models import QuestionType, Question, Image, Question_to_category, Category
 from api.models.helpers import add_to_db
 
-from api.endpoints.constants import BLOCK_START_TEXT, BLOCK_START_AUDIO, BLOCK_END_TEXT, FINAL_BLOCK_TEXT, \
+from api.endpoints.constants import BLOCK_START_TEXT, BLOCK_END_TEXT, FINAL_BLOCK_TEXT, \
     COLLECTION_QUIZ_END_TEXT, COLLECTION_QUIZ_BEGINNING_TEXT, COLLECTION_QUIZ_BEGINNING_AUDIO, INTERVENTION_VIDEO_TEXT, \
     CONTROL_VIDEO_TEXT, DISSEMINATION_QUIZ_END_TEXT, DEMO_QUIZ_END_TEXT
 
@@ -350,13 +350,11 @@ class IATFactory:
         else:
             audio_name = audio_name + '_' + c_right[0][0].lower() 
     
-        audio_links = BLOCK_START_AUDIO[block_nr].copy()
-
         logging.warning('factory audio') 
         logging.warning(block_nr) 
         logging.warning(audio_name) 
-        logging.warning(audio_links[block_nr]) 
-        logging.warning(audio_links[block_nr][audio_name])
-        guide_text['audio'] = audio_links[block_nr][audio_name]
+        logging.warning(guide_text[audio_name]) 
+        
+        guide_text['audio'] = guide_text[audio_name]
 
         self.response.append(guide_text)

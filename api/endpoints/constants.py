@@ -25,10 +25,12 @@ BLOCK_START_TEXT = [
               "probleem! Je mag het dan nog een keer proberen.",
 
      "text1": "Hieronder zie je plaatjes van een {}. Deze ga je zo naar links verplaatsen. Dit doe je door op "
-              "de ‘E’ te tikken op het toetsenbord.",
+              "de ‘e’ te tikken op het toetsenbord.",
 
      "text2": "Ook ga je plaatjes zien van een {}. Deze ga je zo naar rechts verplaatsen. Dit doe je door op "
-              "de ‘I’ te tikken op het toetsenbord."
+              "de ‘i’ te tikken op het toetsenbord.",
+
+     "programmeur_schrijver" : "https://res.cloudinary.com/hwutobbxz/video/upload/v1596284785/audio/IAT-1-profession-programmer-writer_tcnceo.m4a"
      },
 
     {"text0": "Goed gedaan! We gaan het nog een keer doen, maar nu met nieuwe plaatjes.",
@@ -37,44 +39,10 @@ BLOCK_START_TEXT = [
               "de ‘E’ te tikken op het toetsenbord.",
 
      "text2": "Ook ga je plaatjes zien van een {}. Deze ga je zo naar rechts verplaatsen. Dit doe je door op "
-              "de ‘I’ te tikken op het toetsenbord."
-     },
+              "de ‘I’ te tikken op het toetsenbord.",
 
-    {"text0": "Nu gaan we plaatjes combineren.",
+    "programmeur_schrijver" : "",
 
-     "text1": "Wanneer je een plaatje ziet van een {} of {} verplaats je deze naar links door op de ‘E’ "
-              "te tikken op het toetsenbord. Dat zijn dus deze plaatjes.",
-
-     "text2": "Wanneer je een plaatje ziet van een {} of {} verplaats je deze naar rechts door op de "
-              "‘I’ te tikken op het toetsenbord. Dat zijn dus deze plaatjes."
-     },
-
-    {"text0": "Goed gedaan! We gaan het nog een keer doen, maar draaien nu links en rechts om.",
-
-     "text1": "Hieronder zie je plaatjes van een {}. Deze ga je zo naar links verplaatsen. Dit doe je door op de "
-              "‘E’ te tikken op het toetsenbord.",
-
-     "text2": "Ook ga je plaatjes zien van een {}. Deze ga je zo naar rechts verplaatsen. Dit doe je door op de "
-              "‘I’ te tikken op het toetsenbord."
-     },
-
-    {"text0": "Nog een set met plaatjes te gaan! Je doet het heel goed.",
-
-     "text1": "Wanneer je een plaatje ziet van een {} of {} verplaats je deze naar links door op de ‘E’ "
-              "te tikken op het toetsenbord. Dat zijn dus deze plaatjes.",
-
-     "text2": "Wanneer je een plaatje ziet van een {} of {} verplaats je deze naar rechts door op de "
-              "‘I’ te tikken op het toetsenbord. Dat zijn dus deze plaatjes."
-     },
-]
-
-# audio file begins with left category
-BLOCK_START_AUDIO = [
-    {"programmeur_schrijver" : "https://res.cloudinary.com/hwutobbxz/video/upload/v1596284785/audio/IAT-1-profession-programmer-writer_tcnceo.m4a"
-    },
-
-    {
-    "programmeur_schrijver" : "",    
     "jongen_meisje": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596284785/audio/IAT-2-gender-jongen-meisje_gr2drx.m4a",
     "meisje_jongen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596284785/audio/IAT-2-gender-meisje-jongen_nj70nx.m4a",
 
@@ -83,10 +51,18 @@ BLOCK_START_AUDIO = [
 
     "alleen_samen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596286603/audio/IAT-2-social-alleen-samen_ukbvnd.m4a",
     "samen_alleen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596286604/audio/IAT-2-social-samen-alleen_1_ydkqxf.m4a"
-    },
+     },
 
-    {
+    {"text0": "Nu gaan we plaatjes combineren.",
+
+     "text1": "Wanneer je een plaatje ziet van een {} of {} verplaats je deze naar links door op de ‘E’ "
+              "te tikken op het toetsenbord. Dat zijn dus deze plaatjes.",
+
+     "text2": "Wanneer je een plaatje ziet van een {} of {} verplaats je deze naar rechts door op de "
+              "‘I’ te tikken op het toetsenbord. Dat zijn dus deze plaatjes.",
+    
     "programmeur_schrijver" : "",   
+    
     "jongen_meisje": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596286604/audio/IAT-3-gender-jongen-meisje_1_qmh5z6.m4a",
     "meisje_jongen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596286605/audio/IAT-3-gender-meisje-jongen_s86hzl.m4a",
 
@@ -95,10 +71,18 @@ BLOCK_START_AUDIO = [
 
     "alleen_samen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596286604/audio/IAT-3-social-alleen-samen_wlp5ja.m4a",
     "samen_alleen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596286604/audio/IAT-3-social-samen-alleen_imcskt.m4a"
-    },
+     },
 
-    {
+    {"text0": "Goed gedaan! We gaan het nog een keer doen, maar draaien nu links en rechts om.",
+
+     "text1": "Hieronder zie je plaatjes van een {}. Deze ga je zo naar links verplaatsen. Dit doe je door op de "
+              "‘E’ te tikken op het toetsenbord.",
+
+     "text2": "Ook ga je plaatjes zien van een {}. Deze ga je zo naar rechts verplaatsen. Dit doe je door op de "
+              "‘I’ te tikken op het toetsenbord.",
+
     "programmeur_schrijver" : "",   
+
     "jongen_meisje": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596286605/audio/IAT-4-gender-jongen-meisje_b5xejt.m4a",
     "meisje_jongen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596286605/audio/IAT-4-gender-meisje-jongen_1_m45pzu.m4a",
 
@@ -107,10 +91,19 @@ BLOCK_START_AUDIO = [
 
     "alleen_samen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596286606/audio/IAT-4-social-alleen-samen_ifahca.m4a",
     "samen_alleen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596286607/audio/IAT-4-social-samen-alleen_uplozf.m4a"
-    },
 
-    {
-    "programmeur_schrijver" : "",   
+     },
+
+    {"text0": "Nog een set met plaatjes te gaan! Je doet het heel goed.",
+
+     "text1": "Wanneer je een plaatje ziet van een {} of {} verplaats je deze naar links door op de ‘E’ "
+              "te tikken op het toetsenbord. Dat zijn dus deze plaatjes.",
+
+     "text2": "Wanneer je een plaatje ziet van een {} of {} verplaats je deze naar rechts door op de "
+              "‘I’ te tikken op het toetsenbord. Dat zijn dus deze plaatjes.",
+
+     "programmeur_schrijver" : "",   
+
     "jongen_meisje": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596286607/audio/IAT-5-gender-jongen-meisje_dzcggb.m4a",
     "meisje_jongen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596287115/audio/IAT-5-gender-meisje-jongen_qbzxyd.m4a",
 
@@ -131,7 +124,7 @@ FINAL_BLOCK_TEXT = {
             "Er zijn geen goede of foute antwoorden op deze vragen!"
 }
 
-COLLECTION_QUIZ_BEGINNING_TEXT = "Leuk dat je mee doet aan dit onderzoek! Vind je het fijn als de tekst wordt voorgelezen? Klik dan onderaan op de knop 'Voorlezen'. " \
+COLLECTION_QUIZ_BEGINNING_TEXT = "Leuk dat je mee doet aan dit onderzoek! Vind je het fijn als de tekst wordt voorgelezen? Klik dan onderaan op de knop 'voorlezen'. " \
                       "Als je iets niet begrijpt tijdens het onderzoek, of als je wilt " \
                       "stoppen, steek dan je hand op. We komen dan zo snel mogelijk naar je toe om je te helpen. "
 
