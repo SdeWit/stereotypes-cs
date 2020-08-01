@@ -24,13 +24,13 @@
       restart: always
     redis:
       image: redis:4.0.5-alpine     
-    client1:
-      container_name: client1
-      build:
-        context: ./client/client-consent-app
-        dockerfile: Dockerfile
-      ports:
-        - 3001:80
+    # client1:
+    #   container_name: client1
+    #   build:
+    #     context: ./client/client-consent-app
+    #     dockerfile: Dockerfile
+    #   ports:
+    #     - 3001:80
     client2:
       container_name: client2
       build:
@@ -38,20 +38,20 @@
         dockerfile: Dockerfile
       ports:
         - 3002:80
-    client3:
-      container_name: client3
-      build:
-        context: ./client/data-dissemination
-        dockerfile: Dockerfile
-      ports:
-        - 3003:80          
-    client4:
-      container_name: client4
-      build:
-        context: ./client/data-demo
-        dockerfile: Dockerfile
-      ports:
-        - 3004:80                     
+    # client3:
+    #   container_name: client3
+    #   build:
+    #     context: ./client/data-dissemination
+    #     dockerfile: Dockerfile
+    #   ports:
+    #     - 3003:80          
+  #   client4:
+  #     container_name: client4
+  #     build:
+  #       context: ./client/data-demo
+  #       dockerfile: Dockerfile
+  #     ports:
+  #       - 3004:80                     
   volumes:
     pgdata:
 

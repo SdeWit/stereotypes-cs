@@ -8,7 +8,7 @@ from sqlalchemy import or_
 from api.models import QuestionType, Question, Image, Question_to_category, Category
 from api.models.helpers import add_to_db
 from api.endpoints.constants import BLOCK_START_TEXT, BLOCK_END_TEXT, FINAL_BLOCK_TEXT, \
-    COLLECTION_QUIZ_END_TEXT, COLLECTION_QUIZ_BEGINNING_TEXT, INTERVENTION_VIDEO_TEXT, \
+    COLLECTION_QUIZ_END_TEXT, COLLECTION_QUIZ_BEGINNING_TEXT, COLLECTION_QUIZ_BEGINNING_AUDIO, INTERVENTION_VIDEO_TEXT, \
     CONTROL_VIDEO_TEXT, DISSEMINATION_QUIZ_END_TEXT
 
 
@@ -36,7 +36,7 @@ class QuizFactory:
         """
 
         self.response = []
-        self.create_information_beginning(COLLECTION_QUIZ_BEGINNING_TEXT)
+        self.create_information_beginning(COLLECTION_QUIZ_BEGINNING_TEXT, COLLECTION_QUIZ_BEGINNING_AUDIO)
         if 'before' in self.video.data and self.video.data['before']:
             self.response.extend(self.experience.create_experience())
             self.response.extend(self.video.create_video())
@@ -88,7 +88,7 @@ class QuizFactory:
                              .first()
                              .make_response())
 
-    def create_information_beginning(self, beginning_text):
+    def create_information_beginning(self, beginning_text, beginning_audio):
         """
         Creates a type information question to be shown at the start of the test
         Parameters
@@ -98,7 +98,8 @@ class QuizFactory:
         """
         self.response.append({
             "q_type": QuestionType.information.value,
-            "text": beginning_text
+            "text": beginning_text,
+            "audio": beginning_audio
         })
 
     def create_end_iat_text(self):
