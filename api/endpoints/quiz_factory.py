@@ -350,11 +350,13 @@ class IATFactory:
         else:
             audio_name = audio_name + '_' + c_right[0][0].lower() 
     
+        audio_links = BLOCK_START_AUDIO[block_nr].copy()
+
         logging.warning('factory audio') 
         logging.warning(block_nr) 
         logging.warning(audio_name) 
-        logging.warning(BLOCK_START_AUDIO[block_nr]) 
-        logging.warning(BLOCK_START_AUDIO[block_nr][audio_name])
-        guide_text['audio'] = BLOCK_START_AUDIO[block_nr][audio_name]
+        logging.warning(audio_links[block_nr]) 
+        logging.warning(audio_links[block_nr][audio_name])
+        guide_text['audio'] = audio_links[block_nr][audio_name]
 
         self.response.append(guide_text)
