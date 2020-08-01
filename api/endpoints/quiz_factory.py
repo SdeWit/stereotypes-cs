@@ -4,6 +4,7 @@ Module that contains the classes that create the different components for a quiz
 """
 import json
 from sqlalchemy import or_
+import logging
 
 from api.models import QuestionType, Question, Image, Question_to_category, Category
 from api.models.helpers import add_to_db
@@ -324,16 +325,21 @@ class IATFactory:
         guide_text['images0'] = images0
         guide_text['images1'] = images1
 
-        #guide_text['audio'] = 'audio'
-        audio_name = c_left[0][0].lower()
-        # if len(c_left) >= 2:
-        #     audio_name = audio_name + '_' + c_left[1][0].lower()
+        if len(c_left) >= 2:
+             audio_name = c_left[1][0].lower()
+        else: 
+            audio_name = c_left[0][0].lower()
     
-        audio_name = audio_name + '_' + c_right[0][0].lower() 
-        # if len(c_right) >= 2:
-        #     audio_name = audio_name + '_' +  c_right[1][0].lower()
-
-        guide_text['audio'] = audio_name
-        guide_text['audio2'] = BLOCK_START_AUDIO[block_nr][audio_name]
+        if len(c_right) >= 2:
+             audio_name = audio_name + '_' +  c_right[1][0].lower()
+        else:
+            audio_name = audio_name + '_' + c_right[0][0].lower() 
+    
+        logging.warning('factory audio') 
+        logging.warning(block_nr) 
+        logging.warning(audio_name) 
+        logging.warning(BLOCK_START_AUDIO[block_nr]) 
+        logging.warning(BLOCK_START_AUDIO[block_nr][audio_name])
+        guide_text['audio'] = BLOCK_START_AUDIO[block_nr][audio_name]
 
         self.response.append(guide_text)
