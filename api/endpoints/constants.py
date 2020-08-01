@@ -70,38 +70,51 @@ BLOCK_START_TEXT = [
 
 # audio file begins with left category
 BLOCK_START_AUDIO = [
-    {"programmeur" : ''},
-
-    {"jongen" : '',
-    "meisje" : '',
-    "alleen" : '',
-    "samen" : '',
-    "videospelletjes spelen" : '',
-    "tennisen" : '',
+    {"programmeur_schrijver" : 'https://res.cloudinary.com/hwutobbxz/video/upload/v1596284785/audio/IAT-1-profession-programmer-writer_tcnceo.m4a'
     },
 
-    {"jongen" : '',
-    "meisje" : '',
-    "alleen" : '',
-    "samen" : '',
-    "videospelletjes spelen" : '',
-    "tennisen" : '',
+    {
+    "jongen_meisje": 'https://res.cloudinary.com/hwutobbxz/video/upload/v1596284785/audio/IAT-2-gender-jongen-meisje_gr2drx.m4a',
+    "meisje_jongen": 'https://res.cloudinary.com/hwutobbxz/video/upload/v1596284785/audio/IAT-2-gender-meisje-jongen_nj70nx.m4a',
+
+    "videospelletjes spelen_tennisen":'https://res.cloudinary.com/hwutobbxz/video/upload/v1596286605/audio/IAT-2-hobby-spel-tennis_prhzzg.m4a',
+    "tennissen_videospelletjes spelen":'https://res.cloudinary.com/hwutobbxz/video/upload/v1596286834/audio/IAT-2-tennis-spel_qvpxuy.m4a',
+
+    "alleen_samen": 'https://res.cloudinary.com/hwutobbxz/video/upload/v1596286603/audio/IAT-2-social-alleen-samen_ukbvnd.m4a',
+    "samen_alleen": 'https://res.cloudinary.com/hwutobbxz/video/upload/v1596286604/audio/IAT-2-social-samen-alleen_1_ydkqxf.m4a'
     },
 
-    {"jongen" : '',
-    "meisje" : '',
-    "alleen" : '',
-    "samen" : '',
-    "videospelletjes spelen" : '',
-    "tennisen" : '',
+    {
+    "jongen_meisje": 'https://res.cloudinary.com/hwutobbxz/video/upload/v1596286604/audio/IAT-3-gender-jongen-meisje_1_qmh5z6.m4a',
+    "meisje_jongen": 'https://res.cloudinary.com/hwutobbxz/video/upload/v1596286605/audio/IAT-3-gender-meisje-jongen_s86hzl.m4a',
+
+    "videospelletjes spelen_tennisen":'https://res.cloudinary.com/hwutobbxz/video/upload/v1596286605/audio/IAT-3-hobby-spel-tennis_mga5dh.m4a',
+    "tennissen_videospelletjes spelen":'https://res.cloudinary.com/hwutobbxz/video/upload/v1596286604/audio/IAT-3-hobby-tennis-spel_xfzsbz.m4a',
+
+    "alleen_samen": 'https://res.cloudinary.com/hwutobbxz/video/upload/v1596286604/audio/IAT-3-social-alleen-samen_wlp5ja.m4a',
+    "samen_alleen": 'https://res.cloudinary.com/hwutobbxz/video/upload/v1596286604/audio/IAT-3-social-samen-alleen_imcskt.m4a'
     },
 
-    {"jongen" : '',
-    "meisje" : '',
-    "alleen" : '',
-    "samen" : '',
-    "videospelletjes spelen" : '',
-    "tennisen" : '',
+    {
+    "jongen_meisje": 'https://res.cloudinary.com/hwutobbxz/video/upload/v1596286605/audio/IAT-4-gender-jongen-meisje_b5xejt.m4a',
+    "meisje_jongen": 'https://res.cloudinary.com/hwutobbxz/video/upload/v1596286605/audio/IAT-4-gender-meisje-jongen_1_m45pzu.m4a',
+
+    "videospelletjes spelen_tennisen":'https://res.cloudinary.com/hwutobbxz/video/upload/v1596286606/audio/IAT-4-hobby-spel-tennis_v7gs5a.m4a',
+    "tennissen_videospelletjes spelen":'https://res.cloudinary.com/hwutobbxz/video/upload/v1596286607/audio/IAT-4-hobby-tennis-spel_oemkfc.m4a',
+
+    "alleen_samen": 'https://res.cloudinary.com/hwutobbxz/video/upload/v1596286606/audio/IAT-4-social-alleen-samen_ifahca.m4a',
+    "samen_alleen": 'https://res.cloudinary.com/hwutobbxz/video/upload/v1596286607/audio/IAT-4-social-samen-alleen_uplozf.m4a'
+    },
+
+    {
+    "jongen_meisje": 'https://res.cloudinary.com/hwutobbxz/video/upload/v1596286607/audio/IAT-5-gender-jongen-meisje_dzcggb.m4a',
+    "meisje_jongen": 'https://res.cloudinary.com/hwutobbxz/video/upload/v1596287115/audio/IAT-5-gender-meisje-jongen_qbzxyd.m4a',
+
+    "videospelletjes spelen_tennisen":'https://res.cloudinary.com/hwutobbxz/video/upload/v1596286607/audio/IAT-5-hobby-spel-tennis_hmgaan.m4a',
+    "tennissen_videospelletjes spelen":'https://res.cloudinary.com/hwutobbxz/video/upload/v1596286607/audio/IAT-5-hobby-tennis-spel_eheia4.m4a',
+
+    "alleen_samen": 'https://res.cloudinary.com/hwutobbxz/video/upload/v1596286606/audio/IAT-5-social-alleen-samen_qjmonj.m4a',
+    "samen_alleen": 'https://res.cloudinary.com/hwutobbxz/video/upload/v1596286606/audio/IAT-5-social-samen-alleen_y6gekz.m4a'
     },
 ]
 

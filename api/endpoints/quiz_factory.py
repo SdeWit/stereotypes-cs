@@ -325,5 +325,15 @@ class IATFactory:
         guide_text['images1'] = images1
 
         #guide_text['audio'] = 'audio'
-        guide_text['audio'] = Category.name.in_(phase['right_categ'])
+        audio_name = c_left[0][0].lower()
+        # if len(c_left) >= 2:
+        #     audio_name = audio_name + '_' + c_left[1][0].lower()
+    
+        audio_name = audio_name + '_' + c_right[0][0].lower() 
+        # if len(c_right) >= 2:
+        #     audio_name = audio_name + '_' +  c_right[1][0].lower()
+
+        guide_text['audio'] = audio_name
+        guide_text['audio2'] = BLOCK_START_AUDIO[block_nr][audio_name]
+
         self.response.append(guide_text)
