@@ -84,19 +84,33 @@ const Video = (props) => {
               {state.isLoading ? (
                 null
               ) : (
-                <Button
-                variant="contained"
-                size="large"
-                color="primary"
-                className={classes.playButton}
-                onClick={() => {
-                  props.videoWasPlayed()
-                  setstate({ ...state, isPlayed: true });
-                  videoRef.current.internalPlayer.playVideo();
-                }}
-              >
-                Afspelen
-              </Button>
+              <Grid container>
+                <Grid item xs={6}>
+                  <Button
+                      onClick={() => playSound(new Audio(props.audio))}
+                      variant="contained"
+                      color="primary"
+                      style={{ marginTop: '20px' }}
+                  > Voorlezen
+                  </Button>
+                </Grid>
+                
+                <Grid item xs={6}>
+                  <Button
+                  variant="contained"
+                  size="large"
+                  color="primary"
+                  className={classes.playButton}
+                  onClick={() => {
+                    props.videoWasPlayed()
+                    setstate({ ...state, isPlayed: true });
+                    videoRef.current.internalPlayer.playVideo();
+                  }}
+                >
+                    Afspelen
+                  </Button>
+                </Grid>
+              </Grid>
               )}
               </React.Fragment>
             )}
