@@ -65,16 +65,16 @@ const useStyles = makeStyles((theme) => ({
 const giveMeString = function(index, id) {
   // Jongens - Meisjes
   //  12
-  if(id == 13){
-    if(index == '1')
+  if(id === 13){
+    if(index === '1')
       return "Jongens"
-    else if(index == '2')
+    else if(index === '2')
       return "Een beetje meer voor jongens";
-    else if(index == '3')
+    else if(index === '3')
       return "Allebei";
-    else if(index == '4')
+    else if(index === '4')
       return "Een beetje meer voor meisjes";
-    else if(index == '5')
+    else if(index === '5')
       return "Meisjes";
     return index.toString();
   }
@@ -83,16 +83,32 @@ const giveMeString = function(index, id) {
   // Programmeur - Schrijver
   // 6 - 10
   else if(id >= 6 && id <= 10){
-    if(index == '1')
+    if(index === '1')
       return "Programmeur"
-    else if(index == '2')
+    else if(index === '2')
       return "Een beetje meer een programmeur";
-    else if(index == '3')
+    else if(index === '3')
       return "Allebei";
-    else if(index == '4')
+    else if(index === '4')
       return "Een beetje meer een schrijver";
-    else if(index == '5')
+    else if(index === '5')
       return "Schrijver";
+    return index.toString();
+  }
+
+  // hobby
+  // 3
+  else if(id === 3){
+    if(index === '1')
+      return "Videospelletjes spelen"
+    else if(index === '2')
+      return "Een beetje meer videospelletjes spelen";
+    else if(index === '3')
+      return "Allebei";
+    else if(index === '4')
+      return "Een beetje meer tennissen";
+    else if(index === '5')
+      return "Tennissen";
     return index.toString();
   }
 
@@ -101,15 +117,15 @@ const giveMeString = function(index, id) {
   // default
 
   else {
-    if(index == '1')
+    if(index === '1')
       return "Helemaal eens"
-    else if(index == '2')
+    else if(index === '2')
       return "Een beetje eens";
-    else if(index == '3')
+    else if(index === '3')
       return "Neutraal";
-    else if(index == '4')
+    else if(index === '4')
       return "Een beetje oneens";
-    else if(index == '5')
+    else if(index === '5')
       return "Helemaal oneens";
     return index.toString();
   }
@@ -141,7 +157,7 @@ const LikertScaleQuestion = (props) => {
   };
 
   const playSound = audioFile => {
-    if (playing==false){
+    if (playing===false){
       audioFile.play(); 
       playing = true;
       setTimeout(audio_ended, 5000)

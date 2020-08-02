@@ -70,7 +70,7 @@ const Information = (props) => {
   };
 
   const playSound = audioFile => {
-    if (playing==false){
+    if (playing===false){
       audioFile.play(); 
       playing = true;
       setTimeout(audio_ended, 30000)

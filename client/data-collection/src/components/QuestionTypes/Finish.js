@@ -60,7 +60,7 @@ const Finish = (props) => {
   };
 
   const playSound = audioFile => {
-    if (playing==false){
+    if (playing===false){
       audioFile.play(); 
       playing = true;
       setTimeout(audio_ended, 5000)
@@ -93,6 +93,7 @@ const Finish = (props) => {
               onClick={() => playSound(new Audio(props.audio))}
               variant="contained"
               color="primary"
+              style={{ marginTop: "20px" }}
               > 
               Voorlezen
         </Button>
