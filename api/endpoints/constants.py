@@ -30,7 +30,7 @@ BLOCK_START_TEXT = [
      "text2": "Ook ga je '{}'-plaatjes zien. Deze ga je zo naar rechts verplaatsen. Dit doe je door op "
               "de ‘i’ te tikken op het toetsenbord.",
 
-     "programmeur_schrijver" : "https://res.cloudinary.com/hwutobbxz/video/upload/v1596284785/audio/IAT-1-profession-programmer-writer_tcnceo.m4a"
+     "programmeur_schrijver" : "https://res.cloudinary.com/hwutobbxz/video/upload/v1596358730/audio/IAT-1-profession-programmeur-schrijver_btwmar.aiff"
      },
 
     {"text0": "Goed gedaan! We gaan het nog een keer doen, maar nu met nieuwe plaatjes.",
@@ -43,14 +43,14 @@ BLOCK_START_TEXT = [
 
     "programmeur_schrijver" : "",
 
-    "jongen_meisje": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596284785/audio/IAT-2-gender-jongen-meisje_gr2drx.m4a",
-    "meisje_jongen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596284785/audio/IAT-2-gender-meisje-jongen_nj70nx.m4a",
+    "jongen_meisje": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596358728/audio/IAT-2-gender-jongen-meisje_h4equl.aiff",
+    "meisje_jongen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596358728/audio/IAT-2-gender-meisje-jongen_nhxllj.aiff",
 
-    "videospelletjes spelen_tennissen":"https://res.cloudinary.com/hwutobbxz/video/upload/v1596314711/audio/IAT-2-hobby-spel-tennis_1_fu9gxw.m4a",
-    "tennissen_videospelletjes spelen":"https://res.cloudinary.com/hwutobbxz/video/upload/v1596286834/audio/IAT-2-tennis-spel_qvpxuy.m4a",
+    "videospelletjes spelen_tennissen":"https://res.cloudinary.com/hwutobbxz/video/upload/v1596358731/audio/IAT-2-hobby-spel-tennissen_vvlpaz.aiff",
+    "tennissen_videospelletjes spelen":"https://res.cloudinary.com/hwutobbxz/video/upload/v1596358730/audio/IAT-2-hobby-tennissen-spel_rtpg24.aiff",
 
-    "alleen_samen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596286603/audio/IAT-2-social-alleen-samen_ukbvnd.m4a",
-    "samen_alleen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596286604/audio/IAT-2-social-samen-alleen_1_ydkqxf.m4a"
+    "alleen_samen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596358731/audio/IAT-2-social-alleen-samen_i2jcm8.aiff",
+    "samen_alleen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596358732/audio/IAT-2-social-samen-alleen_nq7cp1.aiff"
      },
 
     {"text0": "Nu gaan we plaatjes combineren.",
@@ -63,14 +63,14 @@ BLOCK_START_TEXT = [
     
     "programmeur_schrijver" : "",   
     
-    "jongen_meisje": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596286604/audio/IAT-3-gender-jongen-meisje_1_qmh5z6.m4a",
-    "meisje_jongen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596286605/audio/IAT-3-gender-meisje-jongen_s86hzl.m4a",
+    "jongen_meisje": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596358731/audio/IAT-3-gender-jongen-meisje_fhcypz.aiff",
+    "meisje_jongen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596358735/audio/IAT-3-gender-meisje-jongen_ddenky.aiff",
 
-    "videospelletjes spelen_tennissen":"https://res.cloudinary.com/hwutobbxz/video/upload/v1596286605/audio/IAT-3-hobby-spel-tennis_mga5dh.m4a",
-    "tennissen_videospelletjes spelen":"https://res.cloudinary.com/hwutobbxz/video/upload/v1596286604/audio/IAT-3-hobby-tennis-spel_xfzsbz.m4a",
+    "videospelletjes spelen_tennissen":"https://res.cloudinary.com/hwutobbxz/video/upload/v1596358733/audio/IAT-3-hobby-spel-tennissen_ybgr6c.aiff",
+    "tennissen_videospelletjes spelen":"https://res.cloudinary.com/hwutobbxz/video/upload/v1596358732/audio/IAT-3-hobby-tennissen-spel_bdcpum.aiff",
 
-    "alleen_samen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596286604/audio/IAT-3-social-alleen-samen_wlp5ja.m4a",
-    "samen_alleen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596286604/audio/IAT-3-social-samen-alleen_imcskt.m4a"
+    "alleen_samen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596358733/audio/IAT-3-social-alleen-samen_bbzurw.aiff",
+    "samen_alleen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596358733/audio/IAT-3-social-samen-alleen_yw67m3.aiff"
      },
 
     {"text0": "Goed gedaan! We gaan het nog een keer doen, maar draaien nu links en rechts om.",
@@ -83,14 +83,14 @@ BLOCK_START_TEXT = [
 
     "programmeur_schrijver" : "",   
 
-    "jongen_meisje": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596286605/audio/IAT-4-gender-jongen-meisje_b5xejt.m4a",
-    "meisje_jongen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596314012/audio/IAT-4-gender-meisje-jongen_n7t9nh.m4a",
+    "jongen_meisje": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596358734/audio/IAT-4-gender-jongen-meisje_nlo579.aiff",
+    "meisje_jongen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596358736/audio/IAT-4-gender-meisje-jongen_ggusku.aiff",
 
-    "videospelletjes spelen_tennissen":"https://res.cloudinary.com/hwutobbxz/video/upload/v1596286606/audio/IAT-4-hobby-spel-tennis_v7gs5a.m4a",
-    "tennissen_videospelletjes spelen":"https://res.cloudinary.com/hwutobbxz/video/upload/v1596286607/audio/IAT-4-hobby-tennis-spel_oemkfc.m4a",
+    "videospelletjes spelen_tennissen":"https://res.cloudinary.com/hwutobbxz/video/upload/v1596358734/audio/IAT-4-hobby-spel-tennissen_ipzcrx.aiff",
+    "tennissen_videospelletjes spelen":"https://res.cloudinary.com/hwutobbxz/video/upload/v1596358736/audio/IAT-4-hobby-tennissen-spel_wybnsb.aiff",
 
-    "alleen_samen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596286606/audio/IAT-4-social-alleen-samen_ifahca.m4a",
-    "samen_alleen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596286607/audio/IAT-4-social-samen-alleen_uplozf.m4a"
+    "alleen_samen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596358738/audio/IAT-4-social-alleen-samen_zfaiur.aiff",
+    "samen_alleen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596358736/audio/IAT-4-social-samen-alleen_avpnqs.aiff"
 
      },
 
@@ -104,14 +104,14 @@ BLOCK_START_TEXT = [
 
      "programmeur_schrijver" : "",   
 
-    "jongen_meisje": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596286607/audio/IAT-5-gender-jongen-meisje_dzcggb.m4a",
-    "meisje_jongen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596287115/audio/IAT-5-gender-meisje-jongen_qbzxyd.m4a",
+    "jongen_meisje": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596358737/audio/IAT-5-gender-jongen-meisje_jfpwg5.aiff",
+    "meisje_jongen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596358738/audio/IAT-5-gender-meisje-jongen_csuroo.aiff",
 
-    "videospelletjes spelen_tennissen":"https://res.cloudinary.com/hwutobbxz/video/upload/v1596286607/audio/IAT-5-hobby-spel-tennis_hmgaan.m4a",
-    "tennissen_videospelletjes spelen":"https://res.cloudinary.com/hwutobbxz/video/upload/v1596286607/audio/IAT-5-hobby-tennis-spel_eheia4.m4a",
+    "videospelletjes spelen_tennissen":"https://res.cloudinary.com/hwutobbxz/video/upload/v1596358738/audio/IAT-5-hobby-spel-tennissen_f0icxj.aiff",
+    "tennissen_videospelletjes spelen":"https://res.cloudinary.com/hwutobbxz/video/upload/v1596358739/audio/IAT-5-hobby-tennissen-spel_ro2rrh.aiff",
 
-    "alleen_samen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596286606/audio/IAT-5-social-alleen-samen_qjmonj.m4a",
-    "samen_alleen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596286606/audio/IAT-5-social-samen-alleen_y6gekz.m4a"
+    "alleen_samen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596358738/audio/IAT-5-social-alleen-samen_qy5zbi.aiff",
+    "samen_alleen": "https://res.cloudinary.com/hwutobbxz/video/upload/v1596358738/audio/IAT-5-social-samen-alleen_tkmn4e.aiff"
     },
 ]
 
