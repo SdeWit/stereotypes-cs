@@ -64,7 +64,7 @@ class QuizAnswers(Resource):
 
                 gender = QuestionChoice.query.filter_by(
                     choice_num=answer['answers'], question_id=answer["question_id"]).first().text
-                    participant.gender = gender
+                participant.gender = gender
 
             #LET OP DATA VAN MULTIPLE CHOICE GAAT NIET ZOMAAR ERGENS HEEN!
             elif q_type == QuestionType.mc_multiple_answer \
