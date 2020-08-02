@@ -66,6 +66,7 @@ class QuizAnswers(Resource):
                     choice_num=answer['answers'], question_id=answer["question_id"]).first().text
                     participant.gender = gender
 
+            #LET OP DATA VAN MULTIPLE CHOICE GAAT NIET ZOMAAR ERGENS HEEN!
             elif q_type == QuestionType.mc_multiple_answer \
                     and i_type == ParticipantInformationType.ethnicity:
 
@@ -76,10 +77,26 @@ class QuizAnswers(Resource):
                     ethinicities.append(eth)
                 participant.ethnicity = ethinicities
 
-            elif q_type == QuestionType.mc_multiple_answer:
-                #LET OP DATA VAN MULTIPLE CHOICE GAAT NU NOG NERGENS HEEN!
-                #gaat om familiar and experience
+            elif q_type == QuestionType.mc_multiple_answer \
+                    and i_type == ParticipantInformationType.experience:
+                
+                experiences = []
+                for choice_num in answer['answers']:
+                    exp = QuestionChoice.query.filter_by(
+                        choice_num=choice_num, question_id=answer["question_id"]).first().text
+                    experiences.append(exp)
+                participant.experience = experiences
 
+            elif q_type == QuestionType.mc_multiple_answer \
+                    and i_type == ParticipantInformationType.familiar:
+                
+                familiars = []
+                for choice_num in answer['answers']:
+                    fam = QuestionChoice.query.filter_by(
+                        choice_num=choice_num, question_id=answer["question_id"]).first().text
+                    familiars.append(fam)
+                participant.familiar = familiars
+                
             elif i_type == ParticipantInformationType.researcher_notes:
                 participant.researcher_notes = answer['open_answer']
 
