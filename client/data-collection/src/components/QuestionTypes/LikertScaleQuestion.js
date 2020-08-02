@@ -100,15 +100,15 @@ const giveMeString = function(index, id) {
   // 3
   else if(id === 3){
     if(index === '1')
-      return "Videospelletjes spelen"
+      return "Videospelletjes te spelen"
     else if(index === '2')
-      return "Een beetje meer videospelletjes spelen";
+      return "Videospelletjes te spelen, net iets meer dan tennis";
     else if(index === '3')
       return "Allebei";
     else if(index === '4')
-      return "Een beetje meer tennissen";
+      return "Te tennissen, net iets meer dan videospelletjes te spelen";
     else if(index === '5')
-      return "Tennissen";
+      return "Te tennissen";
     return index.toString();
   }
 

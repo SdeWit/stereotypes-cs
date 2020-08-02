@@ -114,6 +114,7 @@ const Video = (props) => {
                   variant="contained"
                   size="large"
                   color="primary"
+                  style={{ marginTop: '20px' }}
                   className={classes.playButton}
                   onClick={() => {
                     props.videoWasPlayed()

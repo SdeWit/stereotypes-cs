@@ -12,7 +12,7 @@ def populate():
     db.drop_all()
     db.create_all()
 
-    User.create_user("admin", "admin")
+    # User.create_user("admin", "admin")
 
     c_male = Category.create_category(
         name="Jongen", metacategory=Metacategory.gender)
@@ -150,7 +150,7 @@ def populate():
     ## Demographics 1-5
     create_likert("Ik maak makkelijk vrienden en werk graag samen.", 'https://res.cloudinary.com/hwutobbxz/video/upload/v1596200541/audio/1_ywbmuk.m4a')
     create_likert("Ik ben gek op computers", 'https://res.cloudinary.com/hwutobbxz/video/upload/v1596200541/audio/2_qty6fj.m4a')
-    create_likert("Ik vind het het leukst om te", 'https://res.cloudinary.com/hwutobbxz/video/upload/v1596200542/audio/3_e3qsyz.m4a')
+    create_likert("Ik vind het het leukst om", 'https://res.cloudinary.com/hwutobbxz/video/upload/v1596200542/audio/3_e3qsyz.m4a')
     create_likert("Als ik dat zou willen, zou ik later programmeur kunnen worden.",'https://res.cloudinary.com/hwutobbxz/video/upload/v1596200542/audio/4_yxejoq.m4a')
     create_likert("Ik wil later programmeur worden", 'https://res.cloudinary.com/hwutobbxz/video/upload/v1596200542/audio/5_r7ghrl.m4a')
 
