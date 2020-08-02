@@ -54,6 +54,20 @@ const Video = (props) => {
     },
   };
 
+  var playing = false;
+
+  function audio_ended() {
+    playing = false;
+  };
+
+  const playSound = audioFile => {
+    if (playing===false){
+      audioFile.play(); 
+      playing = true;
+      setTimeout(audio_ended, 30000)
+    }
+  }
+  
   return (
     <div className={classes.root}>
       <Grid container spacing={3}>
