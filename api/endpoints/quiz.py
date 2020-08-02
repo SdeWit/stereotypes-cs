@@ -64,7 +64,6 @@ class QuizAnswers(Resource):
 
                 gender = QuestionChoice.query.filter_by(
                     choice_num=answer['answers'], question_id=answer["question_id"]).first().text
-                if gender != "Zeg ik liever niet":
                     participant.gender = gender
 
             elif q_type == QuestionType.mc_multiple_answer \
@@ -76,6 +75,10 @@ class QuizAnswers(Resource):
                         choice_num=choice_num, question_id=answer["question_id"]).first().text
                     ethinicities.append(eth)
                 participant.ethnicity = ethinicities
+
+            elif q_type == QuestionType.mc_multiple_answer:
+                #LET OP DATA VAN MULTIPLE CHOICE GAAT NU NOG NERGENS HEEN!
+                #gaat om familiar and experience
 
             elif i_type == ParticipantInformationType.researcher_notes:
                 participant.researcher_notes = answer['open_answer']
