@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   gridList: {
-    paddingTop: 25,
+    paddingTop: 15,
   },
 }));
 
@@ -102,7 +102,7 @@ const Information = (props) => {
           </Typography>
 
           <Container maxWidth component="main" className={classes.heroContent}>
-            <div style={{ paddingTop: 25 }}>
+            <div style={{ paddingTop: 15 }}>
               <Typography
                 variant="h5"
                 align="center"
@@ -118,7 +118,7 @@ const Information = (props) => {
               cols={props.images0.length}
             >
               {props.images0.map((image) => (
-                <GridListTile style={props.images0.length === 4 ? {width: '19%', margin:'auto'} : {}} key={image} cols={1}>
+                <GridListTile style={props.images0.length === 4 ? {width: '18%', margin:'auto'} : {}} key={image} cols={1}>
                   <img
                     style={{ width: "100%", height: "auto" }}
                     src={image}
@@ -143,7 +143,7 @@ const Information = (props) => {
               cols={props.images1.length}
             >
               {props.images1.map((image) => (
-                <GridListTile style={props.images0.length === 4 ? {width: '19%', margin:'auto'} : {}} key={image} cols={1}>
+                <GridListTile style={props.images0.length === 4 ? {width: '18%', margin:'auto'} : {}} key={image} cols={1}>
                   <img
                     style={{ width: "100%", height: "auto" }}
                     src={image}

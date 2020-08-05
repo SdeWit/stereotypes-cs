@@ -12,6 +12,7 @@ class Experience(enum.Enum):
     Activiteit = "Ja, op een activiteit buiten school bijvoorbeeld in de bibliotheek of bij een codeclub"
     Thuis = "Ja, bij familie, vrienden of thuis"
     Nee = "Nee"
+    Weet_niet = "Ik weet niet wat programmeren is"
 
 class Familiar(enum.Enum):
     """Enumeration of the choices for familiar types"""
@@ -20,6 +21,7 @@ class Familiar(enum.Enum):
     Ja_onbekend = "Ja, maar ik zie deze persoon niet vaak"
     Ja_tv = "Ja, van een film, serie of tv"
     Nee = "Nee"
+    Weet_niet = "Weet ik niet"
 
 class Gender(enum.Enum):
     """Enumeration of the choices for gender types"""
