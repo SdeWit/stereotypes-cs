@@ -6,6 +6,7 @@ import os
 import random
 import traceback
 import logging
+import datetime
 
 from flask import request
 from flask import current_app
@@ -102,6 +103,14 @@ class QuizAnswers(Resource):
                 participant.researcher_notes = answer['open_answer']
 
             else:
+                
+                try:
+                    if 'timestamp' in answer:
+                        date_format = '%Y-%m-%d %H:%M:%s'
+                        date_obj = datetime.datetime.strptime(answer["timestamp"], date_format)
+                except ValueError:
+                    print("Incorrect data format, should be YYYY-MM-DD H:M:s")
+
                 ParticipantAnswer.create_participant_answer(
                     p_id=answer["participant_id"],
                     q_id=answer["question_id"],
@@ -110,7 +119,7 @@ class QuizAnswers(Resource):
                     open_answer=answer["open_answer"] if "open_answer" in answer else None,
                     r_time=answer["response_time"] if 'response_time' in answer else None,
                     before_video=answer["before_video"],
-                    timestamp=answer["timestamp"] if 'timestamp' in answer else None),
+                    timestamp=date_obj if 'timestamp' in answer else None),
 
         commit_db_session()
         return ANSWERS[201], 201
