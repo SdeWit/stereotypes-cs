@@ -89,7 +89,7 @@ def validate_answer(value):
         "img_id": validate_string,
         "answers": validate_accept,
         "response_time": validate_int,
-        "before_video": validate_boolean
+        "before_video": validate_boolean,
         "timestamp" : validate_datetime
     }
 
