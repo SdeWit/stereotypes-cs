@@ -10,7 +10,6 @@ import { KeyboardControls } from '../../utils/constants/Controls';
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { Typography } from '@material-ui/core';
 import useStyles from '../../styles/BinaryQuestion';
-import datetime from datetime 
 
 //Component for Binary question
 const BinaryQuestion = (props) => {
