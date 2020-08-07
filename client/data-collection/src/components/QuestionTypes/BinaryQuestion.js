@@ -44,7 +44,7 @@ const BinaryQuestion = (props) => {
       answers: counter,
       img_id: props.image.link,
       response_time: answers.TIME(questionTime),
-      timestamp: String(new Date()),
+      timestamp: String(new Date().getTime()),
     };
     props.onAction(answer);
     props.onNext();
