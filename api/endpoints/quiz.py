@@ -5,6 +5,7 @@ Module that deals with all logic related to consent forms
 import os
 import random
 import traceback
+import logging
 
 from flask import request
 from flask import current_app
@@ -108,7 +109,8 @@ class QuizAnswers(Resource):
                     answers=answer["answers"] if "answers" in answer else None,
                     open_answer=answer["open_answer"] if "open_answer" in answer else None,
                     r_time=answer["response_time"] if 'response_time' in answer else None,
-                    before_video=answer["before_video"])
+                    before_video=answer["before_video"],
+                    timestamp=answer["timestamp"] if 'timestamp' in answer else None),
 
         commit_db_session()
         return ANSWERS[201], 201
@@ -163,7 +165,21 @@ class RandomQuiz(Resource):
         :return: random quiz and status 200
         """
 
-        scenario = random.choice(list(Version))
+        scenario_list = random.choice(list(Version))
+
+        root = logging.getLogger()
+        root.warning('before')
+        root.warning(scenario_list) 
+
+        for scen in scenario_list: 
+            if "intervention" in scen:
+                scenario_list.append(scen)
+        
+        root.warning('after')
+        root.warning(scenario_list) 
+
+        scenario = random.choice(scenario_list)
+
         try:
             filename = os.path.join(current_app.static_folder,
                                     "IATs/{}.json".format(scenario.value))
@@ -214,6 +230,7 @@ class QuizResults(Resource):
             array.append(answer.img_link)
             array.append(answer.response_time)
             array.append(answer.before_video)
+            array.append(answer.timestamp)
             data.append(array)
 
         return {

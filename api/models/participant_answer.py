@@ -49,12 +49,13 @@ class ParticipantAnswer(db.Model):
     open_question_answer = db.Column(db.Text, nullable=True)
     response_time = db.Column(db.Integer, nullable=True)
     before_video = db.Column(db.Boolean, nullable=False)
+    timestamp = db.Column(db.DateTime(timezone=True), nullable=True)
 
     question = db.relationship("Question", backref=db.backref('answers'))
 
     @staticmethod
     def create_participant_answer(p_id, q_id, img_link=None, answers=None, open_answer=None,
-                                  r_time=None, before_video=False):
+                                  r_time=None, before_video=False, timestamp=None):
         """
             Creates a new answer and adds it in the database.
 
@@ -74,6 +75,8 @@ class ParticipantAnswer(db.Model):
                 Response time of the question (Only for binary questions)
             before_video : boolean
                 True if the questions was before the video, false otherwise
+            timestamp : date
+                Timestamp for when question is filled in
             Returns
             -------
             answer : ParticipantAnswer
@@ -82,7 +85,7 @@ class ParticipantAnswer(db.Model):
         """
         p_answer = ParticipantAnswer(participant_id=p_id, question_id=q_id, img_link=img_link,
                                      answers=answers, open_question_answer=open_answer,
-                                     response_time=r_time, before_video=before_video)
+                                     response_time=r_time, before_video=before_video, timestamp=timestamp)
         add_to_db(p_answer)
 
     def __repr__(self):

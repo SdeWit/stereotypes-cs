@@ -10,6 +10,7 @@ import { KeyboardControls } from '../../utils/constants/Controls';
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { Typography } from '@material-ui/core';
 import useStyles from '../../styles/BinaryQuestion';
+import datetime from datetime 
 
 //Component for Binary question
 const BinaryQuestion = (props) => {
@@ -26,6 +27,7 @@ const BinaryQuestion = (props) => {
       answers: counter,
       img_id: props.image.link,
       response_time: answers.TIME(questionTime),
+      timestamp: datetime.now(),
     };
     props.onAction(answer);
     props.onNext();
@@ -41,6 +43,7 @@ const BinaryQuestion = (props) => {
       answers: counter,
       img_id: props.image.link,
       response_time: answers.TIME(questionTime),
+      timestamp: datetime.now(),
     };
     props.onAction(answer);
     props.onNext();

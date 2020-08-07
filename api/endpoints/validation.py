@@ -1,6 +1,7 @@
 """Collection of methods used for input validation."""
 import base64
 import re
+from datetime import datetime
 
 email_regex = re.compile(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)")
 
@@ -89,6 +90,7 @@ def validate_answer(value):
         "answers": validate_accept,
         "response_time": validate_int,
         "before_video": validate_boolean
+        "timestamp" : validate_datetime
     }
 
     return validate(value, validators)
@@ -284,6 +286,18 @@ def validate_list(value):
     boolean: True if value is a list
     """
     return isinstance(value, list)
+
+def validate_datetime(value):
+    """
+    Validate a list input.
+
+    Parameters:
+    value (any): Input value
+
+    Returns:
+    boolean: True if value is datetime
+    """
+    return isinstance(value, datetime)
 
 
 def validate(data, validators):
