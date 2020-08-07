@@ -103,8 +103,8 @@ class QuizAnswers(Resource):
                 participant.researcher_notes = answer['open_answer']
 
             else:
-                date_obj = NULL
-                
+                date_obj = None
+
                 try:
                     if 'timestamp' in answer:
                         date_format = '%Y-%m-%d %H:%M:%s'
