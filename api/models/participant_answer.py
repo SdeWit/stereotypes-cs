@@ -49,7 +49,7 @@ class ParticipantAnswer(db.Model):
     open_question_answer = db.Column(db.Text, nullable=True)
     response_time = db.Column(db.Integer, nullable=True)
     before_video = db.Column(db.Boolean, nullable=False)
-    timestamp = db.Column(db.DateTime(timezone=True), nullable=True)
+    timestamp = db.Column(db.Text, nullable=True)
 
     question = db.relationship("Question", backref=db.backref('answers'))
 
@@ -75,7 +75,7 @@ class ParticipantAnswer(db.Model):
                 Response time of the question (Only for binary questions)
             before_video : boolean
                 True if the questions was before the video, false otherwise
-            timestamp : date
+            timestamp : str
                 Timestamp for when question is filled in
             Returns
             -------

@@ -21,15 +21,13 @@ const BinaryQuestion = (props) => {
     // const newAnswers = props.categories_left.map((category) =>
     //   parseInt(category.id)
     // );
-    var date = new Date(); 
-    date = date.getFullYear()+'-'+(date.getMonth()+1)+'-'+date.getDate()+' '+date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
-
+    
     const answer = {
       question_id: props.id,
       answers: counter,
       img_id: props.image.link,
       response_time: answers.TIME(questionTime),
-      timestamp: date,
+      timestamp: String(new Date()),
     };
     props.onAction(answer);
     props.onNext();
@@ -40,15 +38,13 @@ const BinaryQuestion = (props) => {
     // const newAnswers = props.categories_right.map((category) =>
     //   parseInt(category.id)
     // );
-    var date = new Date(); 
-    date = date.getFullYear()+'-'+(date.getMonth()+1)+'-'+date.getDate()+' '+date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
 
     const answer = {
       question_id: props.id,
       answers: counter,
       img_id: props.image.link,
       response_time: answers.TIME(questionTime),
-      timestamp: date,
+      timestamp: String(new Date()),
     };
     props.onAction(answer);
     props.onNext();

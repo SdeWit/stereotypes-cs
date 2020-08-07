@@ -5,7 +5,6 @@ Module that deals with all logic related to consent forms
 import os
 import random
 import traceback
-import logging
 import datetime
 
 from flask import request
@@ -103,15 +102,6 @@ class QuizAnswers(Resource):
                 participant.researcher_notes = answer['open_answer']
 
             else:
-                date_obj = None
-
-                try:
-                    if 'timestamp' in answer:
-                        date_format = '%Y-%m-%d %H:%M:%s'
-                        date_obj = datetime.datetime.strptime(answer["timestamp"], date_format)
-                except ValueError:
-                    print("Incorrect data format, should be YYYY-MM-DD H:M:s")
-
                 ParticipantAnswer.create_participant_answer(
                     p_id=answer["participant_id"],
                     q_id=answer["question_id"],
@@ -120,7 +110,7 @@ class QuizAnswers(Resource):
                     open_answer=answer["open_answer"] if "open_answer" in answer else None,
                     r_time=answer["response_time"] if 'response_time' in answer else None,
                     before_video=answer["before_video"],
-                    timestamp=date_obj if 'timestamp' in answer else None),
+                    timestamp=answer["timestamp"] if 'timestamp' in answer else None),
 
         commit_db_session()
         return ANSWERS[201], 201
@@ -176,17 +166,13 @@ class RandomQuiz(Resource):
         """
 
         scenario_list = random.choice(list(Version))
-
-        root = logging.getLogger()
-        root.warning('before')
-        root.warning(scenario_list) 
+        extra_list = []
 
         for scen in scenario_list: 
             if "intervention" in scen:
-                scenario_list.append(scen)
+                extra_list.append(scen)
         
-        root.warning('after')
-        root.warning(scenario_list) 
+        scenario_list = scenario_list + extra_list
 
         scenario = random.choice(scenario_list)
 

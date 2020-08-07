@@ -90,7 +90,7 @@ def validate_answer(value):
         "answers": validate_accept,
         "response_time": validate_int,
         "before_video": validate_boolean,
-        "timestamp" : validate_datetime
+        "timestamp" : validate_string
     }
 
     return validate(value, validators)
@@ -286,19 +286,6 @@ def validate_list(value):
     boolean: True if value is a list
     """
     return isinstance(value, list)
-
-def validate_datetime(value):
-    """
-    Validate a list input.
-
-    Parameters:
-    value (any): Input value
-
-    Returns:
-    boolean: True if value is datetime
-    """
-    return isinstance(value, datetime)
-
 
 def validate(data, validators):
     """
