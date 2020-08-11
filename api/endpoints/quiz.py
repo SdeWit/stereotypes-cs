@@ -171,6 +171,7 @@ class RandomQuiz(Resource):
         for scen in scenario_list: 
             if "intervention" in scen:
                 extra_list.append(scen)
+                extra_list.append(scen)
         
         scenario_list = scenario_list + extra_list
 
