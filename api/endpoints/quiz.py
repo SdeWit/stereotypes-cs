@@ -14,7 +14,7 @@ from flask_restful import Resource
 
 from api.endpoints.constants import ANSWERS, COLUMNS_RESULTS
 from api.models import ParticipantAnswer, Question, ParticipantInformationType, QuestionType, \
-    QuestionChoice, Participant, Version
+    QuestionChoice, Participant, Version, VersionRandom
 from api.models.helpers import commit_db_session
 from api.endpoints.quiz_factory import QuizFactory
 
@@ -165,16 +165,7 @@ class RandomQuiz(Resource):
         :return: random quiz and status 200
         """
 
-        scenario_list = random.choice(list(Version))
-        extra_list = []
-
-        for scen in scenario_list: 
-            if "intervention" in scen:
-                extra_list.append(scen)
-                extra_list.append(scen)
-        
-        scenario_list = scenario_list + extra_list
-
+        scenario_list = random.choice(list(VersionRandom))
         scenario = random.choice(scenario_list)
 
         try:
